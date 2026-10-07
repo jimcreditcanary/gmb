@@ -211,3 +211,21 @@ main.landing .risk-warning { font-size: 1.4rem; line-height: 1.5; }
 .tool-placeholder .button { margin: 0; }
 .tool-placeholder-note { font-size: 1.4rem; margin: 1.2rem 0 0; color: var(--color-brand-navy); }
 .tool-placeholder-note a { color: var(--color-brand-navy); text-decoration: underline; }
+
+/* ---------- Button system (components/ui/button.tsx, docs/components.md). `md` is the theme's .button untouched; sm / lg / block are additional tokens ---------- */
+.button.button-sm, button.button-sm { height: 36px; font-size: 14px; line-height: 2.4; padding-left: 1.6rem; padding-right: 1.6rem; }
+.button.button-lg, button.button-lg { height: 56px; font-size: 18px; line-height: 3; padding-left: 2.8rem; padding-right: 2.8rem; }
+.button.button-block, button.button-block { display: block; width: 100%; padding-left: 0; padding-right: 0; text-align: center; }
+
+/* ---------- Heading looks decoupled from heading levels (docs/templates.md §Headings): `.h2/.h3/.h4` reproduce the theme's h2/h3/h4 so the document outline can be fixed without a visual change ---------- */
+.h2, .h3, .h4 { font-family: var(--font-menca-bold), sans-serif; color: #102c45; line-height: 1; letter-spacing: -0.1rem; margin: 0 0 2rem; }
+.h2 { font-size: 38px; }
+.h3 { font-size: 32px; }
+.h4 { font-size: 20px; letter-spacing: -0.08rem; }
+@media only screen and (min-width: 1200px) { .h2 { font-size: 48px; } }
+section.header-page div.data-content .h2, section.header-page div.data-content .h3, section.header-page div.data-content .h4 { margin: 0; }
+
+/* Blog post body: sections are h2, sub-sections h3, sub-sub-sections h4 (one outline for all 63 posts). Sized as the theme's h3/h4/h5, which is how 59 of the 63 posts were authored. */
+section.postsingle .data-content h2 { font-size: 32px; letter-spacing: -0.1rem; }
+section.postsingle .data-content h3 { font-size: 20px; letter-spacing: -0.08rem; }
+section.postsingle .data-content h4 { font-size: 18px; letter-spacing: -0.05rem; }

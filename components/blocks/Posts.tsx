@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
-import { getPosts, type Page } from "@/lib/content";
+import { getPosts, cardTitle, stripTitleSuffix, type Page } from "@/lib/content";
 import { Img } from "./Img";
 import { Trustpilot } from "./Trustpilot";
 
@@ -14,13 +14,13 @@ export function PostCard({ post, level = 3 }: { post: Page; level?: 2 | 3 }) {
       <div className="data-post">
         <div className="featured-image">
           <picture className="picture-image">
-            <Link href={fm.slug}>{img && <Img src={img} alt={fm.cardImageAlt || fm.cardTitle || fm.title.replace(/ \| .*$/, "")} sizes="(max-width: 640px) 100vw, 300px" />}</Link>
+            <Link href={fm.slug}>{img && <Img src={img} alt={fm.cardImageAlt || fm.cardTitle || stripTitleSuffix(fm.title)} sizes="(max-width: 640px) 100vw, 300px" />}</Link>
           </picture>
         </div>
         <div className="wrap">
-          <div className="data-title"><H className="h4">{fm.cardTitle || fm.h1 || fm.title.replace(/ \| (GMBCU|GMB Credit Union).*$/, "")}</H></div>
+          <div className="data-title"><H className="h4">{cardTitle(fm)}</H></div>
           <div className="data-excerpt">{fm.excerpt}</div>
-          <div className="data-link"><Link href={fm.slug}>Read More &gt;<span className="sr-only-text">: {fm.cardTitle || fm.h1 || fm.title.replace(/ \| (GMBCU|GMB Credit Union).*$/, "")}</span></Link></div>
+          <div className="data-link"><Link href={fm.slug}>Read More &gt;<span className="sr-only-text">: {cardTitle(fm)}</span></Link></div>
         </div>
       </div>
     </li>

@@ -5,6 +5,13 @@ import { frontmatterSchema, type Frontmatter } from "./frontmatter";
 
 export type Page = { frontmatter: Frontmatter; body: string; file: string };
 
+/** "Member Loan | GMB Credit Union Loans" → "Member Loan". The <title> suffix never appears on the page. */
+export const stripTitleSuffix = (title: string) => title.replace(/ \| (GMBCU|GMB Credit Union).*$/, "");
+/** The page's visible H1: the recorded live H1 when it differed from the title, else the title without its suffix. */
+export const displayTitle = (fm: Pick<Frontmatter, "title" | "h1">) => fm.h1 || stripTitleSuffix(fm.title);
+/** Blog card title: the card wording on the live archive when it differed in case from the post's own H1. */
+export const cardTitle = (fm: Pick<Frontmatter, "title" | "h1" | "cardTitle">) => fm.cardTitle || displayTitle(fm);
+
 const CONTENT_DIR = path.join(process.cwd(), "content");
 
 function walk(dir: string, out: string[] = []): string[] {

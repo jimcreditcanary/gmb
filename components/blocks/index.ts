@@ -8,3 +8,5 @@ export { MoneyHelperTool } from "./MoneyHelperTool";
 export { ContactForm } from "./ContactForm";
 export { VideoFacade } from "./VideoFacade";
 export { PostsOverview, RelatedPosts, PostList, PostCard, Pagination } from "./Posts";
+export { SectionHeader } from "./SectionHeader";
+export { Button } from "@/components/ui/button";

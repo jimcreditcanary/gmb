@@ -2,6 +2,7 @@
 import { useRef, type ReactNode } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { SectionHeader } from "./SectionHeader";
 
 /** Product teaser slider. The theme used slick (4/3/2/1 per row at 1200/992/640). Reproduced with CSS scroll-snap + arrows: no carousel JS. */
 export function BoxSlider({ heading, intro, align, children }: { heading?: string; intro?: string; align?: "center" | "right"; children: ReactNode }) {
@@ -9,7 +10,7 @@ export function BoxSlider({ heading, intro, align, children }: { heading?: strin
   const scroll = (dir: 1 | -1) => { const el = track.current; if (!el) return; const w = el.firstElementChild?.getBoundingClientRect().width || 300; el.scrollBy({ left: dir * w, behavior: "smooth" }); };
   return (
     <section className="box-slider bg-white"><div className="outline">
-      {(heading || intro) && <header className="data-header">{heading && <h2 style={align ? { textAlign: align } : undefined} dangerouslySetInnerHTML={{ __html: heading }} />}{intro && <p style={align ? { textAlign: align } : undefined} dangerouslySetInnerHTML={{ __html: intro }} />}</header>}
+      {(heading || intro) && <SectionHeader heading={heading} align={align}>{intro && <p style={align ? { textAlign: align } : undefined} dangerouslySetInnerHTML={{ __html: intro }} />}</SectionHeader>}
       <div className="wrap-boxslider">
         <div className="init-boxslider slick-initialized slick-slider">
           <button type="button" className="slick-next" aria-label="Previous" onClick={() => scroll(-1)}><FontAwesomeIcon icon={faArrowLeft} /></button>

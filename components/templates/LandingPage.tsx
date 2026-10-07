@@ -1,4 +1,5 @@
-import type { Page } from "@/lib/content";
+import { displayTitle, type Page } from "@/lib/content";
+import { Button } from "@/components/ui/button";
 import { Mdx } from "@/lib/mdx";
 import { pageGraph } from "@/lib/jsonld";
 import { JsonLd } from "./JsonLd";
@@ -15,11 +16,11 @@ export function LandingPage({ page }: { page: Page }) {
       <JsonLd data={pageGraph(fm, page.body, page.body.split(/\s+/).length)} />
       <section className="header-page yellow landing-hero"><div className="outline">
         <div className="data-content">
-          <h1>{fm.title.replace(/ \| .*$/, "")}</h1>
+          <h1>{displayTitle(fm)}</h1>
           {fm.description && <p>{fm.description}</p>}
           <p className="rep-apr"><strong>{l.repApr}</strong></p>
           <p className="risk-warning">{l.riskWarning}</p>
-          <p><a className="button" href={l.cta.href} rel="noopener">{l.cta.label}</a></p>
+          <p><Button href={l.cta.href} rel="noopener">{l.cta.label}</Button></p>
           <UtmFields />
         </div>
       </div></section>

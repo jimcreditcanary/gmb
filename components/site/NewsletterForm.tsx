@@ -1,4 +1,5 @@
 "use client";
+import { Button } from "@/components/ui/button";
 import { useState, type FormEvent } from "react";
 
 /** Mailchimp embedded form, same fields (EMAIL + honeypot) and markup ids; posts to /api/newsletter which forwards to Mailchimp. */
@@ -28,7 +29,7 @@ export function NewsletterForm() {
             {status === "ok" && <div className="response" id="mce-success-response">{msg}</div>}
           </div>
           <div aria-hidden="true" style={{ position: "absolute", left: "-5000px" }}><input type="text" name="b_d9343033dc8a6cee1d438cafd_a34de2255e" tabIndex={-1} defaultValue="" /></div>
-          <div className="clear"><input type="submit" name="subscribe" id="mc-embedded-subscribe" className="button" value={status === "sending" ? "Subscribing…" : "Subscribe"} disabled={status === "sending"} /></div>
+          <div className="clear"><Button type="submit" name="subscribe" id="mc-embedded-subscribe" disabled={status === "sending"}>{status === "sending" ? "Subscribing…" : "Subscribe"}</Button></div>
         </div>
       </form>
     </div></div>

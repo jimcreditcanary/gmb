@@ -1,4 +1,4 @@
-import type { Page } from "@/lib/content";
+import { displayTitle, type Page } from "@/lib/content";
 import { Mdx } from "@/lib/mdx";
 import { pageGraph } from "@/lib/jsonld";
 import { JsonLd } from "./JsonLd";
@@ -6,7 +6,7 @@ import { PageHeader } from "@/components/blocks/PageHeader";
 
 const wc = (s: string) => s.replace(/<[^>]+>/g, " ").split(/\s+/).filter(Boolean).length;
 
-/** Generic content template: every section comes from the MDX, in order. Used by home, hub, product, about, contact, legal, faq, embed, campaign and generic pages. */
+/** Content template: every section comes from the MDX, in order. Used by home, about, product-category, product, prizesaver, resources, contact, legal and campaign pages (docs/templates.md). */
 export function MdxPage({ page }: { page: Page }) {
   const fm = page.frontmatter;
   return (
@@ -18,7 +18,7 @@ export function MdxPage({ page }: { page: Page }) {
   );
 }
 
-/** Blog post: header from frontmatter, body from MDX, latest posts strip generated. */
+/** Blog post (template `post`): hero from frontmatter (H1 = displayTitle), body from MDX with h2/h3/h4 sections. */
 export function PostPage({ page }: { page: Page }) {
   const fm = page.frontmatter;
   return (
@@ -26,7 +26,7 @@ export function PostPage({ page }: { page: Page }) {
       {fm.schema && <JsonLd data={fm.schema} />}
       <JsonLd data={pageGraph(fm, page.body, wc(page.body))} />
       <PageHeader colour={fm.headerColour || "yellow"} date={fm.date} image={fm.featuredImage} imageAlt={fm.featuredImageAlt || ""} imageWrap="wrap-blog">
-        <h1>{fm.h1 || fm.title.replace(/ \| (GMBCU|GMB Credit Union).*$/, "")}</h1>
+        <h1>{displayTitle(fm)}</h1>
       </PageHeader>
       <section className="postsingle"><div className="outline">
         <article className="post type-post status-publish format-standard has-post-thumbnail hentry">

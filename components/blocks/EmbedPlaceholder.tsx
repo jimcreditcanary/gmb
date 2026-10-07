@@ -1,4 +1,5 @@
 "use client";
+import { Button } from "@/components/ui/button";
 import { useState } from "react";
 
 const LABELS: [RegExp, string][] = [[/inbest\.ai/, "Benefit Calculator"]];
@@ -12,7 +13,7 @@ export function EmbedPlaceholder({ src, title, height }: { src: string; title?: 
   return (
     <div className="tool-placeholder">
       <div className="tool-placeholder-inner">
-        <p><button type="button" className="button" onClick={() => setLoaded(true)}>{label}</button></p>
+        <p><Button onClick={() => setLoaded(true)}>{label}</Button></p>
         <p className="tool-placeholder-note"><a href={src} target="_blank" rel="noopener">{label}</a> (opens on {host})</p>
       </div>
     </div>

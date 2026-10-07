@@ -4,7 +4,12 @@ import { z } from "zod";
  * Frontmatter contract for every file under /content.
  * The build fails with a readable message if a file does not satisfy this (see scripts/validate-content.ts).
  */
-export const templates = ["home", "hub", "product", "about", "contact", "post", "legal", "faq", "embed", "campaign", "generic", "landing"] as const;
+/**
+ * Page templates (docs/templates.md). One per page; the template fixes the heading outline and the blocks a page is built from.
+ *  home · about · product-category (loans/savings hubs) · product · prizesaver · resources · post (blog post; blog home is a route, not a file) · contact
+ *  plus three that the site needs and the brief did not list: legal (locked), campaign (AGM, Congress, offers), landing (paid media).
+ */
+export const templates = ["home", "about", "product-category", "product", "prizesaver", "resources", "post", "contact", "legal", "campaign", "landing"] as const;
 export const categories = ["home", "hub", "product-loan", "product-savings", "about", "contact", "blog-post", "legal-regulatory", "utility", "other", "landing"] as const;
 
 const slug = z.string().regex(/^\/([a-z0-9-]+\/)*$/, "slug must be a root-relative path with a trailing slash, e.g. /loans/member-loan/");
@@ -55,7 +60,7 @@ export const frontmatterSchema = z.object({
   // landing template extras
   landing: z.object({ cta: z.object({ label: z.string(), href: z.string() }), repApr: z.string(), riskWarning: z.string(), formId: z.string().optional() }).optional(),
 }).superRefine((fm, ctx) => {
-  if (fm.template === "product" && !fm.product) ctx.addIssue({ code: "custom", path: ["product"], message: "product pages need a `product:` block (kind, apr, amounts) for schema" });
+  if ((fm.template === "product" || fm.template === "prizesaver") && !fm.product) ctx.addIssue({ code: "custom", path: ["product"], message: "product pages need a `product:` block (kind, apr, amounts) for schema" });
   if (fm.template === "post" && !fm.publishedAt) ctx.addIssue({ code: "custom", path: ["publishedAt"], message: "posts need publishedAt" });
   if (fm.template === "landing" && !fm.landing) ctx.addIssue({ code: "custom", path: ["landing"], message: "landing pages need a `landing:` block (cta, repApr, riskWarning)" });
   if (fm.canonical !== "https://www.gmbcreditunion.com" + fm.slug) ctx.addIssue({ code: "custom", path: ["canonical"], message: `canonical must equal https://www.gmbcreditunion.com${fm.slug}` });

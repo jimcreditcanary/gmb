@@ -1,4 +1,5 @@
 "use client";
+import { Button } from "@/components/ui/button";
 import { useEffect, useState, useSyncExternalStore } from "react";
 import Link from "next/link";
 
@@ -49,9 +50,9 @@ export function CookieBanner() {
         </div>
       )}
       <div className="cookie-actions">
-        {custom ? <button type="button" className="button button-alt" onClick={() => save({ analytics, marketing })}>Save preferences</button> : <button type="button" className="button button-alt" onClick={() => setCustom(true)}>Customize</button>}
-        <button type="button" className="button button-alt" onClick={() => save({ analytics: false, marketing: false })}>Reject All</button>
-        <button type="button" className="button" onClick={() => save({ analytics: true, marketing: true })}>Accept All</button>
+        {custom ? <Button variant="secondary" onClick={() => save({ analytics, marketing })}>Save preferences</Button> : <Button variant="secondary" onClick={() => setCustom(true)}>Customize</Button>}
+        <Button variant="secondary" onClick={() => save({ analytics: false, marketing: false })}>Reject All</Button>
+        <Button onClick={() => save({ analytics: true, marketing: true })}>Accept All</Button>
       </div>
     </div>
   );

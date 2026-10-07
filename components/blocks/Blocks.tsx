@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Img } from "./Img";
 import { VideoFacade } from "./VideoFacade";
 import { EmbedPlaceholder } from "./EmbedPlaceholder";
+import { SectionHeader } from "./SectionHeader";
 
 const colourClass = (c?: string) => (c ? ` ${c}` : "");
 
@@ -10,12 +11,13 @@ const colourClass = (c?: string) => (c ? ` ${c}` : "");
 export function ListBlock({ heading, align, children }: { heading?: string; align?: "center" | "right"; children: ReactNode }) {
   return (
     <section className="list-block"><div className="outline">
-      {heading && <header className="data-header"><h2 style={align ? { textAlign: align } : undefined} dangerouslySetInnerHTML={{ __html: heading }} /></header>}
+      {heading && <SectionHeader heading={heading} align={align} />}
       <div className="wrap-listblock"><ul className="list-listblock">{children}</ul></div>
     </div></section>
   );
 }
-export function ListItem({ icon, children }: { icon?: string; children: ReactNode }) {
+/** Icon + content row, the list item shared by ListBlock (`ListItem`) and IconGrid (`IconItem`). Icons are decorative: the text beside them carries the meaning. */
+export function IconRow({ icon, children }: { icon?: string; children: ReactNode }) {
   return (
     <li><div className="row">
       <div className="column column-image"><div className="data-icon">{icon && <Img src={icon} alt="" />}</div></div>
@@ -23,6 +25,7 @@ export function ListItem({ icon, children }: { icon?: string; children: ReactNod
     </div></li>
   );
 }
+export { IconRow as ListItem, IconRow as IconItem };
 
 // ---------- PanelSection ----------
 export function PanelSection({ children }: { children: ReactNode }) {
@@ -115,20 +118,12 @@ export function IconGrid({ colour, heading, align, columns, children, variant }:
   if (heading || variant === "values") {
     return (
       <section className="block-icon-section"><div className="outline"><div className="wrap-block-icon-section">
-        {heading && <header className="data-header"><h2 style={align ? { textAlign: align } : undefined} dangerouslySetInnerHTML={{ __html: heading }} /></header>}
+        {heading && <SectionHeader heading={heading} align={align} />}
         {list}
       </div></div></section>
     );
   }
   return <section className={`icon-block bg-${colour || "cream"}`}><div className="outline">{list}</div></section>;
-}
-export function IconItem({ icon, children }: { icon?: string; children: ReactNode }) {
-  return (
-    <li><div className="row">
-      <div className="column column-image"><div className="data-icon">{icon && <Img src={icon} alt="" />}</div></div>
-      <div className="column column-content"><div className="data-content">{children}</div></div>
-    </div></li>
-  );
 }
 
 // ---------- ColourPanels ----------
@@ -153,7 +148,7 @@ export function InfoBlock({ heading, align, children }: { heading?: string; alig
   const intro = kids.filter((k) => !panels.includes(k));
   return (
     <section className="info-block"><div className="outline"><div className="wrap">
-      <header className="data-header">{heading && <h2 style={align ? { textAlign: align } : undefined} dangerouslySetInnerHTML={{ __html: heading }} />}{intro}</header>
+      <SectionHeader heading={heading} align={align}>{intro}</SectionHeader>
       <div className="wrap-infoblock"><div className="row">{panels}</div></div>
     </div></div></section>
   );

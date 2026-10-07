@@ -1,4 +1,5 @@
 "use client";
+import { Button } from "@/components/ui/button";
 import { useState, type ReactNode } from "react";
 
 /**
@@ -18,7 +19,7 @@ export function MoneyHelperTool({ id, href, lang = "en", width, children }: { id
     <div className={`tool-placeholder tool-${id}${loaded ? " is-loaded" : ""}`}>
       {!loaded && (
         <div className="tool-placeholder-inner">
-          <p><button type="button" className="button" onClick={load}>{children}</button></p>
+          <p><Button onClick={load}>{children}</Button></p>
           <p className="tool-placeholder-note"><a href={href} target="_blank" rel="noopener">{children}</a> (opens on moneyhelper.org.uk)</p>
         </div>
       )}

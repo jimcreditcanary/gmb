@@ -14,7 +14,7 @@ for (const p of pages) {
   for (const k of ["ogImage", "featuredImage", "cardImage"] as const) { const v = p.frontmatter[k]; if (v && v.startsWith("/")) refs.add(v); }
   const strip = (x: string) => { let cur = x; for (let i = 0; i < 4; i++) { const m = cur.match(/^(.*?)(-\d{2,4}x\d{2,4}|-scaled|-rotated|-e\d{13})(\.[a-z0-9]+)$/i); if (!m) break; cur = m[1] + m[3]; } return cur; };
   for (const r of refs) { const f = decodeURIComponent(r.split("?")[0]); if (!fs.existsSync(path.join(pub, f)) && !fs.existsSync(path.join(pub, strip(f)))) fail(`${p.file}: missing media ${r}`); }
-  if (!p.frontmatter.description && !p.frontmatter.noindex && p.frontmatter.template !== "generic") console.warn(`⚠ ${p.file}: no description (kept verbatim from the live site; add one when editing)`);
+  if (!p.frontmatter.description && !p.frontmatter.noindex) console.warn(`⚠ ${p.file}: no description (kept verbatim from the live site; add one when editing)`);
   for (const m of p.body.matchAll(/<([A-Z][A-Za-z]*)\b/g)) { /* component names are checked by the MDX compile at build */ void m; }
 }
 console.log(`✔ ${pages.length} content files valid${errors ? `, ${errors} error(s)` : ""}`);

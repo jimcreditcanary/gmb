@@ -1,0 +1,13 @@
+{
+  "legalName": "Thorne Credit Union Limited",
+  "tradingName": "GMB Credit Union",
+  "frn": "213550",
+  "mutualsNumber": "564C",
+  "registeredOffice": { "streetAddress": "Sinclair House, 11 Station Road", "addressLocality": "Cheadle Hulme", "addressRegion": "Stockport", "postalCode": "SK8 5AF", "addressCountry": "GB" },
+  "telephone": "+44 161 486 1777",
+  "statement": "GMB Credit Union is a trading name of Thorne Credit Union Limited, which is authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority and the Prudential Regulation Authority. Firm Reference Number 213550. Registered under the Credit Unions Act 1979, registration number 564C. Registered office: Sinclair House, 11 Station Road, Cheadle Hulme, Stockport SK8 5AF. Eligible deposits are protected by the Financial Services Compensation Scheme.",
+  "fcaRegisterUrl": "https://register.fca.org.uk/s/firm?id=001b000000MfLhuAAF",
+  "mutualsRegisterUrl": "https://mutuals.fca.org.uk/Search/Society/24470",
+  "approvedBy": "Jim Fell, 2026-10-07 (audit/decisions.md)",
+  "locked": true
+}

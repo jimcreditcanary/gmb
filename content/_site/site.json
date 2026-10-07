@@ -1,0 +1,198 @@
+{
+  "brand": "GMB Credit Union",
+  "shortName": "GMBCU",
+  "url": "https://www.gmbcreditunion.com",
+  "logo": {
+    "header": "/theme/images/logo.png",
+    "headerAlt": "GMBCU",
+    "footer": "/theme/images/footer-logo.png",
+    "footerAlt": "GMBCU"
+  },
+  "nav": [
+    {
+      "label": "About us",
+      "href": "/about-us/"
+    },
+    {
+      "label": "Loans",
+      "href": "/loans/",
+      "children": [
+        {
+          "label": "Consolidation Loan",
+          "href": "/loans/consolidation-loan/"
+        },
+        {
+          "label": "Family Loan",
+          "href": "/loans/family-loan/"
+        },
+        {
+          "label": "Handy Loan",
+          "href": "/loans/handy-loan/"
+        },
+        {
+          "label": "Member Loan",
+          "href": "/loans/member-loan/"
+        },
+        {
+          "label": "Save & Borrow Loan",
+          "href": "/loans/save-borrow-loan/"
+        },
+        {
+          "label": "Savings Secured Loan",
+          "href": "/loans/savings-secured-loan/"
+        },
+        {
+          "label": "Top-Up Loan",
+          "href": "/loans/top-up-loan/"
+        }
+      ]
+    },
+    {
+      "label": "Savings",
+      "href": "/savings/",
+      "children": [
+        {
+          "label": "365 Saver",
+          "href": "/savings/365-saver/"
+        },
+        {
+          "label": "Christmas Saver",
+          "href": "/savings/christmas-saver/"
+        },
+        {
+          "label": "Young Saver",
+          "href": "/savings/young-saver/"
+        },
+        {
+          "label": "Member Saver",
+          "href": "/savings/member-saver/"
+        },
+        {
+          "label": "PrizeSaver",
+          "href": "/savings/prizesaver/"
+        },
+        {
+          "label": "Premium Saver",
+          "href": "/savings/premium-saver/"
+        }
+      ]
+    },
+    {
+      "label": "Resources",
+      "href": "/resources/",
+      "children": [
+        {
+          "label": "GMBCU Prize Draw",
+          "href": "/gmb-credit-union-prize-draw/"
+        },
+        {
+          "label": "Member Helper",
+          "href": "/resources/member-helper/"
+        },
+        {
+          "label": "Our Blog",
+          "href": "/our-blog/"
+        }
+      ]
+    },
+    {
+      "label": "Contact us",
+      "href": "/contact-us/"
+    },
+    {
+      "label": "Member Hub",
+      "href": "https://gmb.cumemberapp.com/login"
+    }
+  ],
+  "footer": {
+    "left": [
+      {
+        "label": "Loans",
+        "href": "/loans/"
+      },
+      {
+        "label": "Savings",
+        "href": "/savings/"
+      },
+      {
+        "label": "Savings insurance",
+        "href": "/savings/life-savings-insurance-protection/"
+      },
+      {
+        "label": "Resources",
+        "href": "/resources/"
+      },
+      {
+        "label": "Contact us",
+        "href": "/contact-us/"
+      }
+    ],
+    "right": [
+      {
+        "label": "Member Hub",
+        "href": "https://gmb.cumemberapp.com/login"
+      },
+      {
+        "label": "About us",
+        "href": "/about-us/"
+      },
+      {
+        "label": "FAQs",
+        "href": "/faqs/"
+      },
+      {
+        "label": "Privacy policy",
+        "href": "/privacy-policy/"
+      },
+      {
+        "label": "Complaints",
+        "href": "/complaints/"
+      }
+    ],
+    "socials": [
+      {
+        "href": "https://www.facebook.com/GMBCU/",
+        "label": "",
+        "icon": "fa-brands fa-facebook-f"
+      },
+      {
+        "href": "https://www.youtube.com/channel/UC1U99NodZ9ChSTVT7q3kOCg",
+        "label": "",
+        "icon": "fa-brands fa-youtube"
+      },
+      {
+        "href": "https://www.instagram.com/gmbcreditunion/",
+        "label": "",
+        "icon": "fa-brands fa-instagram"
+      }
+    ],
+    "fscs": {
+      "href": "https://www.fscs.org.uk/",
+      "image": "/theme/images/fscs.svg",
+      "alt": "FSCS"
+    },
+    "newsletter": {
+      "heading": "Stay up to date with GMBCU",
+      "emailLabel": "Email Address *",
+      "required": "* indicates required",
+      "submit": "Subscribe",
+      "honeypot": "b_d9343033dc8a6cee1d438cafd_a34de2255e",
+      "action": "https://gmbcreditunion.us5.list-manage.com/subscribe/post?u=d9343033dc8a6cee1d438cafd&id=a34de2255e&f_id=001bede0f0"
+    }
+  },
+  "trustpilot": {
+    "businessUnit": "669a27146c12cbbfbbfcae63",
+    "templates": [
+      "5406e65db0d04a09e042d5fc",
+      "54ad5defc6454f065c28af8b"
+    ],
+    "locale": "en-GB",
+    "reviewUrl": "https://uk.trustpilot.com/review/gmbcreditunion.com",
+    "styleHeight": "28px",
+    "styleWidth": "100%"
+  },
+  "gtm": {
+    "id": "GTM-NQCV3C4",
+    "note": "loaded only when NEXT_PUBLIC_GTM_ID is set"
+  }
+}

@@ -1,0 +1,328 @@
+{
+  "/our-blog/": {
+    "title": "Our Blog | GMB Credit Union",
+    "description": "Stay updated with the latest Credit Union news, useful info, and tips on managing your money in our blog. Discover more today.",
+    "h1": "Our Blog",
+    "intro": "Discover useful information and tips on managing your money and safeguarding your financial future through our blog. Foster a healthier relationship with your money and feel more positive about the future. And it’s not just a blog about finances – stay up to date with the latest news from your Credit Union too.",
+    "image": "/media/resources-blog.png",
+    "headerColour": "yellow",
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": [
+            "WebPage",
+            "CollectionPage"
+          ],
+          "@id": "https://www.gmbcreditunion.com/our-blog/",
+          "url": "https://www.gmbcreditunion.com/our-blog/",
+          "name": "Our Blog | GMB Credit Union",
+          "isPartOf": {
+            "@id": "https://www.gmbcreditunion.com/#website"
+          },
+          "datePublished": "2023-08-04T13:42:48+00:00",
+          "dateModified": "2023-09-07T16:49:28+00:00",
+          "description": "Stay updated with the latest Credit Union news, useful info, and tips on managing your money in our blog. Discover more today.",
+          "breadcrumb": {
+            "@id": "https://www.gmbcreditunion.com/our-blog/#breadcrumb"
+          },
+          "inLanguage": "en-GB"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.gmbcreditunion.com/our-blog/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.gmbcreditunion.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Our Blog"
+            }
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.gmbcreditunion.com/#website",
+          "url": "https://www.gmbcreditunion.com/",
+          "name": "GMBCU",
+          "description": "",
+          "potentialAction": [
+            {
+              "@type": "SearchAction",
+              "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://www.gmbcreditunion.com/?s={search_term_string}"
+              },
+              "query-input": {
+                "@type": "PropertyValueSpecification",
+                "valueRequired": true,
+                "valueName": "search_term_string"
+              }
+            }
+          ],
+          "inLanguage": "en-GB"
+        }
+      ]
+    },
+    "ogTitle": "Our Blog | GMB Credit Union",
+    "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+    "pagedTitle": "Our Blog | GMB Credit Union"
+  },
+  "/category/uncategorised/": {
+    "title": "Uncategorised Archives | GMBCU",
+    "description": "",
+    "h1": "Our Blog",
+    "intro": "Discover useful information and tips on managing your money and safeguarding your financial future through our blog. Foster a healthier relationship with your money and feel more positive about the future. And it’s not just a blog about finances – stay up to date with the latest news from your Credit Union too.",
+    "image": "/media/resources-blog.png",
+    "headerColour": "yellow",
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "CollectionPage",
+          "@id": "https://www.gmbcreditunion.com/category/uncategorised/",
+          "url": "https://www.gmbcreditunion.com/category/uncategorised/",
+          "name": "Uncategorised Archives | GMBCU",
+          "isPartOf": {
+            "@id": "https://www.gmbcreditunion.com/#website"
+          },
+          "primaryImageOfPage": {
+            "@id": "https://www.gmbcreditunion.com/category/uncategorised/#primaryimage"
+          },
+          "image": {
+            "@id": "https://www.gmbcreditunion.com/category/uncategorised/#primaryimage"
+          },
+          "thumbnailUrl": "https://www.gmbcreditunion.com/media/Untitled-design.jpg",
+          "breadcrumb": {
+            "@id": "https://www.gmbcreditunion.com/category/uncategorised/#breadcrumb"
+          },
+          "inLanguage": "en-GB"
+        },
+        {
+          "@type": "ImageObject",
+          "inLanguage": "en-GB",
+          "@id": "https://www.gmbcreditunion.com/category/uncategorised/#primaryimage",
+          "url": "https://www.gmbcreditunion.com/media/Untitled-design.jpg",
+          "contentUrl": "https://www.gmbcreditunion.com/media/Untitled-design.jpg",
+          "width": 4430,
+          "height": 2953
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.gmbcreditunion.com/category/uncategorised/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.gmbcreditunion.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Uncategorised"
+            }
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.gmbcreditunion.com/#website",
+          "url": "https://www.gmbcreditunion.com/",
+          "name": "GMBCU",
+          "description": "",
+          "potentialAction": [
+            {
+              "@type": "SearchAction",
+              "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://www.gmbcreditunion.com/?s={search_term_string}"
+              },
+              "query-input": {
+                "@type": "PropertyValueSpecification",
+                "valueRequired": true,
+                "valueName": "search_term_string"
+              }
+            }
+          ],
+          "inLanguage": "en-GB"
+        }
+      ]
+    },
+    "ogTitle": "Uncategorised Archives | GMBCU",
+    "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+    "pagedTitle": "Uncategorised Archives | Page {n} of {total} | GMBCU"
+  },
+  "/tag/budget/": {
+    "title": "Budget Archives | GMBCU",
+    "description": "",
+    "h1": "Our Blog",
+    "intro": "Discover useful information and tips on managing your money and safeguarding your financial future through our blog. Foster a healthier relationship with your money and feel more positive about the future. And it’s not just a blog about finances – stay up to date with the latest news from your Credit Union too.",
+    "image": "/media/resources-blog.png",
+    "headerColour": "yellow",
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "CollectionPage",
+          "@id": "https://www.gmbcreditunion.com/tag/budget/",
+          "url": "https://www.gmbcreditunion.com/tag/budget/",
+          "name": "Budget Archives | GMBCU",
+          "isPartOf": {
+            "@id": "https://www.gmbcreditunion.com/#website"
+          },
+          "primaryImageOfPage": {
+            "@id": "https://www.gmbcreditunion.com/tag/budget/#primaryimage"
+          },
+          "image": {
+            "@id": "https://www.gmbcreditunion.com/tag/budget/#primaryimage"
+          },
+          "thumbnailUrl": "https://www.gmbcreditunion.com/media/Blog-header.png",
+          "breadcrumb": {
+            "@id": "https://www.gmbcreditunion.com/tag/budget/#breadcrumb"
+          },
+          "inLanguage": "en-GB"
+        },
+        {
+          "@type": "ImageObject",
+          "inLanguage": "en-GB",
+          "@id": "https://www.gmbcreditunion.com/tag/budget/#primaryimage",
+          "url": "https://www.gmbcreditunion.com/media/Blog-header.png",
+          "contentUrl": "https://www.gmbcreditunion.com/media/Blog-header.png",
+          "width": 1500,
+          "height": 900
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.gmbcreditunion.com/tag/budget/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.gmbcreditunion.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Budget"
+            }
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.gmbcreditunion.com/#website",
+          "url": "https://www.gmbcreditunion.com/",
+          "name": "GMBCU",
+          "description": "",
+          "potentialAction": [
+            {
+              "@type": "SearchAction",
+              "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://www.gmbcreditunion.com/?s={search_term_string}"
+              },
+              "query-input": {
+                "@type": "PropertyValueSpecification",
+                "valueRequired": true,
+                "valueName": "search_term_string"
+              }
+            }
+          ],
+          "inLanguage": "en-GB"
+        }
+      ]
+    },
+    "ogTitle": "Budget Archives | GMBCU",
+    "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+    "pagedTitle": null
+  },
+  "/tag/summer/": {
+    "title": "Summer Archives | GMBCU",
+    "description": "",
+    "h1": "Our Blog",
+    "intro": "Discover useful information and tips on managing your money and safeguarding your financial future through our blog. Foster a healthier relationship with your money and feel more positive about the future. And it’s not just a blog about finances – stay up to date with the latest news from your Credit Union too.",
+    "image": "/media/resources-blog.png",
+    "headerColour": "yellow",
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "CollectionPage",
+          "@id": "https://www.gmbcreditunion.com/tag/summer/",
+          "url": "https://www.gmbcreditunion.com/tag/summer/",
+          "name": "Summer Archives | GMBCU",
+          "isPartOf": {
+            "@id": "https://www.gmbcreditunion.com/#website"
+          },
+          "primaryImageOfPage": {
+            "@id": "https://www.gmbcreditunion.com/tag/summer/#primaryimage"
+          },
+          "image": {
+            "@id": "https://www.gmbcreditunion.com/tag/summer/#primaryimage"
+          },
+          "thumbnailUrl": "https://www.gmbcreditunion.com/media/Blog-header.png",
+          "breadcrumb": {
+            "@id": "https://www.gmbcreditunion.com/tag/summer/#breadcrumb"
+          },
+          "inLanguage": "en-GB"
+        },
+        {
+          "@type": "ImageObject",
+          "inLanguage": "en-GB",
+          "@id": "https://www.gmbcreditunion.com/tag/summer/#primaryimage",
+          "url": "https://www.gmbcreditunion.com/media/Blog-header.png",
+          "contentUrl": "https://www.gmbcreditunion.com/media/Blog-header.png",
+          "width": 1500,
+          "height": 900
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.gmbcreditunion.com/tag/summer/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.gmbcreditunion.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Summer"
+            }
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.gmbcreditunion.com/#website",
+          "url": "https://www.gmbcreditunion.com/",
+          "name": "GMBCU",
+          "description": "",
+          "potentialAction": [
+            {
+              "@type": "SearchAction",
+              "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://www.gmbcreditunion.com/?s={search_term_string}"
+              },
+              "query-input": {
+                "@type": "PropertyValueSpecification",
+                "valueRequired": true,
+                "valueName": "search_term_string"
+              }
+            }
+          ],
+          "inLanguage": "en-GB"
+        }
+      ]
+    },
+    "ogTitle": "Summer Archives | GMBCU",
+    "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+    "pagedTitle": null
+  }
+}

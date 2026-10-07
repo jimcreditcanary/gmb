@@ -37,6 +37,7 @@ The only button on the site. It renders the theme's `.button` class, so migratin
 
 Rules:
 - Never write `<a className="button">`, `<A className="button">`, `<button className="button">` or `<input type="submit">` again. The importer (`tools/html2mdx.mjs`) emits `<Button>` for theme buttons.
+- In MDX, `Button` is `LinkButton` (`lib/with-context.tsx`): the same component plus the visually hidden target description on generic labels ("Learn more", "Apply now"), as every other link gets. Client components import the plain `Button`.
 - Adding a variant or size = one line in `buttonVariants` **and** the matching CSS block in `app/globals.css`. Do not style buttons inline.
 - Hero icon tiles (`PageHeader buttons={[…]}`) are a different pattern (`ul.list-buttons`, icon + label + chevron) and stay inside `PageHeader`.
 - Slider arrows (`BoxSlider`), the FAQ "Jump To" toggle and the video play overlay are icon controls with their own theme classes; they are not `Button`s.

@@ -10,6 +10,7 @@ import { cn } from "@/lib/utils";
  *  - size:    sm | md (the theme default) | lg
  *  - block:   full width
  * Element: <Link> for internal paths, <a> for external/mailto/file links, <button> when there is no href.
+ * Client-safe (no content imports). In MDX and server templates use `LinkButton` from lib/with-context.tsx, which adds the hidden target description to generic labels.
  */
 export const buttonVariants = cva("button", {
   variants: {

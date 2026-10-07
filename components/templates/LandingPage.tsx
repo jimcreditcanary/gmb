@@ -1,5 +1,5 @@
 import { displayTitle, type Page } from "@/lib/content";
-import { Button } from "@/components/ui/button";
+import { LinkButton } from "@/lib/with-context";
 import { Mdx } from "@/lib/mdx";
 import { pageGraph } from "@/lib/jsonld";
 import { JsonLd } from "./JsonLd";
@@ -20,7 +20,7 @@ export function LandingPage({ page }: { page: Page }) {
           {fm.description && <p>{fm.description}</p>}
           <p className="rep-apr"><strong>{l.repApr}</strong></p>
           <p className="risk-warning">{l.riskWarning}</p>
-          <p><Button href={l.cta.href} rel="noopener">{l.cta.label}</Button></p>
+          <p><LinkButton href={l.cta.href} rel="noopener">{l.cta.label}</LinkButton></p>
           <UtmFields />
         </div>
       </div></section>

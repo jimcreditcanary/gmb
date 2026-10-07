@@ -14,9 +14,9 @@ export function PageHeader({ colour, label, trustpilot, image, imageAlt = "", im
   const kind = variant || (colour ? "page" : "title");
   const cls = kind === "home" ? `header ${colour}` : kind === "title" ? "header-title" : `header-page ${colour || ""}`.trim();
   return (
+    <>
     <section className={cls}>
       <div className="outline">
-        {trustpilot && <Trustpilot />}
         <div className="data-content">
           {label && <div className="label">{label}</div>}
           {children}
@@ -45,5 +45,7 @@ export function PageHeader({ colour, label, trustpilot, image, imageAlt = "", im
         {!lottie && image && <div className="data-image">{imageWrap ? <div className={imageWrap}><Img src={image} alt={imageAlt} priority sizes="(max-width: 768px) 100vw, 600px" /></div> : <Img src={image} alt={imageAlt} priority sizes="(max-width: 768px) 100vw, 600px" />}</div>}
       </div>
     </section>
+    {trustpilot && <div className="trust-band"><div className="outline"><Trustpilot /></div></div>}
+    </>
   );
 }

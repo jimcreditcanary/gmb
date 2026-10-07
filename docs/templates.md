@@ -31,17 +31,17 @@ Two calls to confirm: **PrizeSaver** is the `/savings/prizesaver/` account page 
 
 ## Canonical outline per template
 
-**home** — `PageHeader variant="home"` (h1 + intro p + tile buttons + Trustpilot) → `ContentRow` sections (h2 + p + `Button`) → `PostsOverview` (h2 + p; cards generated, card titles h3).
+**home** — `PageHeader variant="home"` (h1 + intro p + tile buttons; Trustpilot band under the hero) → `ContentRow` (h2 + p + `Button`) → `ColourPanels` tile pair (Loans / Savings, h2 each) → `PhotoBand` (h2 + p + `Button` on a solid panel over the photo) → `ContentRow` app section (h2 + icon list + `StoreBadges`) → `PostsOverview` (h2 + p; cards generated, card titles h3).
 
 **about** — `PageHeader` (h1 + strapline p) → `ContentRow` (h2 + two `Col`) → `StatBlock` → `ContentRow` (h2 + video `Embed`) → `IconGrid heading="Our Values"` (h2; items h3).
 
-**product-category** — `PageHeader` (h1 + p, Lottie) → `BoxSlider heading intro` (h2; each `Box` h3 + bullets + primary `Button` "Apply Now" + secondary `Button` "Learn more") → `IconGrid` (no heading; items h3) → `PopoutBlock` (h2 "How to apply" + `Button`).
+**product-category** — `PageHeader` (h1 + p, Lottie) → `BoxSlider layout="grid" heading intro` (h2; every `Box` h3 + bullets + primary `Button` "Apply now" + secondary `Button` "Learn more", 3 / 2 / 1 grid) → `IconGrid` (no heading; items h3) → `PopoutBlock` (h2 "How to apply" + `Button`).
 
-**product** / **prizesaver** — `PageHeader label` (h1 + intro p + `Button` "Apply now" as its own paragraph) → `ListBlock heading="Benefits for you"` (h2; items bold p) → `PanelSection` (three `Panel` h3 + `PanelFooter` h2 "Got a question?" + `Button`) → loans only: `PopoutBlock` (h2 representative example) → `PopoutBlock` (h2 "Apply" + `Button`) → `VideoSection` (h2 "Why choose us?") → loans + Life Savings: `ContentRow` (h2 "Download our app" + two `Button`s). PrizeSaver differs only in copy (bulleted apply options); it is a separate template so agents can treat it as the flagship/prize-draw product.
+**product** / **prizesaver** — `PageHeader label` (h1 + intro p + `Button` "Apply now" as its own paragraph) → `ListBlock heading="Benefits for you"` (h2; items bold p) → `PanelSection` (three `Panel` h3 + `PanelFooter` h2 "Got a question?" + `Button`) → loans only: `PopoutBlock` (h2 representative example) → `PopoutBlock` (h2 "Apply" + `Button`) → `VideoSection` (h2 "Why choose us?") → loans + Life Savings: `ContentRow` (h2 "Download our app" + `StoreBadges`). PrizeSaver differs only in copy (bulleted apply options); it is a separate template so agents can treat it as the flagship/prize-draw product.
 
 **resources** — `PageHeader` (h1 + p) → any of `ContentRow` (h2 + p + `Button`), `PopoutBlock` (h2 …), `ColourPanels` (h2 per panel), `FAQSection` (`FAQGroup` h2; questions are toggles), `MoneyHelperTool` / `Embed` placeholders, `PostsOverview` (h2).
 
-**blog-home** — `PageHeader` (h1 + intro p) → `PostList level={2}` (card titles h2) → `Pagination`.
+**blog-home** — `PageHeader` (h1 + intro p) → `PostList level={2} featuredFirst` (newest post as a two-column feature on page 1, then the grid; card titles h2) → `Pagination`.
 
 **post** — `PageHeader imageWrap="wrap-blog"` (h1, date, featured image) → body: paragraphs, `##` sections, `###` sub-sections, `####` sub-sub-sections. Scoped CSS keeps the body headings at the sizes the posts were authored at (h2 32px, h3 20px, h4 18px).
 

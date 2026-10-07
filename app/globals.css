@@ -229,3 +229,100 @@ section.header-page div.data-content .h2, section.header-page div.data-content .
 section.postsingle .data-content h2 { font-size: 32px; letter-spacing: -0.1rem; }
 section.postsingle .data-content h3 { font-size: 20px; letter-spacing: -0.08rem; }
 section.postsingle .data-content h4 { font-size: 18px; letter-spacing: -0.05rem; }
+
+/* =====================================================================================
+   Design enhancements (docs/design-enhancements.md, approved by Jim Fell 2026-10-07)
+   ===================================================================================== */
+
+/* T1.1 Type: 65ch measure for running text; 17px body on large screens */
+section.content-rows .data-content p, section.popout-block .data-content p, section.video-section .data-content p, section.postsingle .data-content p, section.postsingle .data-content li, section.header-page .data-content p, section.header .data-content p, section.info-block .data-header p, section.box-slider header.data-header p { max-width: 65ch; }
+p[style*="text-align:center"], p[style*="text-align: center"], section.box-slider header.data-header p { margin-left: auto; margin-right: auto; }
+@media only screen and (min-width: 1200px) { html body { font-size: 17px; } }
+section.postsingle .data-content p, section.content-rows .data-content p, section.popout-block .data-content p { line-height: 1.6; }
+
+/* T1.2 Interactive states: press, focus ring, one radius rule (panels 20 / buttons 10 / inputs 10) */
+.button:active, button:active { transform: scale(0.98); }
+a:focus-visible, button:focus-visible, .button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible, [role="button"]:focus-visible { outline: 3px solid #102c45; outline-offset: 2px; }
+input[type=text], input[type=email], input[type=tel], input[type=url], input[type=number], input[type=search], input:not([type]), textarea, select { border-radius: 10px; }
+input[type=text]:focus, input[type=email]:focus, input[type=tel]:focus, input:not([type]):focus, textarea:focus { border-color: #102c45; }
+
+/* T1.3 Colour discipline: loans pages use green + lilac (panels take the hero tint) */
+section.panel-section div.panel.green { background-color: #8cd697; }
+
+/* T1.4 Footer regulatory statement: the one line that must be easy to read */
+footer .regulatory-statement { font-size: 1.4rem; opacity: 1; }
+
+/* T1.5 Motivated motion, level 3: sections fade up once as they enter; FAQ answers open with a height transition. Nothing loops. */
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    main.main-layout > section:not(.header):not(.header-page):not(.header-title) > .outline { animation: reveal-up linear both; animation-timeline: view(); animation-range: entry 0% entry 28%; }
+    @keyframes reveal-up { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+  }
+  section.faq div.wrap-block div.accordion div.wrap div.inner { transition: grid-template-rows 0.3s ease, padding 0.3s ease; }
+}
+section.faq div.wrap-block div.accordion div.wrap div.inner { display: grid; grid-template-rows: 0fr; padding: 0; overflow: hidden; }
+section.faq div.wrap-block div.accordion div.wrap div.inner.show { display: grid; grid-template-rows: 1fr; padding: 1rem 0; }
+section.faq div.wrap-block div.accordion div.wrap div.inner > .inner-content { min-height: 0; overflow: hidden; }
+
+/* T1.6 Trustpilot strip sits under the hero, not inside it */
+.trust-band { padding: 1.6rem 0 0; }
+.trust-band .outline { display: flex; justify-content: center; }
+.trust-band .trustpilot-widget { position: relative; width: 100%; max-width: 560px; height: 28px; }
+
+/* T2.7 Home: full-width photo band with the copy on a solid panel */
+section.photo-band { padding: 4rem 0; }
+section.photo-band .outline { position: relative; border-radius: var(--radius-brand); overflow: hidden; min-height: 520px; display: grid; align-items: end; }
+section.photo-band .photo-band-media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+section.photo-band .photo-band-panel { position: relative; margin: 4rem; max-width: 560px; padding: 3.2rem; border-radius: var(--radius-brand); }
+section.photo-band .photo-band-panel.yellow { background: #f6c757; }
+section.photo-band .photo-band-panel.lilac { background: #decef9; }
+section.photo-band .photo-band-panel.ltblue { background: #cff4fb; }
+section.photo-band .photo-band-panel .button { margin-bottom: 0; }
+@media (max-width: 767px) {
+  section.photo-band .outline { min-height: 0; display: block; }
+  section.photo-band .photo-band-media img { position: static; height: auto; aspect-ratio: 4 / 3; }
+  section.photo-band .photo-band-panel { margin: 0; max-width: none; border-radius: 0 0 var(--radius-brand) var(--radius-brand); padding: 2.4rem 2rem; }
+}
+
+/* T2.8 Product hubs: every product visible in a 3 / 2 / 1 grid instead of a carousel */
+section.box-slider.box-grid { padding-bottom: 4rem; }
+section.box-slider.box-grid .slick-list { overflow: visible; }
+/* selector carries the theme's own specificity: the slider CSS sets display:flex !important on .slick-track at ≥640px */
+section.box-slider div.wrap-boxslider .slick-track.grid-track { display: grid !important; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2.4rem; width: auto !important; transform: none !important; float: none; }
+section.box-slider div.wrap-boxslider .slick-track.grid-track > .slick-slide { float: none; width: auto; flex: none; display: block; height: auto !important; }
+section.box-slider div.wrap-boxslider .slick-track.grid-track > .slick-slide > .wrap { height: 100%; }
+@media (max-width: 991px) { section.box-slider div.wrap-boxslider .slick-track.grid-track { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 639px) { section.box-slider div.wrap-boxslider .slick-track.grid-track { grid-template-columns: minmax(0, 1fr); } }
+
+/* T2.9 Blog: borderless cards, the whole card is the link, the newest post leads the archive */
+ul.list-posts li div.data-post { border: 0; padding: 0; }
+ul.list-posts li div.data-post div.wrap { padding-top: 1.2rem; }
+ul.list-posts li div.data-post div.wrap div.data-link { position: static; }
+ul.list-posts li div.data-post div.wrap div.data-link a::after { content: ""; position: absolute; inset: 0; }
+ul.list-posts li div.data-post:hover div.wrap div.data-title h2, ul.list-posts li div.data-post:hover div.wrap div.data-title h3 { text-decoration: underline; text-decoration-color: var(--brand-orange-aa); text-underline-offset: 3px; }
+section.posts.posts-archive ul.list-posts li.post-featured { display: block; width: 100%; margin-bottom: 4rem; }
+section.posts.posts-archive ul.list-posts li.post-featured div.data-post { display: grid; grid-template-columns: 3fr 2fr; gap: 3.2rem; align-items: center; }
+section.posts.posts-archive ul.list-posts li.post-featured div.data-post div.wrap div.data-title h2 { font-size: 32px; line-height: 1.1; min-height: 0; }
+section.posts.posts-archive ul.list-posts li.post-featured div.data-post div.wrap div.data-excerpt { font-size: 1.8rem; }
+@media only screen and (min-width: 1200px) { section.posts.posts-archive ul.list-posts li:not(.post-featured) { width: 32%; } }
+@media (max-width: 767px) { section.posts.posts-archive ul.list-posts li.post-featured div.data-post { grid-template-columns: 1fr; } }
+
+/* T2.10 Form states: inline errors under the field */
+.field-error { display: block; color: #b3261e; font-size: 1.4rem; margin: 0.4rem 0 0; font-family: var(--font-menca-bold), sans-serif; }
+.wpcf7-form input[aria-invalid="true"], .wpcf7-form textarea[aria-invalid="true"] { border-color: #b3261e; }
+
+/* T3.12 App store badges */
+.store-badges { display: flex; flex-wrap: wrap; gap: 1.2rem; align-items: center; margin: 1rem 0; }
+.store-badges img { display: block; height: 40px; width: auto; }
+
+/* T1.6 follow-up: the hero kept its height from the Trustpilot strip's padding; restore that spacing now the strip sits below */
+section.header .outline { padding-top: 3rem; }
+section.header-page .outline { padding-top: 2rem; }
+@media only screen and (min-width: 992px) { section.header .outline { padding-top: 15.8rem; } section.header-page .outline { padding-top: 0; } }
+@media only screen and (min-width: 1200px) { section.header .outline { padding-top: 17.8rem; } }
+/* T2.9 follow-up: left-align the archive grid so an odd last card is not centred on its own */
+section.posts.posts-archive ul.list-posts { text-align: left; }
+/* T2.8 follow-up: slick's clearfix pseudo-elements would become grid cells */
+section.box-slider div.wrap-boxslider .slick-track.grid-track::before, section.box-slider div.wrap-boxslider .slick-track.grid-track::after { display: none; }
+/* T1.6 follow-up (phones): the fixed-position nav sits over the top of the hero; the strip used to clear it */
+@media (max-width: 991px) { section.header .outline { padding-top: 11rem; } section.header-page .outline { padding-top: 11rem; } }

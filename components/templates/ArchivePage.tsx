@@ -17,8 +17,8 @@ export function ArchivePage({ title, intro, image, posts, page, totalPages, base
         <h1>{title}</h1>
         {intro && <p>{intro}</p>}
       </PageHeader>
-      <section className="posts"><div className="outline">
-        <PostList posts={posts} level={2} />
+      <section className="posts posts-archive"><div className="outline">
+        <PostList posts={posts} level={2} featuredFirst={page === 1} />
         <Pagination page={page} totalPages={totalPages} base={base} />
       </div></section>
     </main>

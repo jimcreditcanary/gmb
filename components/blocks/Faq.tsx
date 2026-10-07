@@ -17,7 +17,7 @@ export function FAQGroup({ heading, colour, children, index }: { heading: string
           return (
             <div className="wrap" key={i}>
               <a href={`#${id}`} className={`toggle${isOpen ? " show" : ""}`} role="button" aria-expanded={isOpen} aria-controls={id} onClick={(e) => { e.preventDefault(); setOpen(isOpen ? null : i); }}>{item.props.question}</a>
-              <div id={id} className={`inner${isOpen ? " show" : ""}`} hidden={!isOpen}>{item.props.children}</div>
+              <div id={id} className={`inner${isOpen ? " show" : ""}`} aria-hidden={!isOpen} inert={!isOpen}><div className="inner-content">{item.props.children}</div></div>
             </div>
           );
         })}

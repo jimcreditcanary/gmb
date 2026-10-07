@@ -5,12 +5,12 @@ import { Img } from "./Img";
 import { Trustpilot } from "./Trustpilot";
 
 /** One blog card, identical DOM to the theme's `.list-posts li`. */
-export function PostCard({ post, level = 3 }: { post: Page; level?: 2 | 3 }) {
+export function PostCard({ post, level = 3, featured }: { post: Page; level?: 2 | 3; featured?: boolean }) {
   const H = (`h${level}`) as "h2" | "h3";
   const fm = post.frontmatter;
   const img = fm.cardImage || fm.featuredImage;
   return (
-    <li>
+    <li className={featured ? "post-featured" : undefined}>
       <div className="data-post">
         <div className="featured-image">
           <picture className="picture-image">
@@ -27,8 +27,9 @@ export function PostCard({ post, level = 3 }: { post: Page; level?: 2 | 3 }) {
   );
 }
 
-export function PostList({ posts, level = 3 }: { posts: Page[]; level?: 2 | 3 }) {
-  return <ul className="list-posts">{posts.map((p) => <PostCard key={p.frontmatter.slug} post={p} level={level} />)}</ul>;
+/** `featuredFirst`: the newest post leads as a 2-column feature (design-enhancements T2.9), the rest follow in the grid. */
+export function PostList({ posts, level = 3, featuredFirst }: { posts: Page[]; level?: 2 | 3; featuredFirst?: boolean }) {
+  return <ul className="list-posts">{posts.map((p, i) => <PostCard key={p.frontmatter.slug} post={p} level={level} featured={featuredFirst && i === 0} />)}</ul>;
 }
 
 /** Latest posts strip used under product/hub pages (`section.posts`). Generated, never stored as copy. */

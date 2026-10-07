@@ -10,3 +10,4 @@ export { VideoFacade } from "./VideoFacade";
 export { PostsOverview, RelatedPosts, PostList, PostCard, Pagination } from "./Posts";
 export { SectionHeader } from "./SectionHeader";
 export { Button } from "@/components/ui/button";
+export { StoreBadges } from "./StoreBadges";

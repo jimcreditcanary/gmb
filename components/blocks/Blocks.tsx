@@ -157,6 +157,16 @@ export function InfoPanel({ year, children }: { year?: string; children: ReactNo
   return <div className="column"><div className="panel">{year && <div className="data-year">{year}</div>}<div className="data-content">{children}</div></div></div>;
 }
 
+// ---------- PhotoBand (design-enhancements T2.7): full-width photo with the copy on a solid panel ----------
+export function PhotoBand({ image, imageAlt = "", colour = "yellow", children }: { image: string; imageAlt?: string; colour?: string; children: ReactNode }) {
+  return (
+    <section className="photo-band"><div className="outline">
+      <div className="photo-band-media"><Img src={image} alt={imageAlt} sizes="100vw" /></div>
+      <div className={`photo-band-panel ${colour}`}><div className="data-content">{children}</div></div>
+    </div></section>
+  );
+}
+
 // ---------- Embed / tools ----------
 export function Embed({ src, title, height }: { src: string; title?: string; height?: number }) {
   if (/youtube\.com|youtu\.be/.test(src)) return <div className="data-video embed-video"><VideoFacade src={src} title={title} /></div>;

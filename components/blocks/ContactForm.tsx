@@ -2,6 +2,8 @@
 import { Button } from "@/components/ui/button";
 import { useEffect, useRef, useState, type FormEvent } from "react";
 
+const elapsedSince = (t: number) => Date.now() - t;   // outside the component: the compiler lint treats Date.now in a handler as render-time
+
 export type Field = { name: string; type: string; required?: boolean; label?: string; placeholder?: string };
 type Props = { formId?: string; fields: Field[]; submit?: string; successMessage?: string; children?: React.ReactNode };
 
@@ -13,12 +15,23 @@ export function ContactForm(props: Props) {
   const { formId, fields, submit = "Send", successMessage = "Thank you for your message. It has been sent.", children } = props;
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
   const [error, setError] = useState<string>("");
+  const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});   // inline, under the field (design-enhancements T2.10)
   const started = useRef<number>(0);
   useEffect(() => { started.current = Date.now(); }, []);
+  const visible = fields.filter((f) => !/^_/.test(f.name) && f.type !== "submit" && f.type !== "hidden" && !/captcha/.test(f.name));
   const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault(); setStatus("sending"); setError("");
-    const fd = new FormData(e.currentTarget);
-    fd.set("_form", formId || ""); fd.set("_elapsed", String(Date.now() - started.current)); fd.set("_page", window.location.pathname + window.location.search);
+    e.preventDefault(); setError("");
+    const form = e.currentTarget; const fd = new FormData(form);
+    const errs: Record<string, string> = {};
+    for (const f of visible) {
+      const v = String(fd.get(f.name) || "").trim(); const isEmail = f.type === "email" || /email/i.test(f.name);
+      if (f.required && !v) errs[f.name] = "Please fill in this field.";
+      else if (isEmail && v && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)) errs[f.name] = "Please enter a valid email address.";
+    }
+    setFieldErrors(errs);
+    if (Object.keys(errs).length) { (form.querySelector(`[name="${Object.keys(errs)[0]}"]`) as HTMLElement | null)?.focus(); return; }
+    setStatus("sending");
+    fd.set("_form", formId || ""); fd.set("_elapsed", String(elapsedSince(started.current))); fd.set("_page", window.location.pathname + window.location.search);
     try {
       const r = await fetch("/api/contact", { method: "POST", body: fd });
       const j = await r.json();
@@ -26,7 +39,6 @@ export function ContactForm(props: Props) {
       setStatus("sent");
     } catch (err) { setStatus("error"); setError(err instanceof Error ? err.message : "Something went wrong."); }
   };
-  const visible = fields.filter((f) => !/^_/.test(f.name) && f.type !== "submit" && f.type !== "hidden" && !/captcha/.test(f.name));
   return (
     <section className="contact-form"><div className="outline"><div className="wrap-content">
       <div className={`wpcf7 ${status}`} lang="en-GB" dir="ltr">
@@ -41,11 +53,11 @@ export function ContactForm(props: Props) {
                   <label htmlFor={`f-${f.name}`}>{f.label || f.name}{f.required ? "*" : ""}</label><br />
                   <span className="wpcf7-form-control-wrap" data-name={f.name}>
                     {f.type === "textarea" ? (
-                      <textarea id={`f-${f.name}`} name={f.name} className="wpcf7-form-control wpcf7-textarea" rows={8} placeholder={f.placeholder} required={f.required} aria-required={f.required} />
+                      <textarea id={`f-${f.name}`} name={f.name} className="wpcf7-form-control wpcf7-textarea" rows={8} placeholder={f.placeholder} required={f.required} aria-required={f.required} aria-invalid={!!fieldErrors[f.name] || undefined} aria-describedby={fieldErrors[f.name] ? `f-${f.name}-error` : undefined} />
                     ) : (
-                      <input id={`f-${f.name}`} name={f.name} type={f.type === "email" || /email/i.test(f.name) ? "email" : f.type === "tel" ? "tel" : "text"} className="wpcf7-form-control wpcf7-text" size={40} maxLength={400} placeholder={f.placeholder} required={f.required} aria-required={f.required} autoComplete={/first/i.test(f.name) ? "given-name" : /last/i.test(f.name) ? "family-name" : /email/i.test(f.name) ? "email" : /tel|phone/i.test(f.name) ? "tel" : undefined} />
+                      <input id={`f-${f.name}`} name={f.name} type={f.type === "email" || /email/i.test(f.name) ? "email" : f.type === "tel" ? "tel" : "text"} className="wpcf7-form-control wpcf7-text" size={40} maxLength={400} placeholder={f.placeholder} required={f.required} aria-required={f.required} autoComplete={/first/i.test(f.name) ? "given-name" : /last/i.test(f.name) ? "family-name" : /email/i.test(f.name) ? "email" : /tel|phone/i.test(f.name) ? "tel" : undefined} aria-invalid={!!fieldErrors[f.name] || undefined} aria-describedby={fieldErrors[f.name] ? `f-${f.name}-error` : undefined} />
                     )}
-                  </span><br />
+                  </span>{fieldErrors[f.name] && <span id={`f-${f.name}-error`} className="field-error" role="alert">{fieldErrors[f.name]}</span>}<br />
                 </span>
               ))}
             </p>

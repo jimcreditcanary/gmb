@@ -18,6 +18,7 @@ const mdxText = (m: string) => {
 const words = (s: string) => { const m = new Map<string, number>(); for (const w of s.split(" ").filter(Boolean)) m.set(w, (m.get(w) || 0) + 1); return m; };
 
 const snapDir = path.join(process.cwd(), "content/_locked"); fs.mkdirSync(snapDir, { recursive: true });
+const ACCEPT = process.argv.includes("--accept");   // approved copy change: rewrite the snapshot from the MDX (say so in the commit)
 let failures = 0, checked = 0;
 for (const p of getAllPages().filter((x) => x.frontmatter.locked)) {
   const slug = p.frontmatter.slug; const snapFile = path.join(snapDir, (slug === "/" ? "home" : slug.replace(/^\/|\/$/g, "").replace(/\//g, "__")) + ".txt");
@@ -40,7 +41,10 @@ for (const p of getAllPages().filter((x) => x.frontmatter.locked)) {
   for (const [w, c] of b) if ((a.get(w) || 0) < c) extra.push(w);
   const ignorable = (w: string) => /^[>…•().,;:!?"\x27-]*$/.test(w) || /^\d+\.$/.test(w);
   const m2 = missing.filter((w) => !ignorable(w)), e2 = extra.filter((w) => !ignorable(w));
-  if (m2.length || e2.length) { failures++; console.error(`✖ LOCKED TEXT CHANGED ${slug}\n    missing: ${m2.slice(0, 20).join(" ")}\n    added:   ${e2.slice(0, 20).join(" ")}`); }
+  if (m2.length || e2.length) {
+    if (ACCEPT) { fs.writeFileSync(snapFile, mdxText(p.body)); console.log(`↻ snapshot updated ${slug}\n    missing: ${m2.slice(0, 20).join(" ")}\n    added:   ${e2.slice(0, 20).join(" ")}`); }
+    else { failures++; console.error(`✖ LOCKED TEXT CHANGED ${slug}\n    missing: ${m2.slice(0, 20).join(" ")}\n    added:   ${e2.slice(0, 20).join(" ")}`); }
+  }
 }
 console.log(failures ? `✖ ${failures} of ${checked} locked pages differ from source` : `✔ ${checked} locked pages match their source text`);
 process.exit(failures ? 1 : 0);

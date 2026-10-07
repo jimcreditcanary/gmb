@@ -5,17 +5,18 @@ import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { SectionHeader } from "./SectionHeader";
 
 /** Product teaser slider. The theme used slick (4/3/2/1 per row at 1200/992/640). Reproduced with CSS scroll-snap + arrows: no carousel JS. */
-export function BoxSlider({ heading, intro, align, children }: { heading?: string; intro?: string; align?: "center" | "right"; children: ReactNode }) {
+export function BoxSlider({ heading, intro, align, layout, children }: { heading?: string; intro?: string; align?: "center" | "right"; layout?: "slider" | "grid"; children: ReactNode }) {
+  const grid = layout === "grid"; // every product visible, no carousel (docs/design-enhancements.md T2.8)
   const track = useRef<HTMLDivElement>(null);
   const scroll = (dir: 1 | -1) => { const el = track.current; if (!el) return; const w = el.firstElementChild?.getBoundingClientRect().width || 300; el.scrollBy({ left: dir * w, behavior: "smooth" }); };
   return (
-    <section className="box-slider bg-white"><div className="outline">
+    <section className={`box-slider bg-white${grid ? " box-grid" : ""}`}><div className="outline">
       {(heading || intro) && <SectionHeader heading={heading} align={align}>{intro && <p style={align ? { textAlign: align } : undefined} dangerouslySetInnerHTML={{ __html: intro }} />}</SectionHeader>}
       <div className="wrap-boxslider">
         <div className="init-boxslider slick-initialized slick-slider">
-          <button type="button" className="slick-next" aria-label="Previous" onClick={() => scroll(-1)}><FontAwesomeIcon icon={faArrowLeft} /></button>
-          <div className="slick-list"><div className="slick-track snap-track" ref={track}>{children}</div></div>
-          <button type="button" className="slick-prev" aria-label="Next" onClick={() => scroll(1)}><FontAwesomeIcon icon={faArrowRight} /></button>
+          {!grid && <button type="button" className="slick-next" aria-label="Previous" onClick={() => scroll(-1)}><FontAwesomeIcon icon={faArrowLeft} /></button>}
+          <div className="slick-list"><div className={`slick-track ${grid ? "grid-track" : "snap-track"}`} ref={track}>{children}</div></div>
+          {!grid && <button type="button" className="slick-prev" aria-label="Next" onClick={() => scroll(1)}><FontAwesomeIcon icon={faArrowRight} /></button>}
         </div>
       </div>
     </div></section>

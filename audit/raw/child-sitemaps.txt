@@ -1,0 +1,6 @@
+https://www.gmbcreditunion.com/post-sitemap.xml
+https://www.gmbcreditunion.com/page-sitemap.xml
+https://www.gmbcreditunion.com/file-sitemap.xml
+https://www.gmbcreditunion.com/category-sitemap.xml
+https://www.gmbcreditunion.com/post_tag-sitemap.xml
+https://www.gmbcreditunion.com/filter-files-sitemap.xml

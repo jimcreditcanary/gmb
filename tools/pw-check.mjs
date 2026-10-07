@@ -1,0 +1,11 @@
+import { chromium } from 'playwright';
+const browser = await chromium.launch({ headless: false, channel: 'chrome' });
+const ctx = await browser.newContext({ viewport: { width: 1440, height: 900 } });
+const page = await ctx.newPage();
+const resp = await page.goto('https://www.gmbcreditunion.com/', { waitUntil: 'domcontentloaded', timeout: 60000 });
+console.log('status', resp.status());
+console.log('ua', await page.evaluate(() => navigator.userAgent));
+console.log('title', await page.title());
+console.log('generator', await page.evaluate(() => document.querySelector('meta[name=generator]')?.content));
+console.log('gtm', (await page.content()).includes('GTM-NQCV3C4'));
+await browser.close();

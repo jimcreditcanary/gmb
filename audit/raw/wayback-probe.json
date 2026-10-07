@@ -1,0 +1,1955 @@
+[
+ {
+  "url": "https://www.gmbcreditunion.com/10-ways-improve-your-credit-score",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20200813074446",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/10-ways-improve-your-credit-score/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/2021-agm-summary",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20210516031921",
+  "live_status": 404,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/2022-agm-summary",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20220528082332",
+  "live_status": 404,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/?page=0",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20210122212146",
+  "live_status": 200,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/?page=1",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20210122221859",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/?page=2",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20210122232753",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/?page=3",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20210516013922",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/?page=4",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20220528065856",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/?page=5",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20220528073704",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/?page=6",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20220625051643",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/?page=7",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20230608090711",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/?page=8",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20230608073016",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/About-Us",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20170610144423",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/About-Us/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/alternatives-short-term-credit",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20220117021130",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/alternatives-short-term-credit/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/annual-dividend",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20220528083139",
+  "live_status": 404,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/annual-report-2020/",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20230923200002",
+  "live_status": 404,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/Apply-for-a-Member-Loan",
+  "wb_status": "302",
+  "mime": "text/html",
+  "ts": "20170714021939",
+  "live_status": 404,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/Apply-for-Member-Savings-Account",
+  "wb_status": "302",
+  "mime": "text/html",
+  "ts": "20170610112702",
+  "live_status": 404,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/budget-planner",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20221130211320",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/resources/member-helper/budget-planner/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/calculator.asp",
+  "wb_status": "302",
+  "mime": "text/html",
+  "ts": "20170610084634",
+  "live_status": 404,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/cash-flow-king",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20220809104234",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/cash-flow-king/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/category-sitemap.xml",
+  "wb_status": "200",
+  "mime": "text/xml",
+  "ts": "20240519061601",
+  "live_status": 200,
+  "redirect_target": "",
+  "content_type": "text/xml"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/category/uncategorised/page/2/",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20241205043819",
+  "live_status": 200,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/category/uncategorised/page/3/",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20241205044221",
+  "live_status": 200,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/category/uncategorised/page/4/",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20241205044452",
+  "live_status": 200,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/category/uncategorised/page/5/",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20241205044724",
+  "live_status": 200,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/category/uncategorised/page/6/",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20241205044948",
+  "live_status": 200,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/category/uncategorised/page/7/",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20250120132019",
+  "live_status": 200,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/category/uncategorised/page/8/",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20241205045535",
+  "live_status": 200,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/celebrating-two-years-members-prize-draw",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20230609153917",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/celebrating-two-years-members-prize-draw/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/complaints",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20221130204624",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/complaints/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/consolidation-loans-plan-brighter-financial-future",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20210916204349",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/consolidation-loans-plan-brighter-financial-future/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/Contact-Us",
+  "wb_status": "302",
+  "mime": "text/html",
+  "ts": "20170610152612",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/Contact-Us/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/cost-living",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20221130194313",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/cost-of-living/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/credit-crisis-real-impact-short-term-credit",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20220117015400",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/credit-crisis-real-impact-short-term-credit/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/creditview",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20190817130653",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/dealing-coronavirus",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20230609134752",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/dealing-coronavirus/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/debt-advice-locator",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20221130210720",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/resources/member-helper/debt-advice-locator/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/Downloads",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20170610062128",
+  "live_status": 404,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/Easy-Access-Member-Savings",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20170610161231",
+  "live_status": 404,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/faqs",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20200925013030",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/faqs/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/feed/",
+  "wb_status": "301",
+  "mime": "application/x-httpd-ea-php70",
+  "ts": "20250114154411",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/",
+  "content_type": ""
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/feel-positive-about-saving-and-confident-about-borrowing/",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20230923203722",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/feel-positive-about-saving-and-borrowing/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/file-sitemap.xml",
+  "wb_status": "200",
+  "mime": "text/xml",
+  "ts": "20240519063600",
+  "live_status": 200,
+  "redirect_target": "",
+  "content_type": "text/xml"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/file/board-mins-14th-june-2023/",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20231205013107",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/file/board-minutes-14th-june-2023/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/file/board-mins-22nd-march-2023/",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20231205025520",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/file/board-minutes-22nd-march-2023/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/file/board-mins-27th-september-2023/",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20231205023708",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/file/board-minutes-27th-september-2023/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/file/csv-file-procedure/",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20230923220053",
+  "live_status": 404,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/file/handover-policy-pack/",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20230923204517",
+  "live_status": 404,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/file/risk-assessment-2023-gmbcu/",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20230923221456",
+  "live_status": 404,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/file/risk-assessment-statements/",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20230923202215",
+  "live_status": 404,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/filter-files-sitemap.xml",
+  "wb_status": "200",
+  "mime": "text/xml",
+  "ts": "20240519063404",
+  "live_status": 200,
+  "redirect_target": "",
+  "content_type": "text/xml"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/filter/board-minutes/page/2/",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20241205032111",
+  "live_status": 200,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/filter/governance/page/2/",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20250518035855",
+  "live_status": 200,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/filter/january-2026/",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20260206230025",
+  "live_status": 404,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/filter/november-2025-2/",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20260118135329",
+  "live_status": 404,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/filter/policies/page/2/",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20251215205447",
+  "live_status": 200,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/filter/policies/page/3/",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20251215195306",
+  "live_status": 200,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/filter/policies/page/4/",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20251215210649",
+  "live_status": 200,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/filter/policies/page/5/",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20251215201144",
+  "live_status": 200,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/filter/policies/page/6/",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20251215211954",
+  "live_status": 200,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/filter/policies/page/7/",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20251215202439",
+  "live_status": 200,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/filter/september-2025-2/",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20251107121659",
+  "live_status": 404,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/filter/tips",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20220714003751",
+  "live_status": 404,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/Financial-Wellbeing",
+  "wb_status": "302",
+  "mime": "text/html",
+  "ts": "20190123030002",
+  "live_status": 404,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/five-financial-goals-next-financial-year",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20220528071516",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/five-financial-goals-next-financial-year/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/GMB-Branch-Account",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20170610120622",
+  "live_status": 404,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/gmb-credit-union-prize-draw-rules",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20220625044222",
+  "live_status": 404,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/gmb-credit-union-prize-draw/apply/",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20230923203031",
+  "live_status": 404,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/gmbcu-members-prize-draw",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20210417113445",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/gmb-credit-union-prize-draw/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/home",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20200216020348",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/how-and-why-help-your-children-form-good-money-habits",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20211016191716",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/help-your-children-form-good-money-habits/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/how-check-your-credit-score-free",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20220528080620",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/how-check-your-credit-score-free/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/how-financial-problems-affect-your-mental-health",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20200806161058",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/how-financial-problems-affect-your-mental-health/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/how-recognise-and-avoid-most-common-finance-scams",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20230320180557",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/how-recognise-and-avoid-most-common-finance-scams/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/images/library/documents/05052016-162152.pdf",
+  "wb_status": "200",
+  "mime": "application/pdf",
+  "ts": "20171017074028",
+  "live_status": 404,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/importance-understanding-ivas",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20220928024855",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/importance-understanding-ivas/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/index.asp",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20170610133132",
+  "live_status": 404,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/index.php/",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20191123015528",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/index.php/2021-agm-summary",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20210916220357",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/2021-agm-summary",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/index.php/about-us",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20191123025309",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/about-us/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/index.php/contact-us",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20191123023708",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/contact-us/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/index.php/creditview",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20191123023232",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/creditview",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/index.php/faqs",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20201031200904",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/faqs/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/index.php/filter/tips",
+  "wb_status": "301",
+  "mime": "text/html",
+  "ts": "20220714003717",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/filter/tips",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/index.php/gmbcu-members-prize-draw",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20210916222602",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/gmbcu-members-prize-draw/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/index.php/how-financial-problems-affect-your-mental-health",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20220117070313",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/how-financial-problems-affect-your-mental-health/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/index.php/loan-application",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20200813082352",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/loan-application-rejected-what-now/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/index.php/loan-application-rejected-what-now",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20210916215158",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/loan-application-rejected-what-now/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/index.php/loans",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20191123010809",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/loans/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/index.php/member-saving-account-application",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20200813082555",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/member-saving-account-application",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/index.php/nivo",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20200813085137",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/nivo",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/index.php/node",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20191123021434",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/node",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/index.php/node/21",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20191113032745",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/node/21",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/index.php/node/22",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20191113032801",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/node/22",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/index.php/node/23",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20191113032707",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/node/23",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/index.php/node/24",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20191113032713",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/node/24",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/index.php/node/28",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20210122215212",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/node/28",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/index.php/node/29",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20210122223717",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/node/29",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/index.php/node/38",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20210118205759",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/node/38",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/index.php/our-blog",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20201031184511",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/our-blog/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/index.php/privacy-policy",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20200813082747",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/privacy-policy/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/index.php/savings-accounts",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20191123021525",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/savings-accounts",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/index.php/useful-links",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20200813082246",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/useful-links",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/index.php/user/login/",
+  "wb_status": "301",
+  "mime": "text/html",
+  "ts": "20220714003801",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/user/login/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/index.php/user/logout/",
+  "wb_status": "302",
+  "mime": "text/html",
+  "ts": "20220714003854",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/user/logout/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/index.php/user/password/",
+  "wb_status": "301",
+  "mime": "text/html",
+  "ts": "20220714003900",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/user/password/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/index.php/virtuous-circle",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20210916214531",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/virtuous-circle/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/junior-saver-account-application",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20200925011836",
+  "live_status": 404,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/lets-get-transparent-loan-interest-rates",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20201028121628",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/lets-get-transparent-loan-interest-rates/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/loan-application",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20190817130711",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/loan-application-rejected-what-now/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/loan-application-rejected-what-now",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20210618141855",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/loan-application-rejected-what-now/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/Loan-Terms-and-Conditions",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20170610153852",
+  "live_status": 404,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/loans",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20190817130630",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/loans/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/loans-old",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20200925013706",
+  "live_status": 404,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/login.asp",
+  "wb_status": "302",
+  "mime": "text/html",
+  "ts": "20170610111059",
+  "live_status": 404,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/media/AGM-Agenda-2024-2.pdf",
+  "wb_status": "200",
+  "mime": "application/pdf",
+  "ts": "20240529013432",
+  "live_status": 200,
+  "redirect_target": "",
+  "content_type": "application/pdf"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/media/Anti-Money-Laundering-Reporting-Officer-2023-AGM-2024.pdf",
+  "wb_status": "200",
+  "mime": "application/pdf",
+  "ts": "20240529012616",
+  "live_status": 200,
+  "redirect_target": "",
+  "content_type": "application/pdf"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/media/Blog-images-11-e1750860743946-600x400.png&quot;",
+  "wb_status": "301",
+  "mime": "text/html",
+  "ts": "20260103203502",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/media/Blog-images-11-e1750860743946-600x400.png&quot",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/media/Board-of-Directors-Report-AGM-2024.pdf",
+  "wb_status": "200",
+  "mime": "application/pdf",
+  "ts": "20240529023623",
+  "live_status": 200,
+  "redirect_target": "",
+  "content_type": "application/pdf"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/media/Complaints-Director-Report-AGM-2024.pdf",
+  "wb_status": "200",
+  "mime": "application/pdf",
+  "ts": "20240529011732",
+  "live_status": 200,
+  "redirect_target": "",
+  "content_type": "application/pdf"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/media/CU-Save-Header-RGB-LOTTIE2.json",
+  "wb_status": "200",
+  "mime": "application/json",
+  "ts": "20250418213241",
+  "live_status": 200,
+  "redirect_target": "",
+  "content_type": "application/json"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/media/Friends-of-GMBCU-Prize-Draw-Report-2024.pdf",
+  "wb_status": "200",
+  "mime": "application/pdf",
+  "ts": "20240529030057",
+  "live_status": 200,
+  "redirect_target": "",
+  "content_type": "application/pdf"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/media/GMB-Credit-Union-Annual-Report-2025.pdf",
+  "wb_status": "200",
+  "mime": "application/pdf",
+  "ts": "20251206123510",
+  "live_status": 200,
+  "redirect_target": "",
+  "content_type": "application/pdf"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/media/GMBCU-Annual-Report-2023-1.pdf",
+  "wb_status": "200",
+  "mime": "application/pdf",
+  "ts": "20240813070017",
+  "live_status": 200,
+  "redirect_target": "",
+  "content_type": "application/pdf"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/media/GMBCU-Annual-Report-2024-4-compressed.pdf",
+  "wb_status": "200",
+  "mime": "application/pdf",
+  "ts": "20240424091539",
+  "live_status": 200,
+  "redirect_target": "",
+  "content_type": "application/pdf"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/media/GMBCU-Loan-TCs-1.pdf",
+  "wb_status": "200",
+  "mime": "application/pdf",
+  "ts": "20250408112057",
+  "live_status": 200,
+  "redirect_target": "",
+  "content_type": "application/pdf"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/media/GMBCU-Loan-TCs.pdf",
+  "wb_status": "200",
+  "mime": "application/pdf",
+  "ts": "20250114145022",
+  "live_status": 200,
+  "redirect_target": "",
+  "content_type": "application/pdf"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/media/GMBCU-Supervisory-Report-AGM-2024-1.pdf",
+  "wb_status": "200",
+  "mime": "application/pdf",
+  "ts": "20240529031011",
+  "live_status": 200,
+  "redirect_target": "",
+  "content_type": "application/pdf"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/media/Minutes-of-2023-AGM-2024.pdf",
+  "wb_status": "200",
+  "mime": "application/pdf",
+  "ts": "20240529013050",
+  "live_status": 200,
+  "redirect_target": "",
+  "content_type": "application/pdf"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/media/PrizeSaver-Terms-Conditions-Hans-info-1.pdf",
+  "wb_status": "200",
+  "mime": "application/pdf",
+  "ts": "20240519102035",
+  "live_status": 200,
+  "redirect_target": "",
+  "content_type": "application/pdf"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/media/Treasurers-Report-2023-AGM-2024.pdf",
+  "wb_status": "200",
+  "mime": "application/pdf",
+  "ts": "20240529021447",
+  "live_status": 200,
+  "redirect_target": "",
+  "content_type": "application/pdf"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/meet-dennis-member-case-study",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20220809103115",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/meet-dennis-member-case-study/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/Member-Loans",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20170610104832",
+  "live_status": 404,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/member-saving-account-application",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20190817130642",
+  "live_status": 404,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/money-navigator",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20221130192840",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/resources/member-helper/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/money-talk-kids-why-you-need-start-your-childrens-financial-education-now/",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20230923210200",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/childrens-financial-education/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/navigating-financial-storm-how-we-can-help",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20221130213716",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/navigating-financial-storm-how-we-can-help/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/news.asp",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20170610070656",
+  "live_status": 404,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/nivo",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20190817130619",
+  "live_status": 404,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/nivo-messaging-app-has-arrived",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20220528072555",
+  "live_status": 404,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/Noddle-Free-for-Life-Credit-Report",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20190123033221",
+  "live_status": 404,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/node",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20190920203745",
+  "live_status": 404,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/node/21",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20190817130657",
+  "live_status": 404,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/node/22",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20190817131457",
+  "live_status": 404,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/node/23",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20190817134205",
+  "live_status": 404,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/node/24",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20190817130556",
+  "live_status": 404,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/node/28",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20201031182650",
+  "live_status": 404,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/node/29",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20210122223819",
+  "live_status": 404,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/node/30",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20201031183137",
+  "live_status": 404,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/node/33",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20200813080437",
+  "live_status": 404,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/node/35",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20200806151826",
+  "live_status": 404,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/node/38",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20200806152905",
+  "live_status": 404,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/node/60",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20210122221727",
+  "live_status": 404,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/node/61",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20210122232524",
+  "live_status": 404,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/node/94",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20210624000043",
+  "live_status": 404,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/one-year-members-prize-draw",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20220528082257",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/one-year-members-prize-draw/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/options-dealing-debt",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20211016184131",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/options-dealing-debt/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/our-blog",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20200813084413",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/our-blog/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/our-blog/page/2/",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20230923220832",
+  "live_status": 200,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/our-blog/page/3/",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20230923213225",
+  "live_status": 200,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/our-blog/page/4/",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20230923205517",
+  "live_status": 200,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/our-blog/page/5/",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20230923201726",
+  "live_status": 200,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/our-blog/page/6/",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20230923215610",
+  "live_status": 200,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/our-blog/page/7/",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20230923211712",
+  "live_status": 200,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/our-blog/page/8/",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20240908221656",
+  "live_status": 200,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/our-blog?page=0",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20200930175601",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/our-blog/?page=0",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/our-blog?page=1",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20200930180037",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/our-blog/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/our-blog?page=2",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20200930180649",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/our-blog/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/our-blog?page=3",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20210118192852",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/our-blog/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/our-blog?page=4",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20211016175636",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/our-blog/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/our-blog?page=5",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20220117005224",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/our-blog/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/our-blog?page=6",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20220528071845",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/our-blog/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/our-blog?page=7",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20220809104309",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/our-blog/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/our-blog?page=8",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20230320185719",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/our-blog/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/our-enhanced-member-loans-explained",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20200930174834",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/our-enhanced-member-loans-explained/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/overdraft-fees-are-changing",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20200813081731",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/overdraft-fees-are-changing/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/page-sitemap.xml",
+  "wb_status": "200",
+  "mime": "text/xml",
+  "ts": "20240519063757",
+  "live_status": 200,
+  "redirect_target": "",
+  "content_type": "text/xml"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/pagenotfound.asp",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20170613055532",
+  "live_status": 404,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/post-sitemap.xml",
+  "wb_status": "200",
+  "mime": "text/xml",
+  "ts": "20240519143043",
+  "live_status": 200,
+  "redirect_target": "",
+  "content_type": "text/xml"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/post_tag-sitemap.xml",
+  "wb_status": "200",
+  "mime": "text/xml",
+  "ts": "20250727063629",
+  "live_status": 200,
+  "redirect_target": "",
+  "content_type": "text/xml"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/privacy-policy",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20190817133206",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/privacy-policy/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/promotional-toolkit",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20200925011959",
+  "live_status": 404,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/README.txt",
+  "wb_status": "200",
+  "mime": "text/plain",
+  "ts": "20220714003714",
+  "live_status": 404,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/robots.txt",
+  "wb_status": "200",
+  "mime": "text/plain",
+  "ts": "20160810084349",
+  "live_status": 200,
+  "redirect_target": "",
+  "content_type": "text/plain"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/rss.xml",
+  "wb_status": "200",
+  "mime": "application/rss+xml",
+  "ts": "20210122213828",
+  "live_status": 404,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/save-now-spend-later",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20230201192338",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/save-now-spend-later/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/save-secure-web-application",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20200930184733",
+  "live_status": 404,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/savings-accounts",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20190817135623",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/savings/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/savings-accounts-terms-conditions",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20190817130706",
+  "live_status": 404,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/savings/christmas-saver/apply/",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20230923213011",
+  "live_status": 404,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/savings/junior-saver/",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20231004062901",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/savings/young-saver/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/savings/junior-saver/apply/",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20230923201542",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/savings/young-saver/apply/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/savings/prizesaver/apply/",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20240302192108",
+  "live_status": 404,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/savings/young-saver/apply/",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20240302185600",
+  "live_status": 404,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/shocking-truth-about-short-term-credit",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20211206001646",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/shocking-truth-about-short-term-credit/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/sign-our-mailing-list",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20220625052815",
+  "live_status": 404,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/simple-money-management-tips-feel-better-about-your-finances/",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20230923203932",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/simple-money-management-tips/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/sitemap.xml",
+  "wb_status": "200",
+  "mime": "text/xml",
+  "ts": "20220713203208",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/sitemap_index.xml",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/sitemap_index.xml",
+  "wb_status": "200",
+  "mime": "text/xml",
+  "ts": "20240519054625",
+  "live_status": 200,
+  "redirect_target": "",
+  "content_type": "text/xml"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/Suggestion-Box",
+  "wb_status": "302",
+  "mime": "text/html",
+  "ts": "20170714101129",
+  "live_status": 404,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/supporting-gmb-members-through-troubled-times",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20210118185433",
+  "live_status": 404,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/top-web-application-form",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20200930191703",
+  "live_status": 404,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/ultimate-guide-open-banking",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20210925130027",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/ultimate-guide-open-banking/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/use-our-nivo-app-and-stay-control",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20220528063522",
+  "live_status": 404,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/Useful-Links",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20170610155916",
+  "live_status": 404,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/user/login/",
+  "wb_status": "301",
+  "mime": "text/html",
+  "ts": "20220714003722",
+  "live_status": 404,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/user/logout/",
+  "wb_status": "302",
+  "mime": "text/html",
+  "ts": "20220714003850",
+  "live_status": 404,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/user/password/",
+  "wb_status": "301",
+  "mime": "text/html",
+  "ts": "20220714003743",
+  "live_status": 404,
+  "redirect_target": "",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/virtuous-circle",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20210417114513",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/virtuous-circle/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/we-are-delivering-how-were-responding-our-members-needs",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20201028114518",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/we-are-delivering-how-were-responding-our-members-needs/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/what-credit-and-why-does-it-matter",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20200813074909",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/what-credit-and-why-does-it-matter/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/what-do-members-need-know-applying-loan",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20210225042125",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/what-do-members-need-know-applying-loan/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/where-go-if-youre-feeling-stressed-about-money",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20201028104134",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/where-go-if-youre-feeling-stressed-about-money/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/why-credit-unions-are-now-more-important-ever",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20201028110017",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/why-credit-unions-are-now-more-important-ever/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/working-towards-brighter-financial-future",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20220713131615",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/working-towards-brighter-financial-future/",
+  "content_type": "text/html"
+ },
+ {
+  "url": "https://www.gmbcreditunion.com/your-money-now-and-whats-next",
+  "wb_status": "200",
+  "mime": "text/html",
+  "ts": "20230320195239",
+  "live_status": 301,
+  "redirect_target": "https://www.gmbcreditunion.com/your-money-now-and-whats-next/",
+  "content_type": "text/html"
+ }
+]

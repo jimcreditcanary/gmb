@@ -1,0 +1,657 @@
+{
+ "/": [
+  "section.header.lilac",
+  "section.content-rows",
+  "section.content-rows",
+  "section.content-rows",
+  "section.content-rows",
+  "section.content-rows",
+  "section.posts-overview"
+ ],
+ "/our-blog/": [
+  "section.header-page.yellow",
+  "section.posts"
+ ],
+ "/loan-application-rejected-what-now/": [
+  "section.header-page.yellow",
+  "section.postsingle"
+ ],
+ "/saving-money-for-life-events/": [
+  "section.header-page.yellow",
+  "section.postsingle"
+ ],
+ "/7-ways-to-save-money-over-the-summer-holidays/": [
+  "section.header-page.yellow",
+  "section.postsingle"
+ ],
+ "/what-a-change-of-government-means-for-your-wallet/": [
+  "section.header-page.yellow",
+  "section.postsingle"
+ ],
+ "/avoid-loan-sharks-and-stay-smart-with-your-money/": [
+  "section.header-page.yellow",
+  "section.postsingle"
+ ],
+ "/2025-agm-summary/": [
+  "section.header-page.yellow",
+  "section.postsingle"
+ ],
+ "/heres-why-you-should-teach-your-children-how-to-manage-their-money-this-summer/": [
+  "section.header-page.yellow",
+  "section.postsingle"
+ ],
+ "/retail-therapy-or-financial-trap-the-real-reason-we-overspend/": [
+  "section.header-page.yellow",
+  "section.postsingle"
+ ],
+ "/celebrating-25-years-of-gmbcu/": [
+  "section.header-page.yellow",
+  "section.postsingle"
+ ],
+ "/childrens-financial-education/": [
+  "section.header-page.yellow",
+  "section.postsingle"
+ ],
+ "/summer-fun-on-a-budget/": [
+  "section.header-page.yellow",
+  "section.postsingle"
+ ],
+ "/2024-agm-summary/": [
+  "section.header-page.yellow",
+  "section.postsingle"
+ ],
+ "/2023-agm-summary/": [
+  "section.header-page.yellow",
+  "section.postsingle"
+ ],
+ "/alternatives-short-term-credit/": [
+  "section.header-page.yellow",
+  "section.postsingle"
+ ],
+ "/cash-flow-king/": [
+  "section.header-page.yellow",
+  "section.postsingle"
+ ],
+ "/celebrating-two-years-members-prize-draw/": [
+  "section.header-page.yellow",
+  "section.postsingle"
+ ],
+ "/consolidation-loans-plan-brighter-financial-future/": [
+  "section.header-page.yellow",
+  "section.postsingle"
+ ],
+ "/creating-good-money-habits-save-as-you-borrow/": [
+  "section.header-page.yellow",
+  "section.postsingle"
+ ],
+ "/credit-crisis-real-impact-short-term-credit/": [
+  "section.header-page.yellow",
+  "section.postsingle"
+ ],
+ "/dealing-coronavirus/": [
+  "section.header-page.yellow",
+  "section.postsingle"
+ ],
+ "/feel-positive-about-saving-and-borrowing/": [
+  "section.header-page.yellow",
+  "section.postsingle"
+ ],
+ "/five-financial-goals-next-financial-year/": [
+  "section.header-page.yellow",
+  "section.postsingle"
+ ],
+ "/help-your-children-form-good-money-habits/": [
+  "section.header-page.yellow",
+  "section.postsingle"
+ ],
+ "/how-did-our-members-get-involved-us/": [
+  "section.header-page.yellow",
+  "section.postsingle"
+ ],
+ "/how-recognise-and-avoid-most-common-finance-scams/": [
+  "section.header-page.yellow",
+  "section.postsingle"
+ ],
+ "/importance-understanding-ivas/": [
+  "section.header-page.yellow",
+  "section.postsingle"
+ ],
+ "/managing-your-money-with-your-credit-union/": [
+  "section.header-page.yellow",
+  "section.postsingle"
+ ],
+ "/meet-dennis-member-case-study/": [
+  "section.header-page.yellow",
+  "section.postsingle"
+ ],
+ "/meet-gary-member-case-study/": [
+  "section.header-page.yellow",
+  "section.postsingle"
+ ],
+ "/navigating-financial-storm-how-we-can-help/": [
+  "section.header-page.yellow",
+  "section.postsingle"
+ ],
+ "/one-year-members-prize-draw/": [
+  "section.header-page.yellow",
+  "section.postsingle"
+ ],
+ "/options-dealing-debt/": [
+  "section.header-page.yellow",
+  "section.postsingle"
+ ],
+ "/overdraft-fees-are-changing/": [
+  "section.header-page.yellow",
+  "section.postsingle"
+ ],
+ "/save-now-spend-later/": [
+  "section.header-page.yellow",
+  "section.postsingle"
+ ],
+ "/shocking-truth-about-short-term-credit/": [
+  "section.header-page.yellow",
+  "section.postsingle"
+ ],
+ "/simple-money-management-tips/": [
+  "section.header-page.yellow",
+  "section.postsingle"
+ ],
+ "/supporting-our-members-through-covid-19/": [
+  "section.header-page.yellow",
+  "section.postsingle"
+ ],
+ "/ultimate-guide-open-banking/": [
+  "section.header-page.yellow",
+  "section.postsingle"
+ ],
+ "/we-asked-our-members-describe-us-3-words/": [
+  "section.header-page.yellow",
+  "section.postsingle"
+ ],
+ "/what-do-members-need-know-applying-loan/": [
+  "section.header-page.yellow",
+  "section.postsingle"
+ ],
+ "/what-do-our-members-most-about-us/": [
+  "section.header-page.yellow",
+  "section.postsingle"
+ ],
+ "/where-go-if-youre-feeling-stressed-about-money/": [
+  "section.header-page.yellow",
+  "section.postsingle"
+ ],
+ "/which-loan-best-you/": [
+  "section.header-page.yellow",
+  "section.postsingle"
+ ],
+ "/why-is-saving-money-important/": [
+  "section.header-page.yellow",
+  "section.postsingle"
+ ],
+ "/why-our-members-choose-us/": [
+  "section.header-page.yellow",
+  "section.postsingle"
+ ],
+ "/working-towards-brighter-financial-future/": [
+  "section.header-page.yellow",
+  "section.postsingle"
+ ],
+ "/your-money-now-and-whats-next/": [
+  "section.header-page.yellow",
+  "section.postsingle"
+ ],
+ "/how-financial-problems-affect-your-mental-health/": [
+  "section.header-page.yellow",
+  "section.postsingle"
+ ],
+ "/lets-get-transparent-loan-interest-rates/": [
+  "section.header-page.yellow",
+  "section.postsingle"
+ ],
+ "/our-enhanced-member-loans-explained/": [
+  "section.header-page.yellow",
+  "section.postsingle"
+ ],
+ "/simplify-your-personal-finance-options/": [
+  "section.header-page.yellow",
+  "section.postsingle"
+ ],
+ "/we-are-delivering-how-were-responding-our-members-needs/": [
+  "section.header-page.yellow",
+  "section.postsingle"
+ ],
+ "/why-credit-unions-are-now-more-important-ever/": [
+  "section.header-page.yellow",
+  "section.postsingle"
+ ],
+ "/what-is-a-credit-union-and-how-does-it-work/": [
+  "section.header-page.yellow",
+  "section.postsingle"
+ ],
+ "/how-to-get-involved-in-the-gmb-credit-union/": [
+  "section.header-page.yellow",
+  "section.postsingle"
+ ],
+ "/members-saver-accounts/": [
+  "section.header-page.yellow",
+  "section.postsingle"
+ ],
+ "/how-check-your-credit-score-free/": [
+  "section.header-page.yellow",
+  "section.postsingle"
+ ],
+ "/how-build-or-improve-your-credit-score/": [
+  "section.header-page.yellow",
+  "section.postsingle"
+ ],
+ "/10-ways-improve-your-credit-score/": [
+  "section.header-page.yellow",
+  "section.postsingle"
+ ],
+ "/what-credit-and-why-does-it-matter/": [
+  "section.header-page.yellow",
+  "section.postsingle"
+ ],
+ "/your-phone-may-be-giving-fraudsters-a-way-into-your-finances/": [
+  "section.header-page.yellow",
+  "section.postsingle"
+ ],
+ "/2026-agm-summary/": [
+  "section.header-page.yellow",
+  "section.postsingle"
+ ],
+ "/virtuous-circle/": [
+  "section.header-page.yellow",
+  "section.postsingle"
+ ],
+ "/directors-area/annual-audited-accounts/": [
+  "section.header-page.purple"
+ ],
+ "/directors-area/board-minutes/": [
+  "section.header-page.purple"
+ ],
+ "/directors-area/budget/": [
+  "section.header-page.purple"
+ ],
+ "/directors-area/policies/": [
+  "section.header-page.purple"
+ ],
+ "/directors-area/business-plan/": [
+  "section.header-page.purple"
+ ],
+ "/directors-area/annual-report/": [
+  "section.header-page.purple"
+ ],
+ "/resources/": [
+  "section.header-page.yellow",
+  "section.content-rows",
+  "section.posts-overview"
+ ],
+ "/resources/member-helper/budget-planner/": [
+  "section.header-page.yellow",
+  "section.content-rows"
+ ],
+ "/cost-of-living/": [
+  "section.header-page.yellow",
+  "section.content-rows",
+  "section.popout-block.bg-",
+  "section.popout-block.bg-",
+  "section.popout-block.bg-",
+  "section.popout-block.bg-",
+  "section.popout-block.bg-",
+  "section.popout-block.bg-",
+  "section.popout-block.bg-",
+  "section.popout-block.bg-"
+ ],
+ "/resources/member-helper/debt-advice-locator/": [
+  "section.header-page.yellow",
+  "section.content-rows"
+ ],
+ "/become-a-credit-union-advocate/": [
+  "section.header-page.purple",
+  "section.contact-form"
+ ],
+ "/join-us-congress-2023/": [
+  "section.header-page.purple",
+  "section.popout-block.bg-"
+ ],
+ "/resources/member-helper/benefit-calculator/": [
+  "section.header-page.yellow",
+  "section.content-rows"
+ ],
+ "/resources/member-helper/": [
+  "section.header-page.yellow",
+  "section.content-rows",
+  "section.colour-panels"
+ ],
+ "/annual-general-meeting-2024/": [
+  "section.header-page.ltblue",
+  "section.content-rows",
+  "section.popout-block.bg-",
+  "section.popout-block.bg-",
+  "section.popout-block.bg-",
+  "section.contact-form"
+ ],
+ "/thank-you-for-your-interest-agm-2024/": [
+  "section.header-page.lilac",
+  "section.popout-block.bg-",
+  "section.popout-block.bg-"
+ ],
+ "/directors-area/governance/": [
+  "section.header-page.purple"
+ ],
+ "/join-us-congress-2024/": [
+  "section.header-page.purple",
+  "section.popout-block.bg-",
+  "section.popout-block.bg-",
+  "section.popout-block.bg-"
+ ],
+ "/directors-area/business-policies/": [
+  "section.header-page.purple"
+ ],
+ "/directors-area/employee-policies/": [
+  "section.header-page.purple"
+ ],
+ "/complaints/": [
+  "section.header-page.lilac",
+  "section.colour-panels"
+ ],
+ "/privacy-policy/": [
+  "section.header-page.lilac",
+  "section.content-rows"
+ ],
+ "/contact-us/": [
+  "section.header-page.lilac",
+  "section.content-rows",
+  "section.popout-block.bg-",
+  "section.contact-form"
+ ],
+ "/loans/starter-loan/": [
+  "section.header-page.green",
+  "section.list-block",
+  "section.panel-section",
+  "section.popout-block.bg-",
+  "section.popout-block.bg-",
+  "section.video-section",
+  "section.content-rows"
+ ],
+ "/loans/handy-loan/": [
+  "section.header-page.green",
+  "section.list-block",
+  "section.panel-section",
+  "section.popout-block.bg-",
+  "section.popout-block.bg-",
+  "section.video-section",
+  "section.content-rows"
+ ],
+ "/loans/consolidation-loan/": [
+  "section.header-page.green",
+  "section.list-block",
+  "section.panel-section",
+  "section.popout-block.bg-",
+  "section.popout-block.bg-",
+  "section.video-section",
+  "section.content-rows"
+ ],
+ "/loans/family-loan/": [
+  "section.header-page.green",
+  "section.list-block",
+  "section.panel-section",
+  "section.popout-block.bg-",
+  "section.popout-block.bg-",
+  "section.video-section",
+  "section.content-rows"
+ ],
+ "/loans/save-borrow-loan/": [
+  "section.header-page.green",
+  "section.list-block",
+  "section.panel-section",
+  "section.popout-block.bg-",
+  "section.popout-block.bg-",
+  "section.video-section",
+  "section.content-rows"
+ ],
+ "/loans/savings-secured-loan/": [
+  "section.header-page.green",
+  "section.list-block",
+  "section.panel-section",
+  "section.popout-block.bg-",
+  "section.popout-block.bg-",
+  "section.video-section",
+  "section.content-rows"
+ ],
+ "/annual-general-meeting-2025/": [
+  "section.header-page.lilac",
+  "section.content-rows",
+  "section.popout-block.bg-",
+  "section.popout-block.bg-",
+  "section.popout-block.bg-",
+  "section.contact-form"
+ ],
+ "/thank-you-for-your-interest-agm-2025/": [
+  "section.header-page.lilac",
+  "section.popout-block.bg-",
+  "section.popout-block.bg-"
+ ],
+ "/test/": [
+  "section.header-title",
+  "section.content-rows"
+ ],
+ "/join-us-at-congress-2025/": [
+  "section.header-page.lilac",
+  "section.popout-block.bg-",
+  "section.popout-block.bg-"
+ ],
+ "/loans/": [
+  "section.header-page.green",
+  "section.box-slider.bg-white",
+  "section.icon-block.bg-cream",
+  "section.popout-block.bg-cream"
+ ],
+ "/loans/top-up-loan/": [
+  "section.header-page.green",
+  "section.list-block",
+  "section.panel-section",
+  "section.popout-block.bg-",
+  "section.video-section",
+  "section.content-rows"
+ ],
+ "/savings/life-savings-insurance-protection/": [
+  "section.header-page.green",
+  "section.content-rows",
+  "section.panel-section",
+  "section.popout-block.bg-",
+  "section.video-section",
+  "section.content-rows"
+ ],
+ "/directors-area/": [
+  "section.header-page.purple"
+ ],
+ "/join-gmbcu-get-25-and-a-chance-to-win-big/": [
+  "section.header-page.ltblue",
+  "section.popout-block.bg-",
+  "section.popout-block.bg-white",
+  "section.popout-block.bg-",
+  "section.popout-block.bg-",
+  "section.panel-section",
+  "section.popout-block.bg-",
+  "section.list-block",
+  "section.popout-block.bg-"
+ ],
+ "/about-us/": [
+  "section.header-page.lilac",
+  "section.content-rows",
+  "section.label-block",
+  "section.content-rows",
+  "section.block-icon-section"
+ ],
+ "/savings/": [
+  "section.header-page.ltblue",
+  "section.box-slider.bg-white",
+  "section.icon-block.bg-cream",
+  "section.popout-block.bg-white"
+ ],
+ "/annual-general-meeting-2026/": [
+  "section.header-page.lilac",
+  "section.content-rows",
+  "section.popout-block.bg-",
+  "section.popout-block.bg-",
+  "section.popout-block.bg-",
+  "section.contact-form"
+ ],
+ "/thank-you-for-your-interest-agm-2026/": [
+  "section.header-page.lilac",
+  "section.popout-block.bg-",
+  "section.popout-block.bg-"
+ ],
+ "/savings/member-saver/": [
+  "section.header-page.ltblue",
+  "section.list-block",
+  "section.panel-section",
+  "section.popout-block.bg-",
+  "section.video-section"
+ ],
+ "/savings/christmas-saver/": [
+  "section.header-page.ltblue",
+  "section.list-block",
+  "section.panel-section",
+  "section.popout-block.bg-",
+  "section.video-section"
+ ],
+ "/savings/premium-saver/": [
+  "section.header-page.ltblue",
+  "section.list-block",
+  "section.panel-section",
+  "section.popout-block.bg-",
+  "section.video-section"
+ ],
+ "/savings/prizesaver/": [
+  "section.header-page.ltblue",
+  "section.list-block",
+  "section.panel-section",
+  "section.popout-block.bg-",
+  "section.video-section"
+ ],
+ "/loans/member-loan/": [
+  "section.header-page.green",
+  "section.list-block",
+  "section.panel-section",
+  "section.popout-block.bg-",
+  "section.popout-block.bg-",
+  "section.video-section",
+  "section.content-rows"
+ ],
+ "/the-gmbcu-member-hub-is-coming-in-june-2026/": [
+  "section.header-page.lilac",
+  "section.popout-block.bg-",
+  "section.panel-section",
+  "section.popout-block.bg-",
+  "section.popout-block.bg-"
+ ],
+ "/member-hub-faqs/": [
+  "section.header-page.lilac",
+  "section.faq"
+ ],
+ "/savings/young-saver/": [
+  "section.header-page.ltblue",
+  "section.list-block",
+  "section.panel-section",
+  "section.popout-block.bg-",
+  "section.video-section"
+ ],
+ "/savings/365-saver/": [
+  "section.header-page.ltblue",
+  "section.list-block",
+  "section.panel-section",
+  "section.popout-block.bg-",
+  "section.video-section"
+ ],
+ "/faqs/": [
+  "section.header-page.lilac",
+  "section.faq"
+ ],
+ "/gmb-credit-union-prize-draw/": [
+  "section.header-page.lilac",
+  "section.video-section",
+  "section.info-block",
+  "section.popout-block.bg-",
+  "section.popout-block.bg-"
+ ],
+ "/category/uncategorised/": [
+  "section.header-page.yellow",
+  "section.posts"
+ ],
+ "/tag/summer/": [
+  "section.header-page.yellow",
+  "section.posts"
+ ],
+ "/tag/budget/": [
+  "section.header-page.yellow",
+  "section.posts"
+ ],
+ "/our-blog/page/2/": [
+  "section.header-page.yellow",
+  "section.posts"
+ ],
+ "/page/2/": [
+  "section.header.lilac",
+  "section.content-rows",
+  "section.content-rows",
+  "section.content-rows",
+  "section.content-rows",
+  "section.content-rows",
+  "section.posts-overview"
+ ],
+ "/category/uncategorised/page/2/": [
+  "section.header-page.yellow",
+  "section.posts"
+ ],
+ "/category/uncategorised/page/3/": [
+  "section.header-page.yellow",
+  "section.posts"
+ ],
+ "/category/uncategorised/page/4/": [
+  "section.header-page.yellow",
+  "section.posts"
+ ],
+ "/category/uncategorised/page/5/": [
+  "section.header-page.yellow",
+  "section.posts"
+ ],
+ "/category/uncategorised/page/6/": [
+  "section.header-page.yellow",
+  "section.posts"
+ ],
+ "/category/uncategorised/page/7/": [
+  "section.header-page.yellow",
+  "section.posts"
+ ],
+ "/category/uncategorised/page/8/": [
+  "section.header-page.yellow",
+  "section.posts"
+ ],
+ "/our-blog/page/3/": [
+  "section.header-page.yellow",
+  "section.posts"
+ ],
+ "/our-blog/page/4/": [
+  "section.header-page.yellow",
+  "section.posts"
+ ],
+ "/our-blog/page/5/": [
+  "section.header-page.yellow",
+  "section.posts"
+ ],
+ "/our-blog/page/6/": [
+  "section.header-page.yellow",
+  "section.posts"
+ ],
+ "/our-blog/page/7/": [
+  "section.header-page.yellow",
+  "section.posts"
+ ],
+ "/our-blog/page/8/": [
+  "section.header-page.yellow",
+  "section.posts"
+ ]
+}

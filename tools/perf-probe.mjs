@@ -1,0 +1,12 @@
+import { chromium } from 'playwright';
+const url = process.argv[2];
+const b = await chromium.launch({ headless: true }); const p = await b.newPage({ viewport: { width: 390, height: 844 } });
+const errs = []; p.on('console', (m) => { if (m.type() === 'error' || m.type() === 'warning') errs.push(m.type() + ': ' + m.text().slice(0, 160)); }); p.on('pageerror', (e) => errs.push('PAGEERROR ' + String(e).slice(0, 200)));
+await p.addInitScript(() => { window.__long = []; new PerformanceObserver((l) => { for (const e of l.getEntries()) window.__long.push([Math.round(e.startTime), Math.round(e.duration)]); }).observe({ type: 'longtask', buffered: true }); });
+const t0 = Date.now(); await p.goto(url, { waitUntil: 'networkidle', timeout: 90000 }); const t1 = Date.now();
+await p.waitForTimeout(3000);
+const long = await p.evaluate(() => window.__long); const html = await p.content();
+console.log('load ms', t1 - t0, 'long tasks', long.length, 'total blocking', long.reduce((a, [, d]) => a + d, 0), 'ms', JSON.stringify(long.slice(0, 10)));
+console.log('html bytes', html.length, 'img tags', (html.match(/<img/g) || []).length, 'scripts', (html.match(/<script/g) || []).length);
+console.log('console:', errs.slice(0, 8).join('\n  '));
+await b.close();

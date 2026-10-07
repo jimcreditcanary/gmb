@@ -1,0 +1,15 @@
+home https://www.gmbcreditunion.com/
+product-loan https://www.gmbcreditunion.com/loans/member-loan/
+product-savings https://www.gmbcreditunion.com/savings/member-saver/
+hub https://www.gmbcreditunion.com/loans/
+about https://www.gmbcreditunion.com/about-us/
+contact https://www.gmbcreditunion.com/contact-us/
+faq https://www.gmbcreditunion.com/faqs/
+legal https://www.gmbcreditunion.com/privacy-policy/
+embed https://www.gmbcreditunion.com/resources/member-helper/budget-planner/
+post https://www.gmbcreditunion.com/2026-agm-summary/
+blog-index https://www.gmbcreditunion.com/our-blog/
+category https://www.gmbcreditunion.com/category/uncategorised/
+tag https://www.gmbcreditunion.com/tag/budget/
+campaign https://www.gmbcreditunion.com/gmb-credit-union-prize-draw/
+landing https://www.gmbcreditunion.com/lp/member-loan/

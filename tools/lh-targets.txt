@@ -1,0 +1,17 @@
+home https://www.gmbcreditunion.com/
+page-builder-loan-product https://www.gmbcreditunion.com/loans/member-loan/
+page-builder-savings-product https://www.gmbcreditunion.com/savings/member-saver/
+page-builder-hub https://www.gmbcreditunion.com/loans/
+page-builder-about https://www.gmbcreditunion.com/about-us/
+page-builder-contact https://www.gmbcreditunion.com/contact-us/
+page-builder-faqs https://www.gmbcreditunion.com/faqs/
+page-builder-legal https://www.gmbcreditunion.com/privacy-policy/
+page-builder-resources-embed https://www.gmbcreditunion.com/resources/member-helper/budget-planner/
+blog-post https://www.gmbcreditunion.com/2026-agm-summary/
+blog-index https://www.gmbcreditunion.com/our-blog/
+category-archive https://www.gmbcreditunion.com/category/uncategorised/
+tag-archive https://www.gmbcreditunion.com/tag/budget/
+filter-archive https://www.gmbcreditunion.com/filter/policies/
+file-single https://www.gmbcreditunion.com/file/budget/
+page-default https://www.gmbcreditunion.com/test/
+search https://www.gmbcreditunion.com/?s=test

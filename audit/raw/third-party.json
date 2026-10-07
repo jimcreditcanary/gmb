@@ -1,0 +1,617 @@
+{
+ "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js": {
+  "count": 881,
+  "type": "script",
+  "hosts": "ajax.googleapis.com"
+ },
+ "https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js": {
+  "count": 881,
+  "type": "script",
+  "hosts": "widget.trustpilot.com"
+ },
+ "https://www.googletagmanager.com/gtm.js": {
+  "count": 906,
+  "type": "script",
+  "hosts": "www.googletagmanager.com"
+ },
+ "https://widget.trustpilot.com/trustboxes/5406e65db0d04a09e042d5fc/index.html": {
+  "count": 263,
+  "type": "document",
+  "hosts": "widget.trustpilot.com"
+ },
+ "https://widget.trustpilot.com/trustboxes/54ad5defc6454f065c28af8b/index.html": {
+  "count": 15,
+  "type": "document",
+  "hosts": "widget.trustpilot.com"
+ },
+ "https://cdn-cookieyes.com/client_data/0b3e95fe5946a0ea4a2ae4f0/script.js": {
+  "count": 881,
+  "type": "script",
+  "hosts": "cdn-cookieyes.com"
+ },
+ "https://www.googletagmanager.com/gtag/js": {
+  "count": 881,
+  "type": "script",
+  "hosts": "www.googletagmanager.com"
+ },
+ "https://cdn-cookieyes.com/client_data/0b3e95fe5946a0ea4a2ae4f0/banner.js": {
+  "count": 881,
+  "type": "script",
+  "hosts": "cdn-cookieyes.com"
+ },
+ "https://log.cookieyes.com/api/v1/log": {
+  "count": 881,
+  "type": "ping",
+  "hosts": "log.cookieyes.com"
+ },
+ "https://cdn-cookieyes.com/client_data/0b3e95fe5946a0ea4a2ae4f0/y7FsQJcm.json": {
+  "count": 881,
+  "type": "fetch",
+  "hosts": "cdn-cookieyes.com"
+ },
+ "https://cdn-cookieyes.com/client_data/0b3e95fe5946a0ea4a2ae4f0/config/VeWwrUyM.json": {
+  "count": 881,
+  "type": "fetch",
+  "hosts": "cdn-cookieyes.com"
+ },
+ "https://cdn-cookieyes.com/client_data/0b3e95fe5946a0ea4a2ae4f0/translations/wPNvVhRx.json": {
+  "count": 881,
+  "type": "fetch",
+  "hosts": "cdn-cookieyes.com"
+ },
+ "https://cdn-cookieyes.com/client_data/0b3e95fe5946a0ea4a2ae4f0/audit-table/vaJRvMwy.json": {
+  "count": 881,
+  "type": "fetch",
+  "hosts": "cdn-cookieyes.com"
+ },
+ "https://cdn-cookieyes.com/assets/images/revisit.svg": {
+  "count": 881,
+  "type": "image",
+  "hosts": "cdn-cookieyes.com"
+ },
+ "https://cdn-cookieyes.com/assets/images/close.svg": {
+  "count": 881,
+  "type": "image",
+  "hosts": "cdn-cookieyes.com"
+ },
+ "https://cdn-cookieyes.com/assets/images/poweredbtcky.svg": {
+  "count": 881,
+  "type": "image",
+  "hosts": "cdn-cookieyes.com"
+ },
+ "https://widget.trustpilot.com/trustboxes/54ad5defc6454f065c28af8b/main.js": {
+  "count": 15,
+  "type": "script",
+  "hosts": "widget.trustpilot.com"
+ },
+ "https://widget.trustpilot.com/trustboxes/5406e65db0d04a09e042d5fc/main.js": {
+  "count": 263,
+  "type": "script",
+  "hosts": "widget.trustpilot.com"
+ },
+ "https://pagead2.googlesyndication.com/ccm/collect": {
+  "count": 894,
+  "type": "fetch",
+  "hosts": "pagead2.googlesyndication.com"
+ },
+ "https://region1.google-analytics.com/g/collect": {
+  "count": 887,
+  "type": "fetch",
+  "hosts": "region1.google-analytics.com"
+ },
+ "https://widget.trustpilot.com/trustbox-data/5406e65db0d04a09e042d5fc": {
+  "count": 263,
+  "type": "xhr",
+  "hosts": "widget.trustpilot.com"
+ },
+ "https://widget.trustpilot.com/stats/TrustboxView": {
+  "count": 263,
+  "type": "xhr",
+  "hosts": "widget.trustpilot.com"
+ },
+ "https://widget.trustpilot.com/stats/TrustboxImpression": {
+  "count": 278,
+  "type": "xhr",
+  "hosts": "widget.trustpilot.com"
+ },
+ "https://widget.trustpilot.com/trustbox-data/54ad5defc6454f065c28af8b": {
+  "count": 15,
+  "type": "xhr",
+  "hosts": "widget.trustpilot.com"
+ },
+ "https://www.youtube.com/embed/m1TKgj3bUvw": {
+  "count": 14,
+  "type": "document",
+  "hosts": "www.youtube.com"
+ },
+ "https://www.youtube.com/s/player/f2999a12/www-player.css": {
+  "count": 46,
+  "type": "stylesheet",
+  "hosts": "www.youtube.com"
+ },
+ "https://www.youtube.com/s/_/ytembeds/_/ss/k=ytembeds.base.YkyqdMSHwyU.L.W.O/am=AAAAQA/d=1/br=1/rs=AGKMywHwT7UkEBmCdjXhRuPb2JKY1dv8NA/m=root,base": {
+  "count": 46,
+  "type": "stylesheet",
+  "hosts": "www.youtube.com"
+ },
+ "https://fonts.gstatic.com/s/roboto/v48/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBHMdazQ.woff2": {
+  "count": 47,
+  "type": "font",
+  "hosts": "fonts.gstatic.com"
+ },
+ "https://www.youtube.com/s/_/ytembeds/_/js/k=ytembeds.base.en_US.wpOHBl_U5kI.2021.O/am=AAAAQA/d=1/excm=base,root/br=1/rs=AGKMywH05RsQA9QEToT7tncuvneoE9lvWA/m=root,base": {
+  "count": 46,
+  "type": "script",
+  "hosts": "www.youtube.com"
+ },
+ "https://www.youtube.com/s/player/f2999a12/player_embed_es6.vflset/en_GB/base.js": {
+  "count": 46,
+  "type": "script",
+  "hosts": "www.youtube.com"
+ },
+ "https://static.doubleclick.net/instream/ad_status.js": {
+  "count": 47,
+  "type": "script",
+  "hosts": "static.doubleclick.net"
+ },
+ "https://www.youtube.com/s/_/ytembeds/_/js/k=ytembeds.base.en_US.wpOHBl_U5kI.2021.O/ck=ytembeds.base.YkyqdMSHwyU.L.W.O/am=AAAAQA/d=1/exm=base,root/excm=base,root/ed=1/br=1/rs=AGKMywHLoOC4_nPf5H3sgFYFy3EpZJcV3w/m=r78Drb": {
+  "count": 46,
+  "type": "script",
+  "hosts": "www.youtube.com"
+ },
+ "https://googleads.g.doubleclick.net/pagead/id": {
+  "count": 94,
+  "type": "xhr",
+  "hosts": "googleads.g.doubleclick.net"
+ },
+ "https://www.google.com/js/th/X7cviWXG6eOMwuvFNR9THWLtHBbQNaxLixVsuWNy4oM.js": {
+  "count": 47,
+  "type": "script",
+  "hosts": "www.google.com"
+ },
+ "https://i.ytimg.com/vi/m1TKgj3bUvw/maxresdefault.jpg": {
+  "count": 14,
+  "type": "image",
+  "hosts": "i.ytimg.com"
+ },
+ "https://yt3.ggpht.com/k9Fj2Tx0AmU_JIatbsja6g2RH8xUoRQe2c6UW-hAKb0Skst85ySgYBp1XqDzLc4YCZuADGAw0A=s68-c-k-c0x00ffffff-no-rj": {
+  "count": 9,
+  "type": "image",
+  "hosts": "yt3.ggpht.com"
+ },
+ "https://www.youtube.com/generate_204": {
+  "count": 47,
+  "type": "image",
+  "hosts": "www.youtube.com"
+ },
+ "https://www.gstatic.com/youtube/img/icons/mweb/youtube_fill/logo/v2/67px.svg": {
+  "count": 1,
+  "type": "fetch",
+  "hosts": "www.gstatic.com"
+ },
+ "https://www.youtube.com/youtubei/v1/log_event": {
+  "count": 89,
+  "type": "xhr",
+  "hosts": "www.youtube.com"
+ },
+ "https://jnn-pa.googleapis.com/$rpc/google.internal.waa.v1.Waa/GenerateIT": {
+  "count": 47,
+  "type": "xhr",
+  "hosts": "jnn-pa.googleapis.com"
+ },
+ "https://www.googletagmanager.com/td": {
+  "count": 27,
+  "type": "image",
+  "hosts": "www.googletagmanager.com"
+ },
+ "https://www.youtube.com/embed/a3cHqaeddwU": {
+  "count": 1,
+  "type": "document",
+  "hosts": "www.youtube.com"
+ },
+ "https://i.ytimg.com/vi/a3cHqaeddwU/maxresdefault.jpg": {
+  "count": 1,
+  "type": "image",
+  "hosts": "i.ytimg.com"
+ },
+ "https://www.googletagmanager.com/a": {
+  "count": 57,
+  "type": "image",
+  "hosts": "www.googletagmanager.com"
+ },
+ "https://www.youtube.com/embed/yL_l-jSwIGc": {
+  "count": 1,
+  "type": "document",
+  "hosts": "www.youtube.com"
+ },
+ "https://i.ytimg.com/vi/yL_l-jSwIGc/maxresdefault.jpg": {
+  "count": 1,
+  "type": "image",
+  "hosts": "i.ytimg.com"
+ },
+ "https://www.youtube.com/embed/EWLsw1HMdNM": {
+  "count": 31,
+  "type": "document",
+  "hosts": "www.youtube.com"
+ },
+ "https://i.ytimg.com/vi/EWLsw1HMdNM/maxresdefault.jpg": {
+  "count": 31,
+  "type": "image",
+  "hosts": "i.ytimg.com"
+ },
+ "https://www.moneyadviceservice.org.uk/assets/syndication/tools.js": {
+  "count": 10,
+  "type": "script",
+  "hosts": "www.moneyadviceservice.org.uk"
+ },
+ "https://partner-tools.moneyadviceservice.org.uk/en/tools/budget-planner": {
+  "count": 5,
+  "type": "document",
+  "hosts": "partner-tools.moneyadviceservice.org.uk"
+ },
+ "https://budget-planner.moneyhelper.org.uk/en/income": {
+  "count": 5,
+  "type": "document",
+  "hosts": "budget-planner.moneyhelper.org.uk"
+ },
+ "https://budget-planner.moneyhelper.org.uk/_next/static/css/7b74d51d7b034cba.css": {
+  "count": 5,
+  "type": "stylesheet",
+  "hosts": "budget-planner.moneyhelper.org.uk"
+ },
+ "https://budget-planner.moneyhelper.org.uk/_next/static/chunks/webpack-3d37ba643a1ff79a.js": {
+  "count": 5,
+  "type": "script",
+  "hosts": "budget-planner.moneyhelper.org.uk"
+ },
+ "https://budget-planner.moneyhelper.org.uk/_next/static/chunks/framework-76fd3e36d0a46af9.js": {
+  "count": 5,
+  "type": "script",
+  "hosts": "budget-planner.moneyhelper.org.uk"
+ },
+ "https://budget-planner.moneyhelper.org.uk/_next/static/chunks/main-0fe03fe318451065.js": {
+  "count": 5,
+  "type": "script",
+  "hosts": "budget-planner.moneyhelper.org.uk"
+ },
+ "https://budget-planner.moneyhelper.org.uk/_next/static/chunks/pages/_app-5afdb6e75a56f12d.js": {
+  "count": 5,
+  "type": "script",
+  "hosts": "budget-planner.moneyhelper.org.uk"
+ },
+ "https://budget-planner.moneyhelper.org.uk/_next/static/chunks/27-9551a98ceef13491.js": {
+  "count": 5,
+  "type": "script",
+  "hosts": "budget-planner.moneyhelper.org.uk"
+ },
+ "https://budget-planner.moneyhelper.org.uk/_next/static/chunks/499-586cc79080699576.js": {
+  "count": 5,
+  "type": "script",
+  "hosts": "budget-planner.moneyhelper.org.uk"
+ },
+ "https://budget-planner.moneyhelper.org.uk/_next/static/XVU76t8Jlkmihte1ZerRl/_buildManifest.js": {
+  "count": 5,
+  "type": "script",
+  "hosts": "budget-planner.moneyhelper.org.uk"
+ },
+ "https://budget-planner.moneyhelper.org.uk/_next/static/XVU76t8Jlkmihte1ZerRl/_ssgManifest.js": {
+  "count": 5,
+  "type": "script",
+  "hosts": "budget-planner.moneyhelper.org.uk"
+ },
+ "https://budget-planner.moneyhelper.org.uk/_next/static/chunks/pages/%5Blanguage%5D/%5BtabName%5D-0c11460e02554ba0.js": {
+  "count": 5,
+  "type": "script",
+  "hosts": "budget-planner.moneyhelper.org.uk"
+ },
+ "https://budget-planner.moneyhelper.org.uk/_next/static/chunks/166-66dd65131342f27d.js": {
+  "count": 5,
+  "type": "script",
+  "hosts": "budget-planner.moneyhelper.org.uk"
+ },
+ "https://budget-planner.moneyhelper.org.uk/_next/static/media/Roobert-Bold.c735e14b.woff": {
+  "count": 5,
+  "type": "font",
+  "hosts": "budget-planner.moneyhelper.org.uk"
+ },
+ "https://budget-planner.moneyhelper.org.uk/_next/static/media/Roobert-SemiBold.0fc31036.woff": {
+  "count": 5,
+  "type": "font",
+  "hosts": "budget-planner.moneyhelper.org.uk"
+ },
+ "https://budget-planner.moneyhelper.org.uk/_next/static/media/Roobert-Regular.b6d10aa8.woff": {
+  "count": 5,
+  "type": "font",
+  "hosts": "budget-planner.moneyhelper.org.uk"
+ },
+ "https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495": {
+  "count": 10,
+  "type": "script",
+  "hosts": "static.cloudflareinsights.com"
+ },
+ "https://budget-planner.moneyhelper.org.uk/iframeResizer.contentWindow.js": {
+  "count": 5,
+  "type": "script",
+  "hosts": "budget-planner.moneyhelper.org.uk"
+ },
+ "https://assets.adobedtm.com/c3a3920a84ef/2104df5e2099/launch-a40370bb1e84.min.js": {
+  "count": 10,
+  "type": "script",
+  "hosts": "assets.adobedtm.com"
+ },
+ "https://assets.adobedtm.com/extensions/EP31dbb9c60e404ba1aa6e746d49be6f29/AppMeasurement.min.js": {
+  "count": 10,
+  "type": "script",
+  "hosts": "assets.adobedtm.com"
+ },
+ "https://assets.adobedtm.com/c3a3920a84ef/2104df5e2099/636bcc61cfdb/RC48ab5350d4ec41d897b77ae32348c870-source.min.js": {
+  "count": 10,
+  "type": "script",
+  "hosts": "assets.adobedtm.com"
+ },
+ "https://assets.adobedtm.com/c3a3920a84ef/2104df5e2099/636bcc61cfdb/RCbcf3b31f553c458faa5f4280892db76d-source.min.js": {
+  "count": 10,
+  "type": "script",
+  "hosts": "assets.adobedtm.com"
+ },
+ "https://budget-planner.moneyhelper.org.uk/cdn-cgi/rum": {
+  "count": 5,
+  "type": "xhr",
+  "hosts": "budget-planner.moneyhelper.org.uk"
+ },
+ "https://insitez.blob.core.windows.net/site/8a33e5b3-23da-46d4-9c32-8b9c38aeaeda.js": {
+  "count": 8,
+  "type": "script",
+  "hosts": "insitez.blob.core.windows.net"
+ },
+ "https://insitez.blob.core.windows.net/widget/IzCode.js": {
+  "count": 8,
+  "type": "script",
+  "hosts": "insitez.blob.core.windows.net"
+ },
+ "https://partner-tools.moneyadviceservice.org.uk/en/tools/debt-advice-locator": {
+  "count": 5,
+  "type": "document",
+  "hosts": "partner-tools.moneyadviceservice.org.uk"
+ },
+ "https://debt-advice-locator.moneyhelper.org.uk/en/question-1": {
+  "count": 5,
+  "type": "document",
+  "hosts": "debt-advice-locator.moneyhelper.org.uk"
+ },
+ "https://debt-advice-locator.moneyhelper.org.uk/_next/static/css/c8ccfe7061d34b6d.css": {
+  "count": 5,
+  "type": "stylesheet",
+  "hosts": "debt-advice-locator.moneyhelper.org.uk"
+ },
+ "https://debt-advice-locator.moneyhelper.org.uk/_next/static/chunks/webpack-f864a508f152d7ef.js": {
+  "count": 5,
+  "type": "script",
+  "hosts": "debt-advice-locator.moneyhelper.org.uk"
+ },
+ "https://debt-advice-locator.moneyhelper.org.uk/_next/static/chunks/596-28983475fc58d89f.js": {
+  "count": 5,
+  "type": "script",
+  "hosts": "debt-advice-locator.moneyhelper.org.uk"
+ },
+ "https://debt-advice-locator.moneyhelper.org.uk/_next/static/chunks/pages/_app-8deb010712ef26e7.js": {
+  "count": 5,
+  "type": "script",
+  "hosts": "debt-advice-locator.moneyhelper.org.uk"
+ },
+ "https://debt-advice-locator.moneyhelper.org.uk/_next/static/chunks/main-0fe03fe318451065.js": {
+  "count": 5,
+  "type": "script",
+  "hosts": "debt-advice-locator.moneyhelper.org.uk"
+ },
+ "https://debt-advice-locator.moneyhelper.org.uk/_next/static/chunks/framework-76fd3e36d0a46af9.js": {
+  "count": 5,
+  "type": "script",
+  "hosts": "debt-advice-locator.moneyhelper.org.uk"
+ },
+ "https://debt-advice-locator.moneyhelper.org.uk/_next/static/chunks/27-9551a98ceef13491.js": {
+  "count": 5,
+  "type": "script",
+  "hosts": "debt-advice-locator.moneyhelper.org.uk"
+ },
+ "https://debt-advice-locator.moneyhelper.org.uk/_next/static/chunks/pages/%5Blanguage%5D/%5Bquestion%5D-6879a5770e402731.js": {
+  "count": 5,
+  "type": "script",
+  "hosts": "debt-advice-locator.moneyhelper.org.uk"
+ },
+ "https://debt-advice-locator.moneyhelper.org.uk/_next/static/llBWGJMdJgpMgviuJGO0J/_ssgManifest.js": {
+  "count": 5,
+  "type": "script",
+  "hosts": "debt-advice-locator.moneyhelper.org.uk"
+ },
+ "https://debt-advice-locator.moneyhelper.org.uk/_next/static/llBWGJMdJgpMgviuJGO0J/_buildManifest.js": {
+  "count": 5,
+  "type": "script",
+  "hosts": "debt-advice-locator.moneyhelper.org.uk"
+ },
+ "https://debt-advice-locator.moneyhelper.org.uk/_next/static/chunks/898-180850f33a7edee3.js": {
+  "count": 5,
+  "type": "script",
+  "hosts": "debt-advice-locator.moneyhelper.org.uk"
+ },
+ "https://debt-advice-locator.moneyhelper.org.uk/_next/static/chunks/606-0f5468c68227874d.js": {
+  "count": 5,
+  "type": "script",
+  "hosts": "debt-advice-locator.moneyhelper.org.uk"
+ },
+ "https://debt-advice-locator.moneyhelper.org.uk/_next/static/media/Roobert-Regular.b6d10aa8.woff": {
+  "count": 5,
+  "type": "font",
+  "hosts": "debt-advice-locator.moneyhelper.org.uk"
+ },
+ "https://debt-advice-locator.moneyhelper.org.uk/_next/static/media/Roobert-SemiBold.0fc31036.woff": {
+  "count": 5,
+  "type": "font",
+  "hosts": "debt-advice-locator.moneyhelper.org.uk"
+ },
+ "https://debt-advice-locator.moneyhelper.org.uk/_next/static/media/Roobert-Bold.c735e14b.woff": {
+  "count": 5,
+  "type": "font",
+  "hosts": "debt-advice-locator.moneyhelper.org.uk"
+ },
+ "https://debt-advice-locator.moneyhelper.org.uk/iframeResizer.contentWindow.js": {
+  "count": 5,
+  "type": "script",
+  "hosts": "debt-advice-locator.moneyhelper.org.uk"
+ },
+ "https://debt-advice-locator.moneyhelper.org.uk/cdn-cgi/rum": {
+  "count": 4,
+  "type": "xhr",
+  "hosts": "debt-advice-locator.moneyhelper.org.uk"
+ },
+ "https://benefits.inbest.ai/iframe/gmbcreditunion": {
+  "count": 2,
+  "type": "document",
+  "hosts": "benefits.inbest.ai"
+ },
+ "https://benefits.inbest.ai/assets/fonts/iconsmind/style.css": {
+  "count": 2,
+  "type": "stylesheet",
+  "hosts": "benefits.inbest.ai"
+ },
+ "https://benefits.inbest.ai/assets/fonts/simple-line-icons/css/simple-line-icons.css": {
+  "count": 2,
+  "type": "stylesheet",
+  "hosts": "benefits.inbest.ai"
+ },
+ "https://benefits.inbest.ai/assets/js/redux.DTmvt8em.js": {
+  "count": 2,
+  "type": "script",
+  "hosts": "benefits.inbest.ai"
+ },
+ "https://benefits.inbest.ai/assets/js/vendor.CMSjRrTm.js": {
+  "count": 2,
+  "type": "script",
+  "hosts": "benefits.inbest.ai"
+ },
+ "https://benefits.inbest.ai/assets/js/polyfills.D_UG0qzu.js": {
+  "count": 2,
+  "type": "script",
+  "hosts": "benefits.inbest.ai"
+ },
+ "https://fonts.googleapis.com/css2": {
+  "count": 2,
+  "type": "stylesheet",
+  "hosts": "fonts.googleapis.com"
+ },
+ "https://webanalytics.inbest.ai/matomo.js": {
+  "count": 2,
+  "type": "script",
+  "hosts": "webanalytics.inbest.ai"
+ },
+ "https://benefits.inbest.ai/assets/js/index.BeSOG-93.js": {
+  "count": 2,
+  "type": "script",
+  "hosts": "benefits.inbest.ai"
+ },
+ "https://benefits.inbest.ai/assets/App.LC8LTXgF.css": {
+  "count": 2,
+  "type": "stylesheet",
+  "hosts": "benefits.inbest.ai"
+ },
+ "https://benefits.inbest.ai/assets/js/App.BTiZW4ap.js": {
+  "count": 2,
+  "type": "script",
+  "hosts": "benefits.inbest.ai"
+ },
+ "https://welfare.inbest.ai/v5/utils/customisation/gmbcreditunion": {
+  "count": 2,
+  "type": "xhr",
+  "hosts": "welfare.inbest.ai"
+ },
+ "https://welfare.inbest.ai/v5/utils/generateIdentifiers": {
+  "count": 2,
+  "type": "xhr",
+  "hosts": "welfare.inbest.ai"
+ },
+ "https://welfare.inbest.ai/v5/utils/auth": {
+  "count": 2,
+  "type": "xhr",
+  "hosts": "welfare.inbest.ai"
+ },
+ "https://welfare.inbest.ai/v5/simulations/uid-l291mux6qhbt": {
+  "count": 1,
+  "type": "xhr",
+  "hosts": "welfare.inbest.ai"
+ },
+ "https://welfare.inbest.ai/v5/user/uid-l291mux6qhbt": {
+  "count": 1,
+  "type": "xhr",
+  "hosts": "welfare.inbest.ai"
+ },
+ "https://welfare.inbest.ai/v5/utils/whitelabelLogging": {
+  "count": 2,
+  "type": "xhr",
+  "hosts": "welfare.inbest.ai"
+ },
+ "https://fonts.gstatic.com/s/nunito/v32/XRXV3I6Li01BKofINeaBTMnFcQ.woff2": {
+  "count": 2,
+  "type": "font",
+  "hosts": "fonts.gstatic.com"
+ },
+ "https://webanalytics.inbest.ai/matomo.php": {
+  "count": 2,
+  "type": "ping",
+  "hosts": "webanalytics.inbest.ai"
+ },
+ "https://region1.google-analytics.com/measurement/conversion": {
+  "count": 3,
+  "type": "fetch",
+  "hosts": "region1.google-analytics.com"
+ },
+ "https://www.googletagmanager.com/gtag/destination": {
+  "count": 4,
+  "type": "script",
+  "hosts": "www.googletagmanager.com"
+ },
+ "https://pagead2.googlesyndication.com/pagead/conversion/669073314/": {
+  "count": 2,
+  "type": "fetch",
+  "hosts": "pagead2.googlesyndication.com"
+ },
+ "https://welfare.inbest.ai/v5/simulations/uid-5ckq1mux7no9t": {
+  "count": 1,
+  "type": "xhr",
+  "hosts": "welfare.inbest.ai"
+ },
+ "https://welfare.inbest.ai/v5/user/uid-5ckq1mux7no9t": {
+  "count": 1,
+  "type": "xhr",
+  "hosts": "welfare.inbest.ai"
+ },
+ "https://www.youtube.com/s/player/1b3be681/www-player.css": {
+  "count": 1,
+  "type": "stylesheet",
+  "hosts": "www.youtube.com"
+ },
+ "https://www.youtube.com/s/_/ytembeds/_/ss/k=ytembeds.base.YkyqdMSHwyU.L.W.O/am=AAAAQADG/d=1/br=1/rs=AGKMywFYAyQEVW5MwkoBv4s7PVKrQ3cULw/m=root,base": {
+  "count": 1,
+  "type": "stylesheet",
+  "hosts": "www.youtube.com"
+ },
+ "https://www.youtube.com/s/_/ytembeds/_/js/k=ytembeds.base.en_US.wpOHBl_U5kI.2021.O/am=AAAAQADG/d=1/excm=base,root/br=1/rs=AGKMywETXfPk6-8yMBFbsf1NY0k_gnlvGA/m=root,base": {
+  "count": 1,
+  "type": "script",
+  "hosts": "www.youtube.com"
+ },
+ "https://www.youtube.com/s/player/1b3be681/player_embed_es6.vflset/en_GB/base.js": {
+  "count": 1,
+  "type": "script",
+  "hosts": "www.youtube.com"
+ },
+ "https://www.youtube.com/s/_/ytembeds/_/js/k=ytembeds.base.en_US.wpOHBl_U5kI.2021.O/ck=ytembeds.base.YkyqdMSHwyU.L.W.O/am=AAAAQADG/d=1/exm=base,root/excm=base,root/ed=1/br=1/rs=AGKMywFZEUsZ247da9oXefIl9SlNNW2Pgw/m=r78Drb": {
+  "count": 1,
+  "type": "script",
+  "hosts": "www.youtube.com"
+ },
+ "https://www.youtube.com/s/_/ytembeds/_/js/k=ytembeds.base.en_US.wpOHBl_U5kI.2021.O/ck=ytembeds.base.YkyqdMSHwyU.L.W.O/am=AAAAQADG/d=1/exm=base,r78Drb,root/excm=base,root/ed=1/br=1/rs=AGKMywFZEUsZ247da9oXefIl9SlNNW2Pgw/m=cwx9N": {
+  "count": 1,
+  "type": "script",
+  "hosts": "www.youtube.com"
+ }
+}

@@ -1,7 +1,8 @@
 "use client";
+import { Button } from "@/components/ui/button";
 import { useEffect, useRef, useState, type FormEvent } from "react";
 
-export type Field = { name: string; type: string; required?: boolean; label?: string };
+export type Field = { name: string; type: string; required?: boolean; label?: string; placeholder?: string };
 type Props = { formId?: string; fields: Field[]; submit?: string; successMessage?: string; children?: React.ReactNode };
 
 /**
@@ -40,9 +41,9 @@ export function ContactForm(props: Props) {
                   <label htmlFor={`f-${f.name}`}>{f.label || f.name}{f.required ? "*" : ""}</label><br />
                   <span className="wpcf7-form-control-wrap" data-name={f.name}>
                     {f.type === "textarea" ? (
-                      <textarea id={`f-${f.name}`} name={f.name} className="wpcf7-form-control wpcf7-textarea" rows={8} required={f.required} aria-required={f.required} />
+                      <textarea id={`f-${f.name}`} name={f.name} className="wpcf7-form-control wpcf7-textarea" rows={8} placeholder={f.placeholder} required={f.required} aria-required={f.required} />
                     ) : (
-                      <input id={`f-${f.name}`} name={f.name} type={f.type === "email" || /email/i.test(f.name) ? "email" : f.type === "tel" ? "tel" : "text"} className="wpcf7-form-control wpcf7-text" size={40} maxLength={400} required={f.required} aria-required={f.required} autoComplete={/first/i.test(f.name) ? "given-name" : /last/i.test(f.name) ? "family-name" : /email/i.test(f.name) ? "email" : /tel|phone/i.test(f.name) ? "tel" : undefined} />
+                      <input id={`f-${f.name}`} name={f.name} type={f.type === "email" || /email/i.test(f.name) ? "email" : f.type === "tel" ? "tel" : "text"} className="wpcf7-form-control wpcf7-text" size={40} maxLength={400} placeholder={f.placeholder} required={f.required} aria-required={f.required} autoComplete={/first/i.test(f.name) ? "given-name" : /last/i.test(f.name) ? "family-name" : /email/i.test(f.name) ? "email" : /tel|phone/i.test(f.name) ? "tel" : undefined} />
                     )}
                   </span><br />
                 </span>
@@ -52,7 +53,7 @@ export function ContactForm(props: Props) {
               <label htmlFor="website-url">Leave this field empty</label>
               <input id="website-url" name="website_url" type="text" tabIndex={-1} autoComplete="off" />
             </div>
-            <p><input type="submit" value={status === "sending" ? "Sending…" : submit} className="wpcf7-form-control wpcf7-submit" disabled={status === "sending"} /></p>
+            <p><Button type="submit" className="wpcf7-form-control wpcf7-submit" disabled={status === "sending"}>{status === "sending" ? "Sending…" : submit}</Button></p>
             {status === "error" && <p className="wpcf7-response-output" role="alert">{error}</p>}
           </form>
         )}

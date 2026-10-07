@@ -1,0 +1,7 @@
+import { getAllPages, getPostsPage } from "./content";
+import { SITE_URL } from "./site";
+const esc = (s: string) => s.replace(/&/g, "&amp;");
+export const urlset = (rows: { loc: string; lastmod?: string; images?: string[] }[]) => `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">${rows.map((r) => `<url><loc>${esc(r.loc)}</loc>${r.lastmod ? `<lastmod>${r.lastmod}</lastmod>` : ""}${(r.images || []).map((i) => `<image:image><image:loc>${esc(i)}</image:loc></image:image>`).join("")}</url>`).join("")}</urlset>`;
+export function postRows() { return getAllPages().filter((p) => p.frontmatter.template === "post" && !p.frontmatter.noindex).map((p) => ({ loc: SITE_URL + p.frontmatter.slug, lastmod: p.frontmatter.updatedAt || p.frontmatter.publishedAt, images: p.frontmatter.featuredImage ? [SITE_URL + p.frontmatter.featuredImage] : [] })); }
+export function pageRows() { const pages = getAllPages().filter((p) => p.frontmatter.template !== "post" && !p.frontmatter.noindex).map((p) => ({ loc: SITE_URL + p.frontmatter.slug, lastmod: p.frontmatter.updatedAt || p.frontmatter.publishedAt })); pages.push({ loc: SITE_URL + "/our-blog/", lastmod: getPostsPage(1).posts[0]?.frontmatter.updatedAt }); return pages; }
+export const xmlHeaders = { "Content-Type": "application/xml; charset=utf-8" };

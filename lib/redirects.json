@@ -1,0 +1,362 @@
+[
+ {
+  "source": "/page/2",
+  "destination": "/",
+  "permanent": true,
+  "kind": "proposed"
+ },
+ {
+  "source": "/sitemap.xml",
+  "destination": "/sitemap_index.xml",
+  "permanent": true,
+  "kind": "live-301"
+ },
+ {
+  "source": "/file-sitemap.xml",
+  "destination": "/sitemap_index.xml",
+  "permanent": true,
+  "kind": "proposed"
+ },
+ {
+  "source": "/filter-files-sitemap.xml",
+  "destination": "/sitemap_index.xml",
+  "permanent": true,
+  "kind": "proposed"
+ },
+ {
+  "source": "/directors-area",
+  "destination": "/",
+  "permanent": false,
+  "kind": "proposed-HOLD"
+ },
+ {
+  "source": "/junior-saver-account-application",
+  "destination": "/savings/young-saver/",
+  "permanent": true,
+  "kind": "proposed"
+ },
+ {
+  "source": "/budget-planner",
+  "destination": "/resources/member-helper/budget-planner/",
+  "permanent": true,
+  "kind": "live-301"
+ },
+ {
+  "source": "/category/uncategorised/feed",
+  "destination": "/category/uncategorised/",
+  "permanent": true,
+  "kind": "live-301"
+ },
+ {
+  "source": "/comments/feed",
+  "destination": "/",
+  "permanent": true,
+  "kind": "live-301"
+ },
+ {
+  "source": "/cost-living",
+  "destination": "/cost-of-living/",
+  "permanent": true,
+  "kind": "live-301"
+ },
+ {
+  "source": "/creditview",
+  "destination": "/",
+  "permanent": true,
+  "kind": "live-301"
+ },
+ {
+  "source": "/debt-advice-locator",
+  "destination": "/resources/member-helper/debt-advice-locator/",
+  "permanent": true,
+  "kind": "live-301"
+ },
+ {
+  "source": "/feed",
+  "destination": "/",
+  "permanent": true,
+  "kind": "live-301"
+ },
+ {
+  "source": "/feel-positive-about-saving-and-confident-about-borrowing",
+  "destination": "/feel-positive-about-saving-and-borrowing/",
+  "permanent": true,
+  "kind": "live-301"
+ },
+ {
+  "source": "/gmbcu-members-prize-draw",
+  "destination": "/gmb-credit-union-prize-draw/",
+  "permanent": true,
+  "kind": "live-301"
+ },
+ {
+  "source": "/home",
+  "destination": "/",
+  "permanent": true,
+  "kind": "live-301"
+ },
+ {
+  "source": "/how-and-why-help-your-children-form-good-money-habits",
+  "destination": "/help-your-children-form-good-money-habits/",
+  "permanent": true,
+  "kind": "live-301"
+ },
+ {
+  "source": "/index.php",
+  "destination": "/",
+  "permanent": true,
+  "kind": "live-301"
+ },
+ {
+  "source": "/index.php/10-ways-improve-your-credit-score",
+  "destination": "/10-ways-improve-your-credit-score/",
+  "permanent": true,
+  "kind": "live-301"
+ },
+ {
+  "source": "/index.php/2021-agm-summary",
+  "destination": "/our-blog/",
+  "permanent": true,
+  "kind": "live-301 (retargeted)"
+ },
+ {
+  "source": "/index.php/about-us",
+  "destination": "/about-us/",
+  "permanent": true,
+  "kind": "live-301"
+ },
+ {
+  "source": "/index.php/contact-us",
+  "destination": "/contact-us/",
+  "permanent": true,
+  "kind": "live-301"
+ },
+ {
+  "source": "/index.php/creditview",
+  "destination": "/",
+  "permanent": true,
+  "kind": "live-301"
+ },
+ {
+  "source": "/index.php/faqs",
+  "destination": "/faqs/",
+  "permanent": true,
+  "kind": "live-301"
+ },
+ {
+  "source": "/index.php/filter/tips",
+  "destination": "/",
+  "permanent": true,
+  "kind": "live-301→HOLD"
+ },
+ {
+  "source": "/index.php/gmbcu-members-prize-draw",
+  "destination": "/gmb-credit-union-prize-draw/",
+  "permanent": true,
+  "kind": "live-301"
+ },
+ {
+  "source": "/index.php/how-financial-problems-affect-your-mental-health",
+  "destination": "/how-financial-problems-affect-your-mental-health/",
+  "permanent": true,
+  "kind": "live-301"
+ },
+ {
+  "source": "/index.php/loan-application",
+  "destination": "/loan-application-rejected-what-now/",
+  "permanent": true,
+  "kind": "live-301"
+ },
+ {
+  "source": "/index.php/loan-application-rejected-what-now",
+  "destination": "/loan-application-rejected-what-now/",
+  "permanent": true,
+  "kind": "live-301"
+ },
+ {
+  "source": "/index.php/loans",
+  "destination": "/loans/",
+  "permanent": true,
+  "kind": "live-301"
+ },
+ {
+  "source": "/index.php/member-saving-account-application",
+  "destination": "/savings/member-saver/",
+  "permanent": true,
+  "kind": "live-301 (retargeted)"
+ },
+ {
+  "source": "/index.php/nivo",
+  "destination": "/",
+  "permanent": true,
+  "kind": "live-301 (retargeted)"
+ },
+ {
+  "source": "/index.php/node",
+  "destination": "/",
+  "permanent": true,
+  "kind": "live-301 (retargeted)"
+ },
+ {
+  "source": "/index.php/node/21",
+  "destination": "/",
+  "permanent": true,
+  "kind": "live-301 (retargeted)"
+ },
+ {
+  "source": "/index.php/node/22",
+  "destination": "/",
+  "permanent": true,
+  "kind": "live-301 (retargeted)"
+ },
+ {
+  "source": "/index.php/node/23",
+  "destination": "/",
+  "permanent": true,
+  "kind": "live-301 (retargeted)"
+ },
+ {
+  "source": "/index.php/node/24",
+  "destination": "/",
+  "permanent": true,
+  "kind": "live-301 (retargeted)"
+ },
+ {
+  "source": "/index.php/node/28",
+  "destination": "/",
+  "permanent": true,
+  "kind": "live-301 (retargeted)"
+ },
+ {
+  "source": "/index.php/node/29",
+  "destination": "/",
+  "permanent": true,
+  "kind": "live-301 (retargeted)"
+ },
+ {
+  "source": "/index.php/node/38",
+  "destination": "/",
+  "permanent": true,
+  "kind": "live-301 (retargeted)"
+ },
+ {
+  "source": "/index.php/our-blog",
+  "destination": "/our-blog/",
+  "permanent": true,
+  "kind": "live-301"
+ },
+ {
+  "source": "/index.php/privacy-policy",
+  "destination": "/privacy-policy/",
+  "permanent": true,
+  "kind": "live-301"
+ },
+ {
+  "source": "/index.php/savings-accounts",
+  "destination": "/savings/",
+  "permanent": true,
+  "kind": "live-301"
+ },
+ {
+  "source": "/index.php/useful-links",
+  "destination": "/resources/",
+  "permanent": true,
+  "kind": "live-301 (retargeted)"
+ },
+ {
+  "source": "/index.php/user/login",
+  "destination": "/",
+  "permanent": true,
+  "kind": "live-301 (retargeted)"
+ },
+ {
+  "source": "/index.php/user/logout",
+  "destination": "/",
+  "permanent": true,
+  "kind": "live-301 (retargeted)"
+ },
+ {
+  "source": "/index.php/user/password",
+  "destination": "/",
+  "permanent": true,
+  "kind": "live-301 (retargeted)"
+ },
+ {
+  "source": "/index.php/virtuous-circle",
+  "destination": "/virtuous-circle/",
+  "permanent": true,
+  "kind": "live-301"
+ },
+ {
+  "source": "/loan-application",
+  "destination": "/loan-application-rejected-what-now/",
+  "permanent": true,
+  "kind": "live-301"
+ },
+ {
+  "source": "/money-navigator",
+  "destination": "/resources/member-helper/",
+  "permanent": true,
+  "kind": "live-301"
+ },
+ {
+  "source": "/money-talk-kids-why-you-need-start-your-childrens-financial-education-now",
+  "destination": "/childrens-financial-education/",
+  "permanent": true,
+  "kind": "live-301"
+ },
+ {
+  "source": "/resources/member-helper/budget-planner/,",
+  "destination": "/resources/member-helper/budget-planner/",
+  "permanent": true,
+  "kind": "live-301"
+ },
+ {
+  "source": "/savings-accounts",
+  "destination": "/savings/",
+  "permanent": true,
+  "kind": "live-301"
+ },
+ {
+  "source": "/savings/junior-saver",
+  "destination": "/savings/young-saver/",
+  "permanent": true,
+  "kind": "live-301"
+ },
+ {
+  "source": "/savings/junior-saver/apply",
+  "destination": "/savings/young-saver/",
+  "permanent": true,
+  "kind": "live-301 (retargeted)"
+ },
+ {
+  "source": "/simple-money-management-tips-feel-better-about-your-finances",
+  "destination": "/simple-money-management-tips/",
+  "permanent": true,
+  "kind": "live-301"
+ },
+ {
+  "source": "/wp-sitemap.xml",
+  "destination": "/sitemap_index.xml",
+  "permanent": true,
+  "kind": "live-301"
+ },
+ {
+  "source": "/directors-area/:path*",
+  "destination": "/",
+  "permanent": false,
+  "kind": "proposed-HOLD"
+ },
+ {
+  "source": "/category-sitemap.xml",
+  "destination": "/sitemap_index.xml",
+  "permanent": true,
+  "kind": "proposed"
+ },
+ {
+  "source": "/post_tag-sitemap.xml",
+  "destination": "/sitemap_index.xml",
+  "permanent": true,
+  "kind": "proposed"
+ }
+]

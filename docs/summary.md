@@ -26,5 +26,5 @@ Full register with reasons and revert paths: `docs/deviations.md`.
 
 ## Links
 - Repo: https://github.com/jimcreditcanary/gmb
-- Vercel project: see `docs/cutover-checklist.md` header once linked
+- Vercel project: https://vercel.com/credit-canary1/gmb · production build (noindex until the real domain is attached, Vercel login required): https://gmb-credit-canary1.vercel.app
 - Phase reports: `audit/phase-1-report.md` … `audit/phase-4-report.md`; decisions: `audit/decisions.md`

@@ -1,6 +1,6 @@
 # Cutover checklist — gmbcreditunion.com → Vercel
 
-Owner: Jim Fell · Target: zero downtime, zero email disruption, zero SEO loss. Do the steps in order; tick as you go. Nothing in sections A–C touches the live site.
+Vercel project: https://vercel.com/credit-canary1/gmb (team credit-canary1) · GitHub: https://github.com/jimcreditcanary/gmb · Owner: Jim Fell · Target: zero downtime, zero email disruption, zero SEO loss. Do the steps in order; tick as you go. Nothing in sections A–C touches the live site.
 
 ## What the DNS looks like today (public records, read 2026-10-07 — re-run `dig` on the day)
 Authoritative nameservers: **StackDNS (20i)** — `ns1–ns4.stackdns.com`. The current host (185.151.30.202 / 2a07:7800::202) is 20i, which is also where StackProtect (the WAF) lives.

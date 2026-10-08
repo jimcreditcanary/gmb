@@ -73,3 +73,23 @@ Copy, including CTA wording ("Learn more >", "Apply Now" variants): verbatim rul
 - **Gradients.** Every colour block is a soft diagonal gradient of its own colour (orange `#FF5A1F → #FF7A3D`, lilac `#DECEF9 → #EEE6FC`, navy `#102C45 → #1C3A57`, and the same for blue, green, yellow). Depth without a second hue; navy type stays at or above 4.6:1 across each range.
 - **Lilac everywhere, quietly.** Quiet sections (blog overview, FAQ items, form panel, icon discs) use lilac at page strength (`#F3EEFC`) instead of grey. The lilac is now the site's resting colour; orange is the loud one.
 - **Image stages.** Illustrations and cut-outs no longer float. Each sits on a stage: a 4:3 frame, bottom-aligned, on a soft lilac-to-white gradient on white rows or a translucent white panel on colour blocks. Photographs fill a rounded 4:3 frame. Product and doorway cards have a fixed-height stage so the artwork lines up across a row. Page heroes drop the artwork onto the block's bottom edge.
+
+## Home page, modelled on monzo.com (2026-10-08)
+
+Jim: "rip monzo.com, create a new version of the home page and weave in the GMB copy". Monzo's home, section by section (captured 2026-10-08): photo hero with one message and one pill, trust badges in the corner → "Get the most out of Monzo": heading, one-line intro, pill, a row of four product cards (image, title, two lines, "Learn more") → feature carousel → six small product cards → travel / savings feature rows (heading + intro + pill + cards) → split feature (copy left, coral block with phone right) → dark trust block ("Which? recommended… Join 16 million") → three steps → security grid → regulatory survey → footer with a giant wordmark.
+
+GMB version, same skeleton, all copy verbatim from the site:
+
+| Monzo section | GMB home section | Where the copy comes from |
+|---|---|---|
+| Photo hero, one pill, badges | `HomeHero`: family photo, white H1 and intro, two pill doorways, FSCS badge; Trustpilot band below | home.mdx |
+| "Get the most out of Monzo" product row | `FeatureSection` "Affordable, ethical loans" + `ProductCards source="/loans/"` (first four loan cards) | home.mdx + the loans hub, rendered from its source |
+| "Save like a superhero" | `FeatureSection` "Secure savings accounts" + `ProductCards source="/savings/"` | home.mdx + the savings hub |
+| Split feature (copy + coral block) | `PopoutBlock` lilac: "Putting your needs first" with the header illustration | home.mdx |
+| Dark block | `PhotoBand`: "Own your financial future" on the family photo | home.mdx |
+| App feature | `PopoutBlock` orange: "Easy and secure finance", phone on the left, icon list, store buttons | home.mdx |
+| "Join 16 million" trust block | `StatBand source="/about-us/"`: £75 million / 600,000 / £120,000 | About page, rendered from its source |
+| Blog | `PostsOverview` "Money smart advice" | home.mdx |
+| "A regulated bank with 24/7 support" | `FaqTeaser group="General FAQs"`: the first four questions as an accordion + "Visit our FAQ" | FAQ page, rendered from its source |
+
+Not copied: the giant footer wordmark (GMBCU's logo is a stacked lockup, it would not survive the treatment), the survey tables (regulatory to Monzo as a bank), the steps (we have no step copy).

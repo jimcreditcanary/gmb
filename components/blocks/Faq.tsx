@@ -7,14 +7,14 @@ import { toTone, toneClass } from "@/lib/tones";
 import { Container } from "@/components/ui/section";
 
 /** Accordion group (docs/design-system.md §Accordion). One open at a time; the open panel animates height. */
-export function FAQGroup({ heading, colour, children, index }: { heading: string; colour?: string; children?: ReactNode; index?: number }) {
+export function FAQGroup({ heading, colour, children, index, hideHeading }: { heading: string; colour?: string; children?: ReactNode; index?: number; hideHeading?: boolean }) {
   const [open, setOpen] = useState<number | null>(null);
   const base = useId();
   const items = Children.toArray(children).filter(isValidElement) as React.ReactElement<{ question: string; children: ReactNode }>[];
   const tone = toTone(colour || "cream");
   return (
     <div id={index !== undefined ? `faq-${index}` : undefined} className="scroll-mt-24 py-6">
-      <h2 className="mb-6">{heading}</h2>
+      <h2 className={hideHeading ? "sr-only-text" : "mb-6"}>{heading}</h2>
       <div className="grid gap-3">
         {items.map((item, i) => {
           const isOpen = open === i; const id = `${base}-${i}`;

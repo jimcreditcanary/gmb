@@ -145,7 +145,7 @@ export function StatBlock({ children }: { children: ReactNode }) {
 export function Stat({ figure, label }: { figure: string; label: string }) {
   return (
     <div>
-      <dd className="min-w-0 break-words font-display text-h1 leading-none tracking-heading [font-variant-numeric:tabular-nums]">{figure}</dd>
+      <dd className="min-w-0 font-display text-h2 leading-none tracking-heading whitespace-nowrap [font-variant-numeric:tabular-nums]">{figure}</dd>
       <dt className="mt-3 font-display text-lg text-ink">{label}</dt>
     </div>
   );

@@ -65,43 +65,39 @@ schema:
             valueName: search_term_string
       inLanguage: en-GB
 ---
-
-<PageHeader variant="home" colour="lilac" trustpilot={true} image="/media/gmbcu-homepage-header-image01.png" buttons={[{"label":"Open a Savings Account","href":"/savings/","icon":"/media/icon-blue.png"},{"label":"Apply for a Personal Loan","href":"/loans/","icon":"/media/icon-green.png"}]}>
+<HomeHero image="/media/gmbcu-homepage-image02.png" imageAlt="" trustpilot={true} buttons={[{"label":"Open a Savings Account","href":"/savings/","icon":"/media/icon-blue.png"},{"label":"Apply for a Personal Loan","href":"/loans/","icon":"/media/icon-green.png"}]}>
 # Your money, your future, your <u>Credit Union</u>
 
 Secure a better future with GMB Credit Union. Access ethical loans and finance, member-focus offerings and helpful support.
-</PageHeader>
+</HomeHero>
 
-<ContentRow colour="white">
-<Col>
-## Putting <u>your needs first</u>
-</Col>
-<Col>
-Experience the difference of an alternative financial relationship founded on trust, transparency and a shared commitment to your financial wellbeing. At GMB Credit Union, we support you in every step of your financial journey, providing personalised offerings and practical advice.
-
-We always put you first, as a member-owned credit union. Trading surpluses go back into improved services and better rates for you. We’re also regulated by the Financial Conduct Authority (FCA) and Prudential Regulation Authority (PRA), which helps keep your money safe. We care about you and won’t take risks that could harm your finances. Our main goal is to help you build a strong financial base for you and your loved ones.
-
-<Button href="/about-us/">About us</Button>
-</Col>
-</ContentRow>
-
-<ColourPanels>
-<ColourPanel image="/media/CU-Loan-Header-RGB.svg">
+<FeatureSection>
 ## [Affordable, ethical loans](/loans/)
 
 Managing everyday household budgets can be tough, and sometimes a loan can help. GMB Credit Union provides ethical loans and finance designed to help you overcome life’s challenges and plan for a secure future. Whether you’re saving for a house, tackling the cost of living or facing unexpected expenses, we’re here to help. Our responsible loans are designed to fit your needs and budget, with flexible repayment terms and interest rates.
 
-<Button href="/loans/" variant="inverse">Browse loans</Button>
-</ColourPanel>
-<ColourPanel image="/media/CU-Loan-SaveSecure-RGB2.svg">
+<Button href="/loans/">Browse loans</Button>
+<ProductCards source="/loans/" count={4} />
+</FeatureSection>
+
+<FeatureSection>
 ## [Secure savings accounts](/savings/)
 
 Be confident with your money in uncertain times by saving for what’s to come. GMB Credit Union provides yearly earnings on all easy-to-use savings accounts, helping you grow your money faster. Check out our variety of member-focused accounts for every situation. Plus, your savings are safe with full protection up to £120,000 by the Financial Services Compensation Scheme (FSCS).
 
 <Button href="/savings/">Browse savings</Button>
-</ColourPanel>
-</ColourPanels>
+<ProductCards source="/savings/" count={4} />
+</FeatureSection>
 
+<PopoutBlock colour="lilac" image="/media/gmbcu-homepage-header-image01.png">
+## Putting <u>your needs first</u>
+
+Experience the difference of an alternative financial relationship founded on trust, transparency and a shared commitment to your financial wellbeing. At GMB Credit Union, we support you in every step of your financial journey, providing personalised offerings and practical advice.
+
+We always put you first, as a member-owned credit union. Trading surpluses go back into improved services and better rates for you. We’re also regulated by the Financial Conduct Authority (FCA) and Prudential Regulation Authority (PRA), which helps keep your money safe. We care about you and won’t take risks that could harm your finances. Our main goal is to help you build a strong financial base for you and your loved ones.
+
+<Button href="/about-us/">About us</Button>
+</PopoutBlock>
 
 <PhotoBand image="/media/gmbcu-homepage-image02.png">
 ## [Own your financial future](/about-us/)
@@ -111,9 +107,7 @@ We’re made and managed by people like you, which means members dictate how we 
 <Button href="/about-us/" variant="inverse">Learn more</Button>
 </PhotoBand>
 
-<ContentRow colour="white" centred={true}>
-<ColImage src="/media/gmbcu-homepage-image03.jpg" alt="" />
-<Col variant="icon">
+<PopoutBlock colour="orange" image="/media/gmbcu-homepage-image03.jpg" imagePosition="left">
 ## <u>Easy and secure finance</u>
 
 Use our secure GMB Credit Union mobile app to manage finances on-the-go. Enjoy easy messaging and transacting like other everyday apps, with added safety for your personal info.
@@ -129,11 +123,14 @@ Use our secure GMB Credit Union mobile app to manage finances on-the-go. Enjoy e
 We’re always working to enhance our digital service, making sure you can handle most of your everyday account tasks securely and easily on your mobile phone. Enjoy quick access to your finances wherever you are with GMB Credit Union.
 
 <Button href="https://apps.apple.com/gb/app/gmb-credit-union/id6446773703" target="_blank">Download from Apple Store</Button> <Button href="https://play.google.com/store/apps/details?id=uk.co.cuapps.gmbcu&hl=en_GB&" target="_blank">Download from Google Play</Button>
-</Col>
-</ContentRow>
+</PopoutBlock>
+
+<StatBand source="/about-us/" />
 
 <PostsOverview trustpilot={true}>
 ## <u>Money smart</u> advice
 
 Learn money management with our financial blog and resources. We’re here to help you make smart choices, maximise your budget and accomplish your financial goals.
 </PostsOverview>
+
+<FaqTeaser source="/faqs/" group="General FAQs" count={4} href="/faqs/" label="Visit our FAQ" />

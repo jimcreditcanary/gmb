@@ -8,162 +8,165 @@ import { VideoFacade } from "./VideoFacade";
 import { EmbedPlaceholder } from "./EmbedPlaceholder";
 
 /*
-  Layout blocks (docs/design-system.md §Blocks). Component names and props are the content contract from Phase 2 and
-  do not change; the markup and styling are the design system's. Every colour prop resolves through lib/tones.ts.
+  Layout blocks (docs/design-direction.md). Component names and props are the content contract and do not change.
+  Rules: left-aligned; whitespace and type scale separate sections, not tinted boxes; colour is spent once per page
+  (navy details block, orange stat band, lilac member panel); structure (rules, grids) encodes information, never decorates.
 */
 
 const kidsOf = (children: ReactNode) => (Array.isArray(children) ? children : [children]).filter(Boolean);
 const typeOf = (k: unknown) => (typeof k === "object" && k !== null ? (k as { type?: unknown }).type : undefined);
 
-// ---------- ListBlock: heading + horizontal row of icon statements ----------
+// ---------- ListBlock: a row of plain statements with the orange tick ----------
 export function ListBlock({ heading, align, children }: { heading?: string; align?: "center" | "right"; children: ReactNode }) {
   return (
     <Section tight>
       <SectionHeader heading={heading} align={align} />
-      <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">{children}</ul>
+      <ul className="rule-grid grid gap-x-10 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">{children}</ul>
     </Section>
   );
 }
 
-/** Icon + content row, shared by ListBlock (`ListItem`) and IconGrid (`IconItem`). Icons are decorative. */
+/** Icon + statement, shared by ListBlock (`ListItem`) and IconGrid (`IconItem`). */
 export function IconRow({ icon, children }: { icon?: string; children: ReactNode }) {
   return (
     <li className="flex items-start gap-4">
-      {icon && <span className="mt-0.5 grid size-12 shrink-0 place-items-center rounded-full bg-surface-subtle"><Img src={icon} alt="" width={28} height={28} className="size-7 object-contain" /></span>}
-      <div className="prose min-w-0 grow [&>h3]:text-h4 [&>p]:text-small [&>p]:text-ink-muted [&_strong]:text-ink">{children}</div>
+      {icon && <Img src={icon} alt="" width={40} height={40} className="mt-0.5 size-10 shrink-0 object-contain" />}
+      <div className="prose min-w-0 grow [&>h3]:text-h4 [&>p]:text-small [&>p]:text-ink-muted [&_strong]:text-ink [&_strong]:text-lg">{children}</div>
     </li>
   );
 }
 export { IconRow as ListItem, IconRow as IconItem };
 
-// ---------- PanelSection: 2–3 tinted panels with a title each, optional footer line ----------
+// ---------- PanelSection: the page's one strong block. Navy, three columns, white type ----------
 export function PanelSection({ children }: { children: ReactNode }) {
   const kids = kidsOf(children);
   const footer = kids.find((k) => typeOf(k) === PanelFooter);
   const panels = kids.filter((k) => k !== footer);
   return (
     <Section tight>
-      <div className={cn("grid gap-6", panels.length >= 3 ? "md:grid-cols-3" : "md:grid-cols-2")}>{panels}</div>
+      <div className={cn("grid gap-10 rounded-panel p-(--panel-padding) md:gap-12", panels.length >= 3 ? "md:grid-cols-3" : "md:grid-cols-2", toneClass.inverse)}>{panels}</div>
       {footer}
     </Section>
   );
 }
-export function Panel({ colour, title, children }: { colour?: string; title?: string; children: ReactNode }) {
-  const tone = toTone(colour || "cream");
+export function Panel({ title, children }: { colour?: string; title?: string; children: ReactNode }) {
   return (
-    <div className={cn("flex flex-col rounded-card p-(--card-padding)", toneClass[tone])}>
-      {title && <h3 className="mb-4" dangerouslySetInnerHTML={{ __html: title }} />}
-      <div className="prose grow [&>ul]:space-y-2 [&_li]:text-small">{children}</div>
+    <div className="flex flex-col border-t border-ink-inverse/25 pt-5">
+      {title && <h3 className="mb-4 text-h4 text-ink-inverse" dangerouslySetInnerHTML={{ __html: title }} />}
+      <div className="prose grow text-ink-inverse-muted [&>ul]:space-y-2 [&_li]:text-small [&_strong]:text-ink-inverse [&_a]:text-ink-inverse">{children}</div>
     </div>
   );
 }
 export function PanelFooter({ children }: { children: ReactNode }) {
-  return <footer className="prose mt-block text-center [&>h2]:flex [&>h2]:flex-wrap [&>h2]:items-center [&>h2]:justify-center [&>h2]:gap-4 [&>h2]:text-h3">{children}</footer>;
+  return <footer className="prose mt-8 [&>h2]:flex [&>h2]:flex-wrap [&>h2]:items-center [&>h2]:gap-5 [&>h2]:text-h3">{children}</footer>;
 }
 
-// ---------- PopoutBlock: feature panel, copy one side and artwork the other ----------
+// ---------- PopoutBlock: an editorial row. Copy left, artwork right. Tint / navy / orange only when the content asks for a box ----------
 export function PopoutBlock({ colour, image, imageAlt = "", imagePosition, children }: { colour?: string; image?: string; imageAlt?: string; imagePosition?: "left" | "right"; children: ReactNode }) {
   const tone = toTone(colour);
-  const art = image ? <div className={cn("mx-auto w-full max-w-[460px]", imagePosition === "left" ? "lg:order-first" : "")}><Img src={image} alt={imageAlt} sizes="(max-width: 1024px) 80vw, 460px" className="h-auto w-full rounded-media object-contain" /></div> : null;
-  return (
-    <Section tight tone={tone} panelClassName={cn(!image && "max-w-none")}>
-      <div className={cn("grid items-center gap-block", image && "lg:grid-cols-2")}>
-        <div className="prose max-w-measure">{children}</div>
-        {art}
-      </div>
-    </Section>
+  const boxed = tone === "tint" || tone === "inverse" || tone === "brand";
+  const art = image ? <div className={cn("mx-auto w-full max-w-[420px] lg:max-w-none", imagePosition === "left" ? "lg:order-first" : "")}><Img src={image} alt={imageAlt} sizes="(max-width: 1024px) 80vw, 460px" className="h-auto w-full object-contain" /></div> : null;
+  const inner = (
+    <div className={cn("grid items-center gap-x-12 gap-y-8", image && "lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)]")}>
+      <div className="prose max-w-measure [&>h2]:max-w-[22ch]">{children}</div>
+      {art}
+    </div>
   );
+  if (boxed) return <Section tight tone={tone}>{inner}</Section>;
+  return <Section tight><div className="border-t border-border pt-(--spacing-block)">{inner}</div></Section>;
 }
 
-// ---------- VideoSection: brand panel + video ----------
+// ---------- VideoSection: navy panel + video ----------
 export function VideoSection({ video, children }: { video: string; children: ReactNode }) {
   return (
     <Section tight>
-      <div className="grid overflow-hidden rounded-panel lg:grid-cols-2">
-        <div className={cn("p-(--panel-padding)", toneClass.brand)}><div className="prose max-w-measure [&>p]:text-ink-inverse">{children}</div></div>
-        <div className="min-h-[260px] bg-surface-inverse"><VideoFacade src={video} square /></div>
+      <div className="grid items-center gap-x-12 gap-y-8 border-t border-border pt-(--spacing-block) lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
+        <div className="prose max-w-measure [&>h2]:max-w-[16ch]">{children}</div>
+        <div className="overflow-hidden rounded-media"><VideoFacade src={video} /></div>
       </div>
     </Section>
   );
 }
 
-// ---------- ContentRow: free two-column copy / media row ----------
+// ---------- ContentRow: editorial two-column row ----------
 export function ContentRow({ colour, centred, children }: { colour?: string; centred?: boolean; children: ReactNode }) {
   const kids = kidsOf(children);
   const cols = kids.filter((k) => typeOf(k) === Col || typeOf(k) === ColImage);
   const header = kids.filter((k) => !cols.includes(k));
   const tone = toTone(colour);
+  const boxed = tone === "inverse" || tone === "brand";   // pastel rows are plain: colour is spent elsewhere on the page
   const hasImage = cols.some((k) => typeOf(k) === ColImage);
-  return (
-    <Section tight tone={tone}>
-      {header.length > 0 && <div className="prose mx-auto mb-block max-w-measure text-center">{header}</div>}
-      <div className={cn("grid gap-block", cols.length > 1 && (hasImage ? "items-center lg:grid-cols-2" : "md:grid-cols-2"), centred && "items-center")}>{cols}</div>
-    </Section>
+  const body = (
+    <>
+      {header.length > 0 && <div className="prose mb-block [&>h2]:max-w-[22ch] [&>p]:max-w-measure">{header}</div>}
+      <div className={cn("grid gap-x-12 gap-y-8", cols.length > 1 && (hasImage ? "items-center lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]" : "md:grid-cols-2"), centred && "items-center")}>{cols}</div>
+    </>
   );
+  return <Section tight tone={boxed ? tone : "surface"}>{boxed ? body : <div className="border-t border-border pt-(--spacing-block)">{body}</div>}</Section>;
 }
 export function Col({ variant, children }: { variant?: "icon"; children: ReactNode }) {
-  return <div className={cn("prose min-w-0", variant === "icon" && "col-icons")}>{children}</div>;
+  return <div className={cn("prose min-w-0 [&>h2]:max-w-[22ch]", variant === "icon" && "col-icons")}>{children}</div>;
 }
 export function ColImage({ src, alt = "" }: { src: string; alt?: string }) {
-  return <div className="mx-auto w-full max-w-[520px]"><Img src={src} alt={alt} sizes="(max-width: 1024px) 90vw, 520px" className="h-auto w-full rounded-media object-contain" /></div>;
+  return <div className="mx-auto w-full max-w-[520px] lg:max-w-none"><Img src={src} alt={alt} sizes="(max-width: 1024px) 90vw, 560px" className="h-auto w-full rounded-media object-contain" /></div>;
 }
 export function IconList({ children }: { children: ReactNode }) {
-  return <ul className="not-prose my-6 grid list-none grid-cols-2 gap-4 p-0 sm:grid-cols-3 lg:grid-cols-5">{children}</ul>;
+  return <ul className="not-prose my-8 grid list-none grid-cols-2 gap-x-4 gap-y-6 p-0 sm:grid-cols-3 lg:grid-cols-5">{children}</ul>;
 }
 export function IconListItem({ icon, children }: { icon?: string; children: ReactNode }) {
   return (
-    <li className="flex flex-col items-center gap-2 text-center text-small text-ink-muted">
-      {icon && <span className="grid size-14 place-items-center rounded-full bg-surface-subtle"><Img src={icon} alt="" width={32} height={32} className="size-8 object-contain" /></span>}
-      <span className="max-w-[12ch] leading-snug">{children}</span>
+    <li className="flex flex-col gap-3 text-small text-ink">
+      {icon && <Img src={icon} alt="" width={36} height={36} className="size-9 object-contain" />}
+      <span className="max-w-[14ch] font-display leading-snug">{children}</span>
     </li>
   );
 }
 
-// ---------- StatBlock: the big-number band ----------
+// ---------- StatBlock: the orange band, numerals at display size ----------
 export function StatBlock({ children }: { children: ReactNode }) {
   return (
     <Section tight>
-      <dl className={cn("grid gap-8 rounded-panel p-(--panel-padding) text-center sm:grid-cols-3", toneClass.brand)}>{children}</dl>
+      <dl className={cn("grid gap-10 rounded-panel p-(--panel-padding) sm:grid-cols-3 [&>div]:min-w-0", toneClass.brand)}>{children}</dl>
     </Section>
   );
 }
 export function Stat({ figure, label }: { figure: string; label: string }) {
   return (
     <div>
-      <dd className="font-display text-h1 leading-none">{figure}</dd>
-      <dt className="mt-2 font-display text-small text-ink-inverse">{label}</dt>
+      <dd className="min-w-0 break-words font-display text-h1 leading-none tracking-heading [font-variant-numeric:tabular-nums]">{figure}</dd>
+      <dt className="mt-3 font-display text-lg text-ink-inverse">{label}</dt>
     </div>
   );
 }
 
-// ---------- IconGrid: feature grid (with or without heading) ----------
-export function IconGrid({ colour, heading, align, columns, children, variant }: { colour?: string; heading?: string; align?: "center" | "right"; columns?: string | number; children: ReactNode; variant?: "values" }) {
+// ---------- IconGrid: feature grid on rules ----------
+export function IconGrid({ heading, align, columns, children }: { colour?: string; heading?: string; align?: "center" | "right"; columns?: string | number; children: ReactNode; variant?: "values" }) {
   const n = Number(columns) || 0;
-  const tone = heading || variant === "values" ? toTone(colour || "lilac") : toTone(colour || "cream");
   const gridCols = n >= 5 ? "sm:grid-cols-2 lg:grid-cols-3" : n === 4 ? "sm:grid-cols-2 lg:grid-cols-4" : "sm:grid-cols-2";
   return (
-    <Section tight tone={tone}>
+    <Section tight>
       <SectionHeader heading={heading} align={align} />
-      <ul className={cn("grid gap-x-8 gap-y-8", gridCols)}>{children}</ul>
+      <ul className={cn("rule-grid grid gap-x-10 gap-y-10", gridCols)}>{children}</ul>
     </Section>
   );
 }
 
-// ---------- ColourPanels: stacked image + tinted copy tiles (complaints, member helper, home pair) ----------
+// ---------- ColourPanels: doorways. Navy, then lilac ----------
 export function ColourPanels({ children }: { children: ReactNode }) {
-  return <Section tight><ul className="grid gap-6 md:grid-cols-2">{children}</ul></Section>;
+  return <Section tight><ul className="doorways grid gap-6 md:grid-cols-2">{children}</ul></Section>;
 }
-export function ColourPanel({ colour, image, imageAlt = "", children }: { colour?: string; image?: string; imageAlt?: string; children: ReactNode }) {
-  const tone = toTone(colour || "lilac");
+export function ColourPanel({ image, imageAlt = "", children }: { colour?: string; image?: string; imageAlt?: string; children: ReactNode }) {
   return (
-    <li className="flex flex-col overflow-hidden rounded-panel bg-surface shadow-card">
-      {image && <div className="aspect-[16/10] w-full overflow-hidden bg-surface-subtle"><Img src={image} alt={imageAlt} sizes="(max-width: 768px) 100vw, 580px" className="size-full object-cover" /></div>}
-      <div className={cn("prose grow p-(--panel-padding) [&>h2]:text-h3", toneClass[tone])}>{children}</div>
+    <li className="flex">
+      <div className="door flex w-full flex-col overflow-hidden rounded-panel">
+        {image && <div className="flex h-56 items-end justify-center px-8 pt-8"><Img src={image} alt={imageAlt} sizes="(max-width: 768px) 90vw, 520px" className="max-h-full w-auto max-w-full object-contain" /></div>}
+        <div className="prose grow p-(--panel-padding) [&>h2]:text-h2 [&>h2]:max-w-[16ch] [&>p]:text-small [&>p]:opacity-90">{children}</div>
+      </div>
     </li>
   );
 }
 
-// ---------- InfoBlock: heading + intro + year/step panels ----------
+// ---------- InfoBlock: heading + intro + step/year panels ----------
 export function InfoBlock({ heading, align, children }: { heading?: string; align?: "center" | "right"; children: ReactNode }) {
   const kids = kidsOf(children);
   const panels = kids.filter((k) => typeOf(k) === InfoPanel);
@@ -171,27 +174,26 @@ export function InfoBlock({ heading, align, children }: { heading?: string; alig
   return (
     <Section tight>
       <SectionHeader heading={heading} align={align}>{intro.length > 0 && <div className="prose mt-stack">{intro}</div>}</SectionHeader>
-      <div className={cn("grid gap-6", panels.length >= 3 ? "md:grid-cols-3" : "md:grid-cols-2")}>{panels}</div>
+      <div className={cn("rule-grid grid gap-x-10 gap-y-8", panels.length >= 3 ? "md:grid-cols-3" : "md:grid-cols-2")}>{panels}</div>
     </Section>
   );
 }
 export function InfoPanel({ year, children }: { year?: string; children: ReactNode }) {
   return (
-    <div className="rounded-card border border-border bg-surface p-(--card-padding) shadow-card">
-      {year && <p className="mb-3 font-display text-h2 text-brand-strong">{year}</p>}
+    <div>
+      {year && <p className="mb-3 font-display text-h2 text-brand">{year}</p>}
       <div className="prose [&>p]:text-small">{children}</div>
     </div>
   );
 }
 
-// ---------- PhotoBand: full-width photo with the copy on a solid panel ----------
-export function PhotoBand({ image, imageAlt = "", colour = "yellow", children }: { image: string; imageAlt?: string; colour?: string; children: ReactNode }) {
-  const tone = toTone(colour);
+// ---------- PhotoBand: full-width photo, copy on a navy panel ----------
+export function PhotoBand({ image, imageAlt = "", children }: { image: string; imageAlt?: string; colour?: string; children: ReactNode }) {
   return (
     <Section tight>
-      <div className="relative grid min-h-[480px] items-end overflow-hidden rounded-panel bg-surface-inverse">
+      <div className="relative grid min-h-[520px] items-end overflow-hidden rounded-panel bg-surface-inverse">
         <Img src={image} alt={imageAlt} sizes="100vw" className="absolute inset-0 size-full object-cover" />
-        <div className={cn("relative m-4 max-w-[560px] rounded-card p-(--panel-padding) sm:m-8", toneClass[tone])}><div className="prose">{children}</div></div>
+        <div className={cn("relative m-4 max-w-[520px] rounded-card p-(--panel-padding) sm:m-8", toneClass.inverse)}><div className="prose [&>p]:text-ink-inverse-muted">{children}</div></div>
       </div>
     </Section>
   );
@@ -203,5 +205,4 @@ export function Embed({ src, title, height }: { src: string; title?: string; hei
   return <EmbedPlaceholder src={src} title={title} height={height} />;
 }
 
-/** Plain wrapper for pages that need a bare section (styleguide, not-found). */
 export { Section, Container, SectionHeader, Link };

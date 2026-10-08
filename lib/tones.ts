@@ -1,29 +1,25 @@
 /**
- * Section tones (docs/design-system.md §Colour). Content files still say `colour="lilac"` etc. from the old theme;
- * those names map onto the design system's tone tokens here, in one place. Add a tone by adding a token, not a hex.
+ * Section tones (docs/design-direction.md). Five colours: content files still carry the old theme's colour names
+ * (`colour="lilac"`, "green", "yellow" …); every pastel resolves to the single tint, purple/dark blue to navy, orange to brand.
  */
-export type Tone = "surface" | "subtle" | "loans" | "savings" | "about" | "resources" | "deep" | "inverse" | "brand";
+export type Tone = "surface" | "subtle" | "tint" | "inverse" | "brand";
 
 const LEGACY: Record<string, Tone> = {
-  white: "surface", cream: "subtle", "": "surface",
-  green: "loans", ltblue: "savings", blue: "savings", lilac: "about", yellow: "resources",
-  purple: "deep", dkblue: "inverse", navy: "inverse", orange: "brand",
+  white: "surface", "": "surface", cream: "subtle",
+  lilac: "tint", ltblue: "tint", blue: "tint", green: "tint", yellow: "tint",
+  purple: "inverse", dkblue: "inverse", navy: "inverse", orange: "brand",
 };
 
 export const toTone = (colour?: string): Tone => LEGACY[(colour || "").trim()] ?? "surface";
 
-/** Background + text classes for a tone. Inverse tones add `.on-inverse` so links and marks switch to white. */
+/** Background + text classes for a tone. Inverse tones add `.on-inverse` so links and marks switch to white; the tint adds `.on-tint` (navy links). */
 export const toneClass: Record<Tone, string> = {
   surface: "bg-surface text-ink",
   subtle: "bg-surface-subtle text-ink",
-  loans: "bg-tone-loans text-ink on-tint",
-  savings: "bg-tone-savings text-ink on-tint",
-  about: "bg-tone-about text-ink on-tint",
-  resources: "bg-tone-resources text-ink on-tint",
-  deep: "bg-tone-deep text-ink-inverse on-inverse",
+  tint: "bg-tint text-ink on-tint",
   inverse: "bg-surface-inverse text-ink-inverse on-inverse",
   brand: "bg-surface-brand text-ink-inverse on-inverse",
 };
 
-export const isInverse = (t: Tone) => t === "deep" || t === "inverse" || t === "brand";
+export const isInverse = (t: Tone) => t === "inverse" || t === "brand";
 export const isTinted = (t: Tone) => t !== "surface";

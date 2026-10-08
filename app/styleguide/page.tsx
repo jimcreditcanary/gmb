@@ -8,17 +8,12 @@ import { PageHeader } from "@/components/blocks/PageHeader";
 export const metadata: Metadata = { title: { absolute: "Design system | GMBCU" }, robots: { index: false, follow: false } };
 
 const swatches: { name: string; token: string; note: string }[] = [
-  { name: "brand", token: "--color-brand", note: "logo orange, accents and large type only (3.1:1)" },
-  { name: "brand-strong", token: "--color-brand-strong", note: "buttons, links, small text (4.7:1)" },
-  { name: "brand-hover", token: "--color-brand-hover", note: "hover / active" },
-  { name: "ink", token: "--color-ink", note: "headings and body" },
+  { name: "brand", token: "--color-brand", note: "logo orange: large type, the hero slab, the stat band, the stroke under a word" },
+  { name: "brand-strong", token: "--color-brand-strong", note: "buttons and links (4.7:1 on white)" },
+  { name: "ink", token: "--color-ink", note: "navy: text, and the one strong block per page" },
+  { name: "tint", token: "--color-tint", note: "lilac: the single tint, member panels" },
+  { name: "surface-subtle", token: "--color-surface-subtle", note: "quiet grey sections" },
   { name: "ink-muted", token: "--color-ink-muted", note: "secondary copy" },
-  { name: "surface-subtle", token: "--color-surface-subtle", note: "quiet section background" },
-  { name: "tone-loans", token: "--color-tone-loans", note: "loan heroes and panels" },
-  { name: "tone-savings", token: "--color-tone-savings", note: "savings heroes and panels" },
-  { name: "tone-about", token: "--color-tone-about", note: "about, contact, legal heroes" },
-  { name: "tone-resources", token: "--color-tone-resources", note: "resources and blog heroes" },
-  { name: "surface-inverse", token: "--color-surface-inverse", note: "footer, deep panels" },
 ];
 const type: { label: string; cls: string; sample: string }[] = [
   { label: "display", cls: "text-display font-display", sample: "Your money, your future" },
@@ -31,19 +26,19 @@ const type: { label: string; cls: string; sample: string }[] = [
   { label: "small", cls: "text-small", sample: "Loan repaid by direct debit monthly, four-weekly, or weekly" },
   { label: "caption", cls: "text-caption", sample: "Firm Reference Number 213550" },
 ];
-const tones: Tone[] = ["surface", "subtle", "loans", "savings", "about", "resources", "deep", "inverse", "brand"];
+const tones: Tone[] = ["surface", "subtle", "tint", "inverse", "brand"];
 
 /** /styleguide: the design system rendered from its own tokens and components. Noindex. */
 export default function Styleguide() {
   return (
     <main id="main">
-      <PageHeader colour="lilac" label="Design system">
+      <PageHeader colour="white" image="/media/gmbcu-homepage-header-image01.png" label="Design system">
         <h1>GMBCU design system</h1>
         <p>Tokens in <code>design/tokens.json</code>, mapped to utilities in <code>app/globals.css</code>. Everything on this page is rendered from them.</p>
       </PageHeader>
 
       <Section tight>
-        <SectionHeader heading="Colour" intro="One accent. The logo orange is decorative; the hue-matched AA orange is what you click. Four brand tints are section tones, chosen by page family." />
+        <SectionHeader heading="Colour" intro="Five colours. The logo orange is spent on one bold device per page; the hue-matched AA orange is what you click; navy is the ink; lilac is the only tint." />
         <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {swatches.map((s) => (
             <li key={s.name} className="overflow-hidden rounded-card border border-border">
@@ -63,7 +58,7 @@ export default function Styleguide() {
       </Section>
 
       <Section tight>
-        <SectionHeader heading="Buttons" intro="Primary, secondary, ghost. Three sizes. Pill radius is the control radius token." />
+        <SectionHeader heading="Buttons" intro="Primary, secondary, ghost. Three sizes. 10px corners: union, not app store." />
         <div className="flex flex-wrap items-center gap-4">
           <Button href="#">Apply now</Button>
           <Button href="#" variant="secondary">Learn more</Button>
@@ -75,7 +70,7 @@ export default function Styleguide() {
       </Section>
 
       <Section tight>
-        <SectionHeader heading="Section tones" intro="A tone is a rounded panel inside the container, never a full-bleed stripe. Inverse tones switch text, links and marks to white." />
+        <SectionHeader heading="Section tones" intro="Most sections are white, separated by rules and whitespace. A tone is used once per page for the block that matters." />
         <ul className="grid gap-4 sm:grid-cols-3">
           {tones.map((t) => <li key={t} className={`rounded-card p-6 ${toneClass[t]}`}><p className="font-display text-h4">{t}</p><p className="text-small">Body copy with a <a href="#">link</a> and a <u>mark</u>.</p></li>)}
         </ul>
@@ -100,7 +95,7 @@ export default function Styleguide() {
             <li><code>--spacing-section</code> clamp(48px, 96px): between page sections</li>
             <li><code>--spacing-block</code> 32px: between blocks inside a section</li>
             <li><code>--spacing-stack</code> 16px: heading → paragraph → button</li>
-            <li><code>--radius-control</code> pill · <code>--radius-field</code> 12px · <code>--radius-card</code> 16px · <code>--radius-panel</code> 24px</li>
+            <li><code>--radius-control</code> 10px · <code>--radius-field</code> 12px · <code>--radius-card</code> 12px · <code>--radius-panel</code> 20px</li>
           </ul>
         </Container>
       </Section>

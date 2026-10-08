@@ -44,7 +44,7 @@ export function Nav({ items }: { items: NavItem[] }) {
             ) : null}
           </li>
         ))}
-        {cta && <li className="ml-2"><Button href={cta.href} size="sm" rel="noopener">{cta.label}</Button></li>}
+        {cta && <li className="ml-2"><Button href={cta.href} size="sm" variant="secondary" rel="noopener">{cta.label}</Button></li>}
       </ul>
       {/* phone */}
       <button type="button" className="grid size-11 place-items-center rounded-control text-ink lg:hidden" aria-controls={panelId} aria-expanded={open} aria-label={open ? "Close menu" : "Open menu"} onClick={() => setOpen((v) => !v)}>

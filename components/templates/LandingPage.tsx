@@ -13,7 +13,7 @@ export function LandingPage({ page }: { page: Page }) {
   return (
     <main id="main" className="landing">
       <JsonLd data={pageGraph(fm, page.body, page.body.split(/\s+/).length)} />
-      <section className={`py-(--hero-padding-y) ${toneClass.resources}`}>
+      <section className={`py-(--hero-padding-y) ${toneClass.tint}`}>
         <Container>
           <div className="prose max-w-measure [&>h1]:text-h1">
             <h1>{displayTitle(fm)}</h1>

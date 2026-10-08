@@ -101,7 +101,7 @@
 /* === SEMANTIC === */
 :root {
   --color-surface: #FFFFFF;
-  --color-surface-subtle: #F7F8FA;
+  --color-surface-subtle: #EFF1F4;
   --color-surface-muted: #EFF1F4;
   --color-surface-inverse: #102C45;
   --color-surface-brand: #CC4512;
@@ -120,36 +120,33 @@
   --color-border: #E1E5EA;
   --color-border-strong: #CBD2DA;
   --color-ring: #102C45;
-  --color-tone-loans: #8CD697;
-  --color-tone-savings: #CFF4FB;
-  --color-tone-about: #DECEF9;
-  --color-tone-resources: #F6C757;
-  --color-tone-deep: #4A2B7F;
   --color-success: #1E7B4B;
   --color-warning: #B26A00;
   --color-error: #B3261E;
-  --typography-display: clamp(2.5rem, 1.6rem + 3vw, 3.5rem);
-  --typography-h1: clamp(2.25rem, 1.5rem + 2.4vw, 3rem);
-  --typography-h2: clamp(1.75rem, 1.3rem + 1.4vw, 2.25rem);
-  --typography-h3: 1.375rem;
+  --color-tint: #DECEF9;
+  --typography-display: clamp(3rem, 1.5rem + 6vw, 6rem);
+  --typography-h1: clamp(2.5rem, 1.6rem + 3.2vw, 4rem);
+  --typography-h2: clamp(2rem, 1.4rem + 2vw, 3rem);
+  --typography-h3: 1.5rem;
   --typography-h4: 1.125rem;
   --typography-lead: 1.25rem;
   --typography-body: 1.0625rem;
   --typography-small: 0.9375rem;
   --typography-caption: 0.8125rem;
-  --typography-leading-heading: 1.1;
+  --typography-leading-heading: 0.98;
   --typography-leading-body: 1.6;
   --typography-measure: 65ch;
+  --typography-tracking-heading: -0.03em;
   --spacing-section: clamp(3rem, 2rem + 4vw, 6rem);
   --spacing-section-tight: clamp(2rem, 1.5rem + 2vw, 3.5rem);
   --spacing-block: 2rem;
   --spacing-stack: 1rem;
   --spacing-gutter: 1.5rem;
   --spacing-page-inline: clamp(1rem, 0.5rem + 2.5vw, 2.5rem);
-  --radius-control: 9999px;
+  --radius-control: 0.625rem;
   --radius-field: 0.75rem;
-  --radius-card: 1rem;
-  --radius-panel: 1.5rem;
+  --radius-card: 0.75rem;
+  --radius-panel: 1.25rem;
   --radius-media: 1rem;
   --motion-duration: 200ms;
   --motion-duration-slow: 400ms;
@@ -164,7 +161,7 @@
   --button-secondary-bg: #FFFFFF;
   --button-secondary-fg: #102C45;
   --button-secondary-border: #102C45;
-  --button-radius: 9999px;
+  --button-radius: 0.625rem;
   --button-height-sm: 2.5rem;
   --button-height-md: 3rem;
   --button-height-lg: 3.5rem;
@@ -179,11 +176,11 @@
   --input-padding-x: 1rem;
   --card-bg: #FFFFFF;
   --card-border: #E1E5EA;
-  --card-radius: 1rem;
+  --card-radius: 0.75rem;
   --card-padding: 1.5rem;
   --card-shadow: 0 1px 2px 0 rgb(16 44 69 / 0.06);
   --card-hover-shadow: 0 4px 12px -2px rgb(16 44 69 / 0.08), 0 1px 3px rgb(16 44 69 / 0.05);
-  --panel-radius: 1.5rem;
+  --panel-radius: 1.25rem;
   --panel-padding: clamp(1.5rem, 1rem + 2vw, 3rem);
   --nav-height: 4.5rem;
   --nav-bg: #FFFFFF;
@@ -192,7 +189,7 @@
   --footer-bg: #102C45;
   --footer-fg: #FFFFFF;
   --footer-fg-muted: #B3C3D4;
-  --hero-radius: 1.5rem;
+  --hero-radius: 1.25rem;
   --hero-padding-y: clamp(2.5rem, 1.5rem + 4vw, 5rem);
   --hero-min-height: 28rem;
 }

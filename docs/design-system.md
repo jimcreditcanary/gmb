@@ -23,33 +23,34 @@ The ported WordPress CSS (`theme.css`, `megamenu.css`) and the purge step are go
 
 ## Colour
 
+Five colours (direction in `docs/design-direction.md`):
+
 | Token | Value | Role |
 |---|---|---|
-| `--color-brand` | `#FF4800` (logo) | Decorative only: `<u>` marks, icons, big display accents. 3.1:1 on white, so never small text. |
-| `--color-brand-strong` | `#CC4512` | Everything you click: buttons, links, small orange text. 4.7:1 on white (AA). Hue-matched to the logo. |
+| `--color-brand` | `#FF4800` (logo) | Spent once per page: the home hero slab, the stat band, the stroke under a headline word. Large type only (3.1:1 on white). |
+| `--color-brand-strong` | `#CC4512` | Everything you click: buttons, links. 4.7:1 on white (AA). |
 | `--color-brand-hover` | `#A8380E` | Hover / active. |
-| `--color-ink` | `#102C45` | Headings and body. |
-| `--color-ink-muted` | neutral 700 `#3A4550` | Secondary copy, intros. Neutral 700 so it passes AA on every tint (5.7:1 on green). |
-| `--color-surface` / `-subtle` / `-muted` | white / `#F7F8FA` / `#EFF1F4` | Page, quiet sections, icon discs. |
-| `--color-surface-inverse` | navy 700 | Footer, deep panels. |
-| `--color-tone-loans` / `-savings` / `-about` / `-resources` | green / light blue / lilac / yellow | The four brand tints, as section tones. |
+| `--color-ink` | `#102C45` | Text, and the navy surface for the one strong block per page (product details, video panel, doorways). |
+| `--color-tint` | `#DECEF9` | The single tint: representative examples, savings doorway, FAQ items. |
+| `--color-surface` / `-subtle` | white / `#EFF1F4` | Page and quiet sections. |
+| `--color-ink-muted` | `#3A4550` | Secondary copy; passes AA on the tint. |
 
 Rules:
-1. One accent. Orange is for actions and marks. Nothing else is orange.
-2. **Tones by family.** Loans pages use `loans`; savings pages `savings`; about, contact and legal `about`; resources and the blog `resources`. A page uses its family tone in the hero and in panels, plus white and `subtle`. Never more than two tones on a page.
-3. A tone is a **rounded panel inside the container**, never a full-bleed stripe (heroes excepted).
-4. Inverse tones (`deep`, `inverse`, `brand`) take `.on-inverse`, which switches links and marks to white. Tinted tones take `.on-tint`: links go navy with an orange underline, because orange text fails AA on the tints (2.8:1 on green).
+1. Colour is information, not wallpaper. White page; sections are separated by whitespace, type scale and hairlines.
+2. One strong block per page. Home: the orange slab. Product: the navy details block. Hub: the comparison list (no colour). About: the orange stat band.
+3. The old pastel names in content (`green`, `ltblue`, `yellow`, `lilac`) all resolve to the single tint; `purple`/`dkblue` to navy; `orange` to brand (`lib/tones.ts`). A tinted or navy block is a rounded panel inside the container, never a full-bleed stripe (heroes excepted).
+4. Inverse blocks take `.on-inverse` (white links and marks); the tint takes `.on-tint` (navy links with the orange underline).
 
 ## Type
 
-Menca Bold for headings and buttons, Menca Medium for body (self-hosted, `app/fonts.ts`). Root font size is the browser default (16px); the old 62.5% hack is gone.
+Menca Bold for headings and buttons, used large and tight (-0.03em, leading 0.98); Menca Medium for body (self-hosted, `app/fonts.ts`). Root font size is the browser default (16px).
 
 | Token | Size | Use |
 |---|---|---|
-| `--typography-display` | 40–56px fluid | Home hero H1 |
-| `--typography-h1` | 36–48px fluid | Page H1 |
-| `--typography-h2` | 28–36px fluid | Section title |
-| `--typography-h3` | 22px | Card / panel title |
+| `--typography-display` | 48–96px fluid | Home hero H1, stat numerals |
+| `--typography-h1` | 40–64px fluid | Page H1 |
+| `--typography-h2` | 32–48px fluid | Section title, product name in the comparison |
+| `--typography-h3` | 24px | Panel title |
 | `--typography-h4` | 18px | Minor heading, nav, labels |
 | `--typography-lead` | 20px | Hero intro, section intro |
 | `--typography-body` | 17px | Body |
@@ -61,9 +62,9 @@ Headings `line-height 1.1`, body `1.6`, measure `65ch`. `.h1–.h4` classes exis
 ## Space, radius, shadow, motion
 
 - Spacing: 4px base. `--spacing-section` 48–96px fluid between sections; `--spacing-block` 32px between blocks; `--spacing-stack` 16px heading → paragraph → button; `--spacing-page-inline` 16–40px page gutters. Content width 1200px.
-- Radius: `control` pill (buttons, pills, pagination), `field` 12px (inputs), `card` 16px (cards, tiles, FAQ items), `panel` 24px (tinted panels, hero art, photo bands), `media` 16px (images, video).
+- Radius: `control` 10px (buttons, pagination), `field` 12px (inputs), `card` 12px (FAQ items, small panels), `panel` 20px (navy/tint/orange blocks, hero slab), `media` 16px (images, video).
 - Shadow: navy-tinted. `card` at rest, `card-hover` on hover, `float` for menus and the banner. No pure-black shadows.
-- Motion: 200ms standard, 400ms slow, `cubic-bezier(0.2, 0.8, 0.2, 1)`. Accordion height, menu fly-outs, hover lifts, button press. No scroll-driven reveals: they hide below-the-fold text from Lighthouse and axe (both read opacity) and from full-page screenshots. Everything collapses under `prefers-reduced-motion`.
+- Motion: one orchestrated moment on the home hero (headline settles, slab slides in, once on load). Otherwise only responses to a person's action: menu, accordion, button press. No scroll-driven reveals, no hover lifts on every card. Everything collapses under `prefers-reduced-motion`.
 
 ## Components
 

@@ -37,7 +37,8 @@ export function Footer() {
           <div>
             <p className="mb-3 font-display text-h4">{f.newsletter.heading || "Stay up to date with GMBCU"}</p>
             <NewsletterForm />
-            <a href={f.fscs.href} target="_blank" rel="noopener" aria-label="Financial Services Compensation Scheme (opens in a new tab)" className="mt-8 inline-block"><Image src={f.fscs.image} alt={f.fscs.alt || "FSCS Protected"} width={111} height={100} className="h-24 w-auto" /></a>
+            <a href={f.fscs.href} target="_blank" rel="noopener" aria-label="Financial Services Compensation Scheme (opens in a new tab)" className="mt-8 block w-[106px]">{/* eslint-disable-next-line @next/next/no-img-element -- 7 KB SVG, eager: lazy-loading left the badge as a 32px placeholder in some captures */}
+              <img src={f.fscs.image} alt={f.fscs.alt || "FSCS Protected"} width={106} height={96} loading="eager" decoding="async" style={{ width: 106, height: 96, maxWidth: "none" }} /></a>
           </div>
         </div>
         <p className="regulatory-statement mt-12 max-w-[90ch] border-t border-ink-inverse/15 pt-6 text-caption leading-relaxed text-ink-inverse-muted" data-locked="true">{r.statement}</p>

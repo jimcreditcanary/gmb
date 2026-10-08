@@ -38,14 +38,16 @@
   --primitive-color-tint-green: #8CD697;
   --primitive-color-tint-yellow: #F6C757;
   --primitive-color-tint-cream: #FFFFF4;
+  --primitive-color-tint-lilac-soft: #F3EEFC;
   --primitive-color-status-success: #1E7B4B;
   --primitive-color-status-warning: #B26A00;
   --primitive-color-status-error: #B3261E;
   --primitive-color-status-info: #1C3A57;
   --primitive-color-trustpilot: #00B67A;
   --primitive-font-display: var(--font-menca-bold), system-ui, sans-serif;
-  --primitive-font-body: var(--font-menca-medium), system-ui, sans-serif;
+  --primitive-font-body: var(--font-figtree), system-ui, sans-serif;
   --primitive-font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+  --primitive-font-ui: var(--font-figtree), system-ui, sans-serif;
   --primitive-fontSize-xs: 0.75rem;
   --primitive-fontSize-sm: 0.875rem;
   --primitive-fontSize-base: 1rem;
@@ -97,12 +99,19 @@
   --primitive-size-container-wide: 87.5rem;
   --primitive-size-measure: 65ch;
   --primitive-size-nav-height: 4.5rem;
+  --primitive-gradient-brand: linear-gradient(135deg, #FF5A1F 0%, #FF7A3D 100%);
+  --primitive-gradient-lilac: linear-gradient(135deg, #DECEF9 0%, #EEE6FC 100%);
+  --primitive-gradient-blue: linear-gradient(135deg, #CFF4FB 0%, #E4F9FD 100%);
+  --primitive-gradient-green: linear-gradient(135deg, #8CD697 0%, #B4E6BB 100%);
+  --primitive-gradient-yellow: linear-gradient(135deg, #F6C757 0%, #FBDC8E 100%);
+  --primitive-gradient-navy: linear-gradient(160deg, #102C45 0%, #1C3A57 100%);
+  --primitive-gradient-soft: linear-gradient(180deg, #F3EEFC 0%, #FFFFFF 100%);
 }
 
 /* === SEMANTIC === */
 :root {
   --color-surface: #FFFFFF;
-  --color-surface-subtle: #EFF1F4;
+  --color-surface-subtle: #F3EEFC;
   --color-surface-muted: #EFF1F4;
   --color-surface-inverse: #102C45;
   --color-surface-brand: #FF5A1F;
@@ -140,7 +149,7 @@
   --typography-leading-heading: 0.98;
   --typography-leading-body: 1.6;
   --typography-measure: 65ch;
-  --typography-tracking-heading: -0.03em;
+  --typography-tracking-heading: -0.025em;
   --spacing-section: clamp(3rem, 2rem + 4vw, 6rem);
   --spacing-section-tight: clamp(2rem, 1.5rem + 2vw, 3.5rem);
   --spacing-block: 2rem;

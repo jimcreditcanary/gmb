@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import "@/lib/fontawesome";
-import { mencaBold, mencaMedium } from "./fonts";
+import { mencaBold, mencaMedium, figtree } from "./fonts";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { CookieBanner } from "@/components/site/Consent";
@@ -17,7 +17,7 @@ export const viewport: Viewport = { width: "device-width", initialScale: 1, them
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en-GB" className={`${mencaBold.variable} ${mencaMedium.variable}`}>
+    <html lang="en-GB" className={`${mencaBold.variable} ${mencaMedium.variable} ${figtree.variable}`}>
       <body className="flex min-h-dvh flex-col">
         <a href="#main" className="skip-link">Skip to content</a>
         <Header />

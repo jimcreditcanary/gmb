@@ -34,12 +34,12 @@ export function Nav({ items }: { items: NavItem[] }) {
       <ul className="hidden items-center gap-1 lg:flex">
         {links.map((item) => (
           <li key={item.href} className="group relative">
-            <Link href={item.href} className={cn("inline-flex h-10 items-center gap-1.5 rounded-control px-3.5 font-display text-small text-ink no-underline transition-colors duration-(--motion-duration) hover:bg-surface-subtle hover:text-ink", active(item.href) && "bg-surface-subtle")} aria-current={active(item.href) ? "page" : undefined} {...(item.children?.length ? { "aria-haspopup": "true" } : {})}>
+            <Link href={item.href} className={cn("inline-flex h-10 items-center gap-1.5 rounded-control px-3.5 font-ui text-small font-semibold text-ink no-underline transition-colors duration-(--motion-duration) hover:bg-surface-subtle hover:text-ink", active(item.href) && "bg-surface-subtle")} aria-current={active(item.href) ? "page" : undefined} {...(item.children?.length ? { "aria-haspopup": "true" } : {})}>
               {item.label}{item.children?.length ? <FontAwesomeIcon icon={faChevronDown} className="size-3 opacity-70 transition-transform duration-(--motion-duration) group-hover:rotate-180 group-focus-within:rotate-180" aria-hidden="true" /> : null}
             </Link>
             {item.children?.length ? (
               <ul className="invisible absolute left-0 top-full z-40 min-w-56 translate-y-1 rounded-card border border-border bg-surface p-2 opacity-0 shadow-float transition-[opacity,transform,visibility] duration-(--motion-duration) ease-standard group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
-                {item.children.map((c) => <li key={c.href}><Link href={c.href} className="block rounded-field px-3 py-2 font-display text-small text-ink no-underline hover:bg-surface-subtle hover:text-ink">{c.label}</Link></li>)}
+                {item.children.map((c) => <li key={c.href}><Link href={c.href} className="block rounded-field px-3 py-2 font-ui text-small font-medium text-ink no-underline hover:bg-surface-subtle hover:text-ink">{c.label}</Link></li>)}
               </ul>
             ) : null}
           </li>
@@ -59,7 +59,7 @@ export function Nav({ items }: { items: NavItem[] }) {
           {links.map((item) => (
             <li key={item.href} className="border-b border-border">
               <div className="flex items-center">
-                <Link href={item.href} className="grow py-3.5 font-display text-h4 text-ink no-underline">{item.label}</Link>
+                <Link href={item.href} className="grow py-3.5 font-ui text-h4 font-bold text-ink no-underline">{item.label}</Link>
                 {item.children?.length ? <button type="button" className="grid size-11 place-items-center rounded-control" aria-expanded={sub === item.href} aria-label={`Show ${item.label} pages`} onClick={() => setSub(sub === item.href ? null : item.href)}><FontAwesomeIcon icon={faChevronDown} className={cn("size-4 transition-transform duration-(--motion-duration)", sub === item.href && "rotate-180")} aria-hidden="true" /></button> : null}
               </div>
               {item.children?.length && sub === item.href ? (

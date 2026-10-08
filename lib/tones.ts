@@ -15,13 +15,13 @@ export const toTone = (colour?: string): Tone => LEGACY[(colour || "").trim()] ?
 /** Background + text classes for a tone. Inverse tones add `.on-inverse`; the tints add `.on-tint` (navy links, orange underline). */
 export const toneClass: Record<Tone, string> = {
   surface: "bg-surface text-ink",
-  subtle: "bg-surface-subtle text-ink",
-  lilac: "bg-lilac text-ink on-tint",
-  blue: "bg-blue text-ink on-tint",
-  green: "bg-green text-ink on-tint",
-  yellow: "bg-yellow text-ink on-tint",
-  inverse: "bg-surface-inverse text-ink-inverse on-inverse",
-  brand: "bg-surface-brand text-ink on-tint",
+  subtle: "tone-subtle text-ink",
+  lilac: "tone-lilac text-ink on-tint",
+  blue: "tone-blue text-ink on-tint",
+  green: "tone-green text-ink on-tint",
+  yellow: "tone-yellow text-ink on-tint",
+  inverse: "tone-navy text-ink-inverse on-inverse",
+  brand: "tone-brand text-ink on-tint",
 };
 
 /** The cycle used when a list of cards needs colour without the content saying which. */

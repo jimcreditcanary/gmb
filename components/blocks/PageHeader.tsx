@@ -26,19 +26,19 @@ export function PageHeader({ colour, label, trustpilot, image, imageAlt = "", lo
   const compact = kind === "title";
   return (
     <>
-      <section className={cn("hero overflow-x-clip", kind === "home" && "hero-home", compact ? "py-section-tight" : "pt-4 pb-6 sm:pt-6")}>
+      <section className={cn("hero overflow-x-clip", kind === "home" && "hero-home", compact ? "py-section-tight" : "pt-4 pb-4 sm:pt-6")}>
         <Container>
-          <div className={cn(!compact && cn("relative overflow-hidden rounded-panel px-6 py-10 sm:px-10 sm:py-14 lg:px-16 lg:py-20", toneClass[tone]))}>
+          <div className={cn(!compact && cn("relative overflow-hidden rounded-panel px-6 pt-10 pb-10 sm:px-10 sm:pt-14 sm:pb-14 lg:px-16 lg:pt-20 lg:pb-20", toneClass[tone]))}>
             <div className={cn("grid items-center gap-x-12 gap-y-10", hasArt && !compact && "lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)]")}>
               <div className={cn("hero-copy relative", compact && "max-w-measure")}>
-                {label && <p className={cn("mb-3 font-display text-h4", dark ? "text-ink-inverse-muted" : "text-ink")}>{label}</p>}
+                {label && <p className={cn("mb-3 font-ui text-h4 font-semibold", dark ? "text-ink-inverse-muted" : "text-ink")}>{label}</p>}
                 <div className={cn("prose hero-prose [&>p]:text-lead [&>p]:max-w-[48ch]", kind === "home" ? "[&>h1]:text-display [&>h1]:text-ink [&>h1]:max-w-none [&>p]:mt-6" : "[&>h1]:max-w-[18ch]", dark ? "[&>p]:text-ink-inverse-muted" : "[&>p]:text-ink")}>{children}</div>
                 {date && <p className={cn("mt-stack text-small", dark ? "text-ink-inverse-muted" : "text-ink")}>Date: {date}</p>}
                 {buttons && buttons.length > 0 && (
                   <ul className="mt-8 flex flex-wrap gap-3">
                     {buttons.map((b, i) => (
                       <li key={b.href + b.label}>
-                        <Link href={b.href} className={cn("group inline-flex h-14 items-center gap-3 rounded-control px-7 font-display text-lg no-underline transition-colors duration-(--motion-duration)", i === 0 ? "bg-ink text-ink-inverse hover:bg-navy-800 hover:text-ink-inverse" : "bg-surface text-ink hover:bg-ink hover:text-ink-inverse")}>
+                        <Link href={b.href} className={cn("group inline-flex h-14 items-center gap-3 rounded-control px-7 font-ui text-lg font-semibold no-underline transition-colors duration-(--motion-duration)", i === 0 ? "bg-ink text-ink-inverse hover:bg-navy-800 hover:text-ink-inverse" : "bg-surface text-ink hover:bg-ink hover:text-ink-inverse")}>
                           {b.label}<FontAwesomeIcon icon={faArrowRight} className="size-4 transition-transform duration-(--motion-duration) group-hover:translate-x-1" aria-hidden="true" />
                         </Link>
                       </li>
@@ -52,8 +52,10 @@ export function PageHeader({ colour, label, trustpilot, image, imageAlt = "", lo
                     {image && <Img src={image} alt={imageAlt} priority sizes="(max-width: 1024px) 90vw, 640px" className="absolute -bottom-10 -right-8 h-auto w-[115%] max-w-none object-contain object-right-bottom sm:-bottom-14 lg:-bottom-20 lg:-right-16 lg:w-[125%]" />}
                   </div>
                 ) : (
-                  <div className="hero-art relative mx-auto w-full max-w-[460px] lg:max-w-none">
-                    {lottie ? <div className="aspect-square w-full"><Lottie src={lottie} poster={poster} /></div> : image && <Img src={image} alt={imageAlt} priority sizes="(max-width: 1024px) 80vw, 460px" className="mx-auto h-auto w-full object-contain" />}
+                  <div className="hero-art relative mx-auto -mb-10 w-full max-w-[460px] sm:-mb-14 lg:-mb-20 lg:max-w-none">
+                    <div className="stage aspect-[5/4] w-full rounded-none">
+                      {lottie ? <div className="h-full w-full"><Lottie src={lottie} poster={poster} /></div> : image && <Img src={image} alt={imageAlt} priority sizes="(max-width: 1024px) 80vw, 460px" className="size-full object-contain object-bottom" />}
+                    </div>
                   </div>
                 )
               )}

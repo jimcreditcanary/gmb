@@ -6,6 +6,7 @@ import { Section, Container, SectionHeader } from "@/components/ui/section";
 import { Img } from "./Img";
 import { VideoFacade } from "./VideoFacade";
 import { EmbedPlaceholder } from "./EmbedPlaceholder";
+import { imageDims } from "@/lib/media";
 
 /*
   Layout blocks (docs/design-direction.md). Component names and props are the content contract and do not change.
@@ -13,6 +14,14 @@ import { EmbedPlaceholder } from "./EmbedPlaceholder";
   (navy details block, orange stat band, lilac member panel); structure (rules, grids) encodes information, never decorates.
 */
 
+/** A landscape photograph fills its frame; portrait files and all SVG/PNG artwork are cut-outs that stand on a stage. */
+const isCoverPhoto = (src: string) => { if (!/\.(jpe?g|webp|avif)$/i.test(src)) return false; const d = imageDims(src); return !d || d.width >= d.height; };
+/** Artwork on a stage: landscape photographs fill a rounded 4:3 frame; cut-outs stand bottom-aligned on a soft frame so the mixed set reads as one. */
+function Art({ src, alt = "", onTint, sizes = "(max-width: 1024px) 90vw, 520px", ratio = "aspect-[4/3]" }: { src: string; alt?: string; onTint?: boolean; sizes?: string; ratio?: string }) {
+  if (isCoverPhoto(src)) return <div className={cn("overflow-hidden rounded-media", ratio)}><Img src={src} alt={alt} sizes={sizes} className="size-full object-cover" /></div>;
+  const d = imageDims(src); const portrait = !!d && d.height > d.width * 1.1;   // tall cut-outs (the app phone) get a square stage, not a letterboxed 4:3
+  return <div className={cn("stage p-6 sm:p-8", portrait ? "aspect-square" : ratio, onTint ? "stage-white" : "stage-soft")}><Img src={src} alt={alt} sizes={sizes} className="size-full object-contain object-bottom" /></div>;
+}
 const kidsOf = (children: ReactNode) => (Array.isArray(children) ? children : [children]).filter(Boolean);
 const typeOf = (k: unknown) => (typeof k === "object" && k !== null ? (k as { type?: unknown }).type : undefined);
 
@@ -30,8 +39,8 @@ export function ListBlock({ heading, align, children }: { heading?: string; alig
 export function IconRow({ icon, children }: { icon?: string; children: ReactNode }) {
   return (
     <li className="flex items-start gap-4">
-      {icon && <Img src={icon} alt="" width={40} height={40} className="mt-0.5 size-10 shrink-0 object-contain" />}
-      <div className="prose min-w-0 grow [&>h3]:text-h4 [&>p]:text-small [&>p]:text-ink-muted [&_strong]:text-ink [&_strong]:text-lg">{children}</div>
+      {icon && <span className="grid size-12 shrink-0 place-items-center rounded-full bg-surface-subtle"><Img src={icon} alt="" width={30} height={30} className="size-7 object-contain" /></span>}
+      <div className="prose min-w-0 grow [&>h3]:text-h4 [&>p]:text-small [&>p]:text-ink-muted [&_strong]:text-ink [&_strong]:text-base">{children}</div>
     </li>
   );
 }
@@ -67,7 +76,7 @@ export function PanelFooter({ children }: { children: ReactNode }) {
 export function PopoutBlock({ colour, image, imageAlt = "", imagePosition, children }: { colour?: string; image?: string; imageAlt?: string; imagePosition?: "left" | "right"; children: ReactNode }) {
   const tone = toTone(colour);
   const boxed = tone !== "surface";
-  const art = image ? <div className={cn("mx-auto w-full max-w-[420px] lg:max-w-none", imagePosition === "left" ? "lg:order-first" : "")}><Img src={image} alt={imageAlt} sizes="(max-width: 1024px) 80vw, 460px" className="h-auto w-full object-contain" /></div> : null;
+  const art = image ? <div className={cn("mx-auto w-full max-w-[460px] lg:max-w-none", imagePosition === "left" ? "lg:order-first" : "")}><Art src={image} alt={imageAlt} onTint={boxed} sizes="(max-width: 1024px) 80vw, 460px" /></div> : null;
   const inner = (
     <div className={cn("grid items-center gap-x-12 gap-y-8", image && "lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)]")}>
       <div className="prose max-w-measure [&>h2]:max-w-[22ch]">{children}</div>
@@ -110,7 +119,7 @@ export function Col({ variant, children }: { variant?: "icon"; children: ReactNo
   return <div className={cn("prose min-w-0 [&>h2]:max-w-[22ch]", variant === "icon" && "col-icons")}>{children}</div>;
 }
 export function ColImage({ src, alt = "" }: { src: string; alt?: string }) {
-  return <div className="mx-auto w-full max-w-[520px] lg:max-w-none"><Img src={src} alt={alt} sizes="(max-width: 1024px) 90vw, 560px" className="h-auto w-full rounded-media object-contain" /></div>;
+  return <div className="mx-auto w-full max-w-[520px] lg:max-w-none"><Art src={src} alt={alt} sizes="(max-width: 1024px) 90vw, 560px" /></div>;
 }
 export function IconList({ children }: { children: ReactNode }) {
   return <ul className="not-prose my-8 grid list-none grid-cols-2 gap-x-4 gap-y-6 p-0 sm:grid-cols-3 lg:grid-cols-5">{children}</ul>;
@@ -162,7 +171,7 @@ export function ColourPanel({ image, imageAlt = "", children }: { colour?: strin
   return (
     <li className="flex">
       <div className="door on-tint flex w-full flex-col overflow-hidden rounded-panel">
-        {image && <div className="flex h-56 items-end justify-center px-8 pt-8"><Img src={image} alt={imageAlt} sizes="(max-width: 768px) 90vw, 520px" className="max-h-full w-auto max-w-full object-contain" /></div>}
+        {image && <div className="px-6 pt-6 sm:px-8 sm:pt-8"><div className="stage stage-white h-52 w-full p-5 sm:h-60"><Img src={image} alt={imageAlt} sizes="(max-width: 768px) 90vw, 520px" className="size-full object-contain object-bottom" /></div></div>}
         <div className="prose grow p-(--panel-padding) [&>h2]:text-h2 [&>h2]:max-w-[16ch] [&>p]:text-small">{children}</div>
       </div>
     </li>

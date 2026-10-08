@@ -44,7 +44,7 @@ Rules:
 
 ## Type
 
-Menca Bold for headings and buttons, used large and tight (-0.03em, leading 0.98); Menca Medium for body (self-hosted, `app/fonts.ts`). Root font size is the browser default (16px).
+Menca Bold for H1, H2 and display numerals, used large and tight (-0.025em, leading 0.98). Figtree (self-hosted via next/font) for body 400, labels and buttons 600, h3/h4 700: a text face with real weights. Menca Medium is kept only for the brand's own copy marks. Root font size is the browser default (16px).
 
 | Token | Size | Use |
 |---|---|---|

@@ -66,3 +66,10 @@ What I would have built for "any credit union": white page, blue-ish accent, rou
 ## Not changed, and why
 
 Copy, including CTA wording ("Learn more >", "Apply Now" variants): verbatim rule. Photography: the site's own images only; no stock added. Illustration set: kept, it is the brand's.
+
+## Polish pass (2026-10-08, "challenge on fonts, imagery, gradients; keep the lilac; place images better")
+
+- **Type.** Menca Bold stays for H1, H2 and display numerals, because it is the brand's voice at size. Everything else moves to Figtree (self-hosted through next/font): body 17px/400, labels and buttons 600, h3/h4 700. Menca Medium was a display cut doing body work; Figtree has real text weights, tabular numerals and better rhythm at 15 to 17px.
+- **Gradients.** Every colour block is a soft diagonal gradient of its own colour (orange `#FF5A1F → #FF7A3D`, lilac `#DECEF9 → #EEE6FC`, navy `#102C45 → #1C3A57`, and the same for blue, green, yellow). Depth without a second hue; navy type stays at or above 4.6:1 across each range.
+- **Lilac everywhere, quietly.** Quiet sections (blog overview, FAQ items, form panel, icon discs) use lilac at page strength (`#F3EEFC`) instead of grey. The lilac is now the site's resting colour; orange is the loud one.
+- **Image stages.** Illustrations and cut-outs no longer float. Each sits on a stage: a 4:3 frame, bottom-aligned, on a soft lilac-to-white gradient on white rows or a translucent white panel on colour blocks. Photographs fill a rounded 4:3 frame. Product and doorway cards have a fixed-height stage so the artwork lines up across a row. Page heroes drop the artwork onto the block's bottom edge.

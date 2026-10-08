@@ -27,7 +27,7 @@ export function Box({ image, imageAlt = "", children }: { image?: string; imageA
   return (
     <li className="flex">
       <div className="card-tone on-tint flex w-full flex-col rounded-card p-(--card-padding) text-ink sm:p-8">
-        {image && <div className="mb-6 flex h-36 items-center"><Img src={image} alt={imageAlt} className="max-h-full w-auto max-w-[200px] object-contain" /></div>}
+        {image && <div className="stage stage-white mb-6 h-40 w-full p-4"><Img src={image} alt={imageAlt} className="size-full object-contain object-bottom" /></div>}
         <div className="prose grow [&>h3]:text-h3 [&>p]:text-small [&>ul]:mt-4 [&>ul]:list-none [&>ul]:p-0 [&>ul]:text-small [&>ul]:font-display [&>ul>li]:border-t [&>ul>li]:border-ink/15 [&>ul>li]:py-2 [&>ul>li]:m-0">{body}</div>
         {actions.length > 0 && <div className="mt-6 flex flex-wrap gap-3 [&>.button.button-alt]:bg-transparent">{actions as ReactNode[]}</div>}
       </div>

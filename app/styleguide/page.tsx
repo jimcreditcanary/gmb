@@ -53,7 +53,7 @@ export default function Styleguide() {
       </Section>
 
       <Section tight>
-        <SectionHeader heading="Type" intro="Menca Bold for every heading, Menca Medium for body. Sizes are fluid tokens; the measure is 65 characters." />
+        <SectionHeader heading="Type" intro="Menca Bold for H1, H2 and display numerals. Figtree for everything else: body, h3/h4, buttons, labels, with real weights. Sizes are fluid tokens; the measure is 65 characters." />
         <dl className="grid gap-5">
           {type.map((t) => <div key={t.label} className="grid gap-1 border-b border-border pb-5 sm:grid-cols-[8rem_1fr] sm:items-baseline"><dt className="text-caption text-ink-subtle">{t.label}</dt><dd className={t.cls}>{t.sample}</dd></div>)}
         </dl>

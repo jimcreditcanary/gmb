@@ -12,7 +12,7 @@ const labels = { "fa-facebook-f": "Facebook", "fa-youtube": "YouTube", "fa-insta
 function Menu({ id, items, title }: { id: string; items: { label: string; href: string }[]; title: string }) {
   return (
     <nav id={id} aria-label={title}>
-      <ul className="grid gap-2.5">{items.map((it) => <li key={it.href}>{it.href.startsWith("http") ? <a href={it.href} rel="noopener" className="font-display text-small text-ink-inverse no-underline hover:underline">{it.label}</a> : <Link href={it.href} className="font-display text-small text-ink-inverse no-underline hover:underline">{it.label}</Link>}</li>)}</ul>
+      <ul className="grid gap-2.5">{items.map((it) => <li key={it.href}>{it.href.startsWith("http") ? <a href={it.href} rel="noopener" className="font-ui text-small font-semibold text-ink-inverse no-underline hover:underline">{it.label}</a> : <Link href={it.href} className="font-ui text-small font-semibold text-ink-inverse no-underline hover:underline">{it.label}</Link>}</li>)}</ul>
     </nav>
   );
 }
@@ -21,7 +21,7 @@ function Menu({ id, items, title }: { id: string; items: { label: string; href: 
 export function Footer() {
   const f = SITE.footer; const r = SITE.regulatory;
   return (
-    <footer id="site-footer" className="on-inverse bg-surface-inverse py-section text-ink-inverse">
+    <footer id="site-footer" className="on-inverse tone-navy py-section text-ink-inverse">
       <Container>
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-[1.2fr_1fr_1fr_1.6fr]">
           <div>
@@ -35,7 +35,7 @@ export function Footer() {
           <Menu id="footer-nav-left" items={f.left} title="Footer" />
           <Menu id="footer-nav-right" items={f.right} title="Footer secondary" />
           <div>
-            <p className="mb-3 font-display text-h4">{f.newsletter.heading || "Stay up to date with GMBCU"}</p>
+            <p className="mb-3 font-ui text-h4 font-bold">{f.newsletter.heading || "Stay up to date with GMBCU"}</p>
             <NewsletterForm />
             <a href={f.fscs.href} target="_blank" rel="noopener" aria-label="Financial Services Compensation Scheme (opens in a new tab)" className="mt-8 block w-[106px]">{/* eslint-disable-next-line @next/next/no-img-element -- 7 KB SVG, eager: lazy-loading left the badge as a 32px placeholder in some captures */}
               <img src={f.fscs.image} alt={f.fscs.alt || "FSCS Protected"} width={106} height={96} loading="eager" decoding="async" style={{ width: 106, height: 96, maxWidth: "none" }} /></a>

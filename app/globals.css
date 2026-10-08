@@ -43,6 +43,7 @@
   /* type → font-display / font-body, text-h1 … */
   --font-display: var(--primitive-font-display);
   --font-body: var(--primitive-font-body);
+  --font-ui: var(--primitive-font-ui);
   --text-display: var(--typography-display);
   --text-h1: var(--typography-h1);
   --text-h2: var(--typography-h2);
@@ -91,7 +92,8 @@
   html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }
   body { background: var(--color-surface); color: var(--color-ink); font-family: var(--primitive-font-body); font-size: var(--typography-body); line-height: var(--typography-leading-body); -webkit-font-smoothing: antialiased; overflow-x: clip; }
-  h1, h2, h3, h4, .h1, .h2, .h3, .h4 { font-family: var(--primitive-font-display); line-height: var(--typography-leading-heading); letter-spacing: var(--typography-tracking-heading); color: inherit; text-wrap: balance; }
+  h1, h2, .h1, .h2 { font-family: var(--primitive-font-display); line-height: var(--typography-leading-heading); letter-spacing: var(--typography-tracking-heading); color: inherit; text-wrap: balance; }
+  h3, h4, .h3, .h4 { font-family: var(--primitive-font-ui); font-weight: 700; letter-spacing: -0.015em; color: inherit; text-wrap: balance; }
   h1, .h1 { font-size: var(--typography-h1); }
   h2, .h2 { font-size: var(--typography-h2); }
   h3, .h3 { font-size: var(--typography-h3); letter-spacing: -0.01em; line-height: 1.15; }
@@ -99,7 +101,7 @@
   p { text-wrap: pretty; }
   a { color: var(--color-link); text-decoration: underline; text-underline-offset: 0.15em; text-decoration-thickness: 1px; transition: color var(--motion-duration) var(--motion-easing); }
   a:hover { color: var(--color-link-hover); }
-  strong, b { font-family: var(--primitive-font-display); font-weight: normal; }
+  strong, b { font-weight: 600; }
   /* the brand's underline mark: <u> in headings becomes an orange stroke, not an underline */
   u { text-decoration: none; background: linear-gradient(transparent 82%, var(--color-brand) 82%, var(--color-brand) 96%, transparent 96%); padding: 0 0.02em; }
   :focus-visible { outline: 3px solid var(--color-ring); outline-offset: 3px; border-radius: 2px; }
@@ -144,13 +146,26 @@
     .hero-home .hero-slab { animation: slab 0.8s var(--primitive-easing-out) both; animation-delay: 0.1s; }
     @keyframes slab { from { opacity: 0; transform: translateX(32px); } to { opacity: 1; transform: none; } }
   }
+  /* tones: the brand colours as soft gradients, so blocks have depth without losing contrast */
+  .tone-brand { background: var(--primitive-gradient-brand); }
+  .tone-lilac { background: var(--primitive-gradient-lilac); }
+  .tone-blue { background: var(--primitive-gradient-blue); }
+  .tone-green { background: var(--primitive-gradient-green); }
+  .tone-yellow { background: var(--primitive-gradient-yellow); }
+  .tone-navy { background: var(--primitive-gradient-navy); }
+  .tone-subtle { background: var(--color-surface-subtle); }
+  /* illustration stage: every artwork sits on a defined, bottom-aligned frame so the mixed SVG set reads as one */
+  .stage { position: relative; display: flex; align-items: flex-end; justify-content: center; border-radius: var(--radius-media); overflow: hidden; }
+  .stage > img { display: block; width: 100%; height: 100%; object-fit: contain; object-position: bottom; }
+  .stage-soft { background: var(--primitive-gradient-soft); }
+  .stage-white { background: rgb(255 255 255 / 0.45); }
   /* colour cards in a list cycle through the brand tints unless the content names one */
-  .card-cycle > li:nth-child(4n+1) > .card-tone { background: var(--color-lilac); }
-  .card-cycle > li:nth-child(4n+2) > .card-tone { background: var(--color-blue); }
-  .card-cycle > li:nth-child(4n+3) > .card-tone { background: var(--color-yellow); }
-  .card-cycle > li:nth-child(4n+4) > .card-tone { background: var(--color-green); }
-  .doorways > li:nth-child(odd) > .door { background: var(--color-surface-brand); color: var(--color-ink); }
-  .doorways > li:nth-child(even) > .door { background: var(--color-lilac); color: var(--color-ink); }
+  .card-cycle > li:nth-child(4n+1) > .card-tone { background: var(--primitive-gradient-lilac); }
+  .card-cycle > li:nth-child(4n+2) > .card-tone { background: var(--primitive-gradient-blue); }
+  .card-cycle > li:nth-child(4n+3) > .card-tone { background: var(--primitive-gradient-yellow); }
+  .card-cycle > li:nth-child(4n+4) > .card-tone { background: var(--primitive-gradient-green); }
+  .doorways > li:nth-child(odd) > .door { background: var(--primitive-gradient-brand); color: var(--color-ink); }
+  .doorways > li:nth-child(even) > .door { background: var(--primitive-gradient-lilac); color: var(--color-ink); }
   .doorways > li > .door a:not(.button) { color: var(--color-ink); }
   /* rule grid: items separated by hairlines, not boxed */
   .rule-grid > * { border-top: 1px solid var(--color-border); padding-top: var(--spacing-stack); }

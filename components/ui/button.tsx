@@ -12,7 +12,7 @@ import { cn } from "@/lib/utils";
  * Client-safe: no content imports. MDX uses `LinkButton` (lib/with-context.tsx), which adds hidden target context to generic labels.
  */
 export const buttonVariants = cva(
-  "button inline-flex items-center justify-center gap-2 font-display text-base leading-none no-underline rounded-control border transition-[background-color,color,border-color,transform] duration-(--motion-duration) ease-standard select-none whitespace-nowrap active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none focus-visible:outline-3 focus-visible:outline-ring focus-visible:outline-offset-3",
+  "button inline-flex items-center justify-center gap-2 font-ui font-semibold text-base leading-none no-underline rounded-control border transition-[background-color,color,border-color,transform] duration-(--motion-duration) ease-standard select-none whitespace-nowrap active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none focus-visible:outline-3 focus-visible:outline-ring focus-visible:outline-offset-3",
   {
     variants: {
       variant: {

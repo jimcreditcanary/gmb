@@ -18,9 +18,9 @@ export function PostCard({ post, level = 3, featured }: { post: Page; level?: 2 
         {img && <Img src={img} alt={fm.cardImageAlt || fm.cardTitle || stripTitleSuffix(fm.title)} sizes={featured ? "(max-width: 768px) 100vw, 720px" : "(max-width: 640px) 100vw, 380px"} className="size-full object-cover transition-transform duration-(--motion-duration-slow) ease-standard group-hover:scale-[1.03]" />}
       </div>
       <div className={cn("flex grow flex-col pt-4", featured && "md:pt-0")}>
-        <H className={cn("font-display leading-snug group-hover:underline group-hover:decoration-brand group-hover:underline-offset-4", featured ? "text-h2" : "text-h4")}>{title}</H>
+        <H className={cn("leading-snug group-hover:underline group-hover:decoration-brand group-hover:underline-offset-4", featured ? "font-display text-h2" : "font-ui text-h4 font-bold")}>{title}</H>
         {fm.excerpt && <p className={cn("mt-2 text-ink-muted", featured ? "text-body" : "text-small")}>{fm.excerpt}</p>}
-        <p className="mt-auto pt-3"><Link href={fm.slug} className="font-display text-small text-ink underline decoration-brand-strong decoration-2 underline-offset-4 after:absolute after:inset-0 after:content-['']">Read More &gt;<span className="sr-only-text">: {title}</span></Link></p>
+        <p className="mt-auto pt-3"><Link href={fm.slug} className="font-ui text-small font-semibold text-ink underline decoration-brand-strong decoration-2 underline-offset-4 after:absolute after:inset-0 after:content-['']">Read More &gt;<span className="sr-only-text">: {title}</span></Link></p>
       </div>
     </li>
   );
@@ -58,7 +58,7 @@ export function Pagination({ page, totalPages, base }: { page: number; totalPage
     if (n === 1 || n === totalPages || Math.abs(n - page) <= 2 || (page <= 3 && n <= 6) || (page >= totalPages - 2 && n >= totalPages - 5)) nums.push(n);
     else if (nums[nums.length - 1] !== "…") nums.push("…");
   }
-  const pill = "inline-flex h-10 min-w-10 items-center justify-center rounded-control px-3 font-display text-small no-underline transition-colors duration-(--motion-duration)";
+  const pill = "inline-flex h-10 min-w-10 items-center justify-center rounded-control px-3 font-ui text-small font-semibold no-underline transition-colors duration-(--motion-duration)";
   return (
     <nav className="mt-block flex flex-wrap items-center justify-center gap-2" aria-label="Posts pagination">
       <h2 className="screen-reader-text">Posts pagination</h2>

@@ -48,17 +48,17 @@ Menca Bold for H1, H2 and display numerals, used large and tight (-0.025em, lead
 
 | Token | Size | Use |
 |---|---|---|
-| `--typography-display` | 48–96px fluid | Home hero H1, stat numerals |
-| `--typography-h1` | 40–64px fluid | Page H1 |
-| `--typography-h2` | 32–48px fluid | Section title, product name in the comparison |
-| `--typography-h3` | 24px | Panel title |
-| `--typography-h4` | 18px | Minor heading, nav, labels |
-| `--typography-lead` | 20px | Hero intro, section intro |
-| `--typography-body` | 17px | Body |
-| `--typography-small` | 15px | Card copy, lists, captions |
-| `--typography-caption` | 13px | Regulatory line, eyebrow |
+| `--typography-display` | 56–104px fluid | Home hero H1, stat numerals |
+| `--typography-h1` | 44–72px fluid | Page H1 |
+| `--typography-h2` | 36–56px fluid | Section title |
+| `--typography-h3` | 28px | Panel and card title |
+| `--typography-h4` | 20px | Minor heading, nav, labels |
+| `--typography-lead` | 22px | Hero intro, section intro |
+| `--typography-body` | 18px, weight 450 | Body |
+| `--typography-small` | 16px | Card copy, lists |
+| `--typography-caption` | 14px | Regulatory line |
 
-Headings `line-height 1.1`, body `1.6`, measure `65ch`. `.h1–.h4` classes exist for the two content files that need a heading to look like another level.
+Headings `line-height 0.98`, body `1.6`, measure `65ch`. To change the scale, edit `semantic.typography` in `design/tokens.json` and run `pnpm tokens`; no component names a size. `.h1–.h4` classes exist for the two content files that need a heading to look like another level.
 
 ## Space, radius, shadow, motion
 

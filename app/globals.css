@@ -91,7 +91,7 @@
 @layer base {
   html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }
-  body { background: var(--color-surface); color: var(--color-ink); font-family: var(--primitive-font-body); font-size: var(--typography-body); line-height: var(--typography-leading-body); -webkit-font-smoothing: antialiased; overflow-x: clip; }
+  body { background: var(--color-surface); color: var(--color-ink); font-family: var(--primitive-font-body); font-size: var(--typography-body); font-weight: var(--typography-weight-body, 400); line-height: var(--typography-leading-body); -webkit-font-smoothing: antialiased; overflow-x: clip; }
   h1, h2, .h1, .h2 { font-family: var(--primitive-font-display); line-height: var(--typography-leading-heading); letter-spacing: var(--typography-tracking-heading); color: inherit; text-wrap: balance; }
   h3, h4, .h3, .h4 { font-family: var(--primitive-font-ui); font-weight: 700; letter-spacing: -0.015em; color: inherit; text-wrap: balance; }
   h1, .h1 { font-size: var(--typography-h1); }

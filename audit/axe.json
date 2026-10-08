@@ -6,31 +6,9 @@
  "about@390": [],
  "contact@390": [],
  "faq@390": [],
- "legal@390": [
-  {
-   "id": "heading-order",
-   "impact": "moderate",
-   "tags": [],
-   "help": "Heading levels should only increase by one",
-   "nodes": 1,
-   "sample": [
-    "h3"
-   ]
-  }
- ],
+ "legal@390": [],
  "embed@390": [],
- "post@390": [
-  {
-   "id": "heading-order",
-   "impact": "moderate",
-   "tags": [],
-   "help": "Heading levels should only increase by one",
-   "nodes": 1,
-   "sample": [
-    "h3:nth-child(3)"
-   ]
-  }
- ],
+ "post@390": [],
  "blog-index@390": [],
  "category@390": [],
  "tag@390": [],
@@ -43,31 +21,9 @@
  "about@1440": [],
  "contact@1440": [],
  "faq@1440": [],
- "legal@1440": [
-  {
-   "id": "heading-order",
-   "impact": "moderate",
-   "tags": [],
-   "help": "Heading levels should only increase by one",
-   "nodes": 1,
-   "sample": [
-    "h3"
-   ]
-  }
- ],
+ "legal@1440": [],
  "embed@1440": [],
- "post@1440": [
-  {
-   "id": "heading-order",
-   "impact": "moderate",
-   "tags": [],
-   "help": "Heading levels should only increase by one",
-   "nodes": 1,
-   "sample": [
-    "h3:nth-child(3)"
-   ]
-  }
- ],
+ "post@1440": [],
  "blog-index@1440": [],
  "category@1440": [],
  "tag@1440": [],

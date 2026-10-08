@@ -13,7 +13,8 @@
     "new:post": "tsx scripts/new-post.ts",
     "import:content": "node tools/html2mdx.mjs --all",
     "lhci": "lhci autorun --config=lighthouserc.cjs",
-    "lhci:desktop": "LH_FORM=desktop lhci autorun --config=lighthouserc.cjs"
+    "lhci:desktop": "LH_FORM=desktop lhci autorun --config=lighthouserc.cjs",
+    "tokens": "node /Users/jamesfell/.claude/skills/design-system/scripts/generate-tokens.cjs --config design/tokens.json -o app/styles/tokens.css"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^7.3.1",

@@ -4,22 +4,31 @@ import type { MouseEventHandler, ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
 /**
- * The one button for the whole site (docs/components.md §Button).
- * Renders the theme's `.button` so the look is unchanged; variant/size/block are class modifiers.
- *  - variant: primary (orange) | secondary (white with orange text, the theme's `.button-alt`)
- *  - size:    sm | md (the theme default) | lg
- *  - block:   full width
- * Element: <Link> for internal paths, <a> for external/mailto/file links, <button> when there is no href.
- * Client-safe (no content imports). In MDX and server templates use `LinkButton` from lib/with-context.tsx, which adds the hidden target description to generic labels.
+ * The one button (docs/design-system.md §Button). Tokens: --button-* in design/tokens.json.
+ *  variant  primary (orange) · secondary (outlined ink) · ghost (text link) · inverse (white, for dark blocks) · dark (navy, for orange blocks)
+ *  size     sm 40px · md 48px · lg 56px
+ *  block    full width
+ * Element: <Link> for internal paths, <a> for external / files / mailto, <button> when there is no href.
+ * Client-safe: no content imports. MDX uses `LinkButton` (lib/with-context.tsx), which adds hidden target context to generic labels.
  */
-export const buttonVariants = cva("button", {
-  variants: {
-    variant: { primary: "", secondary: "button-alt" },
-    size: { sm: "button-sm", md: "", lg: "button-lg" },
-    block: { true: "button-block" },
+export const buttonVariants = cva(
+  "button inline-flex items-center justify-center gap-2 font-ui font-semibold text-base leading-none no-underline rounded-control border transition-[background-color,color,border-color,transform] duration-(--motion-duration) ease-standard select-none whitespace-nowrap active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none focus-visible:outline-3 focus-visible:outline-ring focus-visible:outline-offset-3",
+  {
+    variants: {
+      variant: {
+        primary: "bg-brand-strong border-brand-strong text-ink-inverse hover:bg-brand-hover hover:border-brand-hover",
+        secondary: "bg-surface border-ink text-ink hover:bg-ink hover:text-ink-inverse",
+        ghost: "bg-transparent border-transparent text-link px-0 hover:text-link-hover",
+        inverse: "bg-surface border-surface text-ink hover:bg-ink hover:border-ink hover:text-ink-inverse",
+        dark: "bg-ink border-ink text-ink-inverse hover:bg-navy-800 hover:border-navy-800",
+      },
+      size: { sm: "h-10 px-5 text-small", md: "h-12 px-6", lg: "h-14 px-8 text-lg" },
+      block: { true: "flex w-full" },
+    },
+    compoundVariants: [{ variant: "ghost", size: ["sm", "md", "lg"], class: "h-auto px-0" }],
+    defaultVariants: { variant: "primary", size: "md" },
   },
-  defaultVariants: { variant: "primary", size: "md" },
-});
+);
 
 export type ButtonProps = VariantProps<typeof buttonVariants> & {
   href?: string;

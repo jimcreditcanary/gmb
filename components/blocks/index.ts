@@ -8,5 +8,6 @@ export { MoneyHelperTool } from "./MoneyHelperTool";
 export { ContactForm } from "./ContactForm";
 export { VideoFacade } from "./VideoFacade";
 export { PostsOverview, RelatedPosts, PostList, PostCard, Pagination } from "./Posts";
-export { SectionHeader } from "./SectionHeader";
+export { StoreBadges } from "./StoreBadges";
 export { Button } from "@/components/ui/button";
+export { HomeHero, FeatureSection, ProductCards, StatBand, FaqTeaser } from "./Home";

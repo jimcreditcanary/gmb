@@ -2,6 +2,8 @@
 
 This site is Next.js (App Router) + MDX. **All copy lives in `/content`**; components in `/components` render layout only. Agents and humans edit the same way.
 
+The look is a token-based design system: **read `docs/design-system.md` before touching a component.** Tokens live in `design/tokens.json` (`pnpm tokens` regenerates `app/styles/tokens.css`); components use Tailwind utilities mapped from those tokens in `app/globals.css`. No raw hex, no new CSS files.
+
 ## Golden rules
 1. **Verbatim copy.** Do not reword, "improve" or reformat existing copy unless the change request says so.
 2. **Locked pages** (`locked: true` in frontmatter: every product, legal, FAQ, about, contact, home, prize draw, the footer statement and some posts) are regulatory. The build diffs their text against `content/_locked/*.txt` and fails on any change. To make an approved change: edit the MDX, then update the snapshot (`pnpm tsx scripts/locked-diff.ts` prints the diff; copy the new text into the snapshot file) and say so in the PR.
@@ -14,7 +16,7 @@ This site is Next.js (App Router) + MDX. **All copy lives in `/content`**; compo
 - Body: Markdown inside layout components. Available blocks (one per theme section): `PageHeader`, `ListBlock/ListItem`, `PanelSection/Panel/PanelFooter`, `PopoutBlock`, `VideoSection`, `ContentRow/Col/ColImage/IconList/IconListItem`, `StatBlock/Stat`, `IconGrid/IconItem`, `ColourPanels/ColourPanel`, `BoxSlider/Box`, `FAQSection/FAQGroup/FAQ`, `InfoBlock/InfoPanel`, `ContactForm`, `Embed`, `MoneyHelperTool`, `RelatedPosts`, `PostsOverview`. Full catalogue and props: **`docs/components.md`**. Open any existing page of the same template and copy its structure.
 - Buttons: always `<Button href="…">Label</Button>` (`variant="secondary"`, `size="sm|lg"`, `block`, `target="_blank"`). Never `<a className="button">`.
 - Headings: one `h1` (in `PageHeader`), sections `##`, items `###`, never skip a level. Blog posts: `##` sections, `###` sub-sections.
-- Colours: `yellow lilac purple green ltblue cream white` (see `audit/design-tokens.json`).
+- Colours: content still uses the old names `yellow lilac purple green ltblue cream white`; they resolve to design-system tones in `lib/tones.ts` (loans = green, savings = light blue, about/contact/legal = lilac, resources/blog = yellow). Pick the page family's tone, never a mix.
 - Images: drop the file in `public/media/`, reference it as `/media/name.png`. `pnpm validate` checks every reference exists; `scripts/media-dims.mjs` (runs on build) records dimensions so there is no layout shift.
 - The route is automatic: `app/[[...slug]]/page.tsx` renders any slug that exists in `/content`.
 

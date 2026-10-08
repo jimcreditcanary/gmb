@@ -1,12 +1,8 @@
 "use client";
-import { Button } from "@/components/ui/button";
 import { useState, type ReactNode } from "react";
+import { Button } from "@/components/ui/button";
 
-/**
- * Placeholder container for a MoneyHelper syndicated tool (decision 2026-10-07: embeds as placeholders for now).
- * Nothing third-party loads until the member chooses to: the panel shows the tool's own link text as a button;
- * one click loads MoneyHelper's tools.js in place (their script swaps the anchor for the iframe). No cookies, no CLS before that.
- */
+/** Placeholder for a MoneyHelper syndicated tool: nothing third-party loads until the member chooses to. */
 export function MoneyHelperTool({ id, href, lang = "en", width, children }: { id: string; href: string; lang?: string; width?: string; children: ReactNode }) {
   const [loaded, setLoaded] = useState(false);
   const load = () => {
@@ -16,11 +12,11 @@ export function MoneyHelperTool({ id, href, lang = "en", width, children }: { id
     setLoaded(true);
   };
   return (
-    <div className={`tool-placeholder tool-${id}${loaded ? " is-loaded" : ""}`}>
+    <div className={`tool-placeholder tool-${id} my-6 ${loaded ? "" : "grid min-h-80 place-items-center rounded-panel bg-tone-savings p-8 text-center"}`}>
       {!loaded && (
-        <div className="tool-placeholder-inner">
-          <p><Button onClick={load}>{children}</Button></p>
-          <p className="tool-placeholder-note"><a href={href} target="_blank" rel="noopener">{children}</a> (opens on moneyhelper.org.uk)</p>
+        <div>
+          <Button onClick={load}>{children}</Button>
+          <p className="mt-3 text-small text-ink-muted"><a href={href} target="_blank" rel="noopener" className="text-ink">{children}</a> (opens on moneyhelper.org.uk)</p>
         </div>
       )}
       {loaded && <a id={id} className="mas-widget" lang={lang} href={href} target="_blank" rel="noopener" data-width={width}>{children}</a>}

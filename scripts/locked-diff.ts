@@ -9,7 +9,7 @@ const norm = (s: string) => s.replace(/\u00a0/g, " ").replace(/•/g, " • ").r
 const mdxText = (m: string) => {
   let s = m.replace(/\{\/\*[\s\S]*?\*\/\}/g, "").replace(/<\/?u>/g, "").replace(/<ContactForm[\s\S]*?<\/ContactForm>/g, "");   // forms are excluded from the reference text too
   // text carried in component props (headings, questions, stats, eyebrow labels, hero buttons)
-  s = s.replace(/<(Panel|ListBlock|IconGrid|BoxSlider|InfoBlock|FAQGroup|FAQ|Stat|PageHeader|InfoPanel|ColourPanel)\b([\s\S]*?)>/g, (_, tag: string, a: string) => " " + [...a.matchAll(/(?:heading|title|question|figure|label|intro|year)="([^"]*)"/g)].map((x) => x[1]).join(" ") + " " + [...a.matchAll(/"label":"([^"]*)"/g)].map((x) => x[1]).join(" ") + " ");
+  s = s.replace(/<(Panel|ListBlock|IconGrid|BoxSlider|InfoBlock|FAQGroup|FAQ|Stat|PageHeader|HomeHero|InfoPanel|ColourPanel)\b([\s\S]*?)>/g, (_, tag: string, a: string) => " " + [...a.matchAll(/(?:heading|title|question|figure|label|intro|year)="([^"]*)"/g)].map((x) => x[1]).join(" ") + " " + [...a.matchAll(/"label":"([^"]*)"/g)].map((x) => x[1]).join(" ") + " ");
   s = s.replace(/<\/?(a|A|u|strong|em|b|i|sup|sub|span)\b[^>]*>/g, "");         // inline: no whitespace
   s = s.replace(/<br\s*\/?>/g, " ").replace(/<\/?[A-Za-z][^>]*>/g, " ");          // block/components: whitespace
   s = s.replace(/!\[[^\]]*\]\([^)]*\)/g, "").replace(/\[([^\]]*)\]\([^)]*\)/g, "$1").replace(/^\s*(?:[-+]|\d+\.)\s+/gm, " ").replace(/^\s*#+\s*/gm, " ").replace(/&quot;/g, '"').replace(/&amp;/g, "&").replace(/&nbsp;/g, " ").replace(/&lt;/g, "<").replace(/&gt;/g, ">");

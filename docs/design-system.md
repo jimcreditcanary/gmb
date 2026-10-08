@@ -48,7 +48,7 @@ Menca Bold for H1, H2 and display numerals, used large and tight (-0.025em, lead
 
 | Token | Size | Use |
 |---|---|---|
-| `--typography-display` | 56–104px fluid | Home hero H1, stat numerals |
+| `--typography-display` | 52–96px fluid | Home hero H1, stat numerals |
 | `--typography-h1` | 44–72px fluid | Page H1 |
 | `--typography-h2` | 36–56px fluid | Section title |
 | `--typography-h3` | 28px | Panel and card title |

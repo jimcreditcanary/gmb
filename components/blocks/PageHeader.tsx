@@ -29,7 +29,7 @@ export function PageHeader({ colour, label, trustpilot, image, imageAlt = "", lo
       <section className={cn("hero overflow-x-clip", kind === "home" && "hero-home", compact ? "py-section-tight" : "pt-4 pb-4 sm:pt-6")}>
         <Container>
           <div className={cn(!compact && cn("relative overflow-hidden rounded-panel px-6 pt-10 pb-10 sm:px-10 sm:pt-14 sm:pb-14 lg:px-16 lg:pt-20 lg:pb-20", toneClass[tone]))}>
-            <div className={cn("grid items-center gap-x-12 gap-y-10", hasArt && !compact && "lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)]")}>
+            <div className={cn("grid items-center gap-x-12 gap-y-10", hasArt && !compact && (kind === "home" ? "lg:grid-cols-[minmax(0,8fr)_minmax(0,4fr)]" : "lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)]"))}>
               <div className={cn("hero-copy relative", compact && "max-w-measure")}>
                 {label && <p className={cn("mb-3 font-ui text-h4 font-semibold", dark ? "text-ink-inverse-muted" : "text-ink")}>{label}</p>}
                 <div className={cn("prose hero-prose [&>p]:text-lead [&>p]:max-w-[48ch]", kind === "home" ? "[&>h1]:text-display [&>h1]:text-ink [&>h1]:max-w-none [&>p]:mt-6" : "[&>h1]:max-w-[18ch]", dark ? "[&>p]:text-ink-inverse-muted" : "[&>p]:text-ink")}>{children}</div>

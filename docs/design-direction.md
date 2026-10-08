@@ -1,6 +1,16 @@
-# Design direction: "A union for your money"
+# Design direction: "A union for your money" (Monzo model)
 
-2026-10-08. Second pass on top of the token system (`docs/design-system.md`), using the frontend-design method: plan, review against the generic default, build, critique. Brief: "overhaul it and make it shit hot", copy verbatim, URLs and IA fixed, logo orange kept.
+2026-10-08. Passes on top of the token system (`docs/design-system.md`), using the frontend-design method: plan, review against the generic default, build, critique. Brief: "overhaul it and make it shit hot"; then, on seeing the restrained version, "it lacks colour and feels really boring, what if we were to model it on monzo.com". Copy verbatim, URLs and IA fixed, logo orange kept.
+
+## Revision: the Monzo model
+
+What monzo.com actually does (checked 2026-10-08): a white page; colour arrives as big rounded blocks inside the page margins (coral, navy, green cards with photography and phone screens), not as full-bleed stripes; pill buttons, dark primary; large friendly type; product rows with photographs and a pill "Learn more". Translated to GMBCU with its own colours:
+
+- The hero is one big orange block, navy display type (4.6:1), the family photo in the corner, the two tiles as pill doorways (navy, white).
+- Every section that carries colour is a 32px-radius block: product cards cycle lilac, light blue, yellow, green; product details are three colour cards; the representative example and the stat band are colour cards; the video sits in a navy card; home doorways are orange then lilac.
+- Buttons are pills again: orange primary, navy `dark` on orange blocks, white `inverse` on navy and orange.
+- The restrained pass's rules-not-boxes layout is kept only for white sections (benefits row, values grid, editorial rows).
+
 
 ## Subject
 

@@ -27,7 +27,8 @@ Five colours (direction in `docs/design-direction.md`):
 
 | Token | Value | Role |
 |---|---|---|
-| `--color-brand` | `#FF4800` (logo) | Spent once per page: the home hero slab, the stat band, the stroke under a headline word. Large type only (3.1:1 on white). |
+| `--color-brand` | `#FF4800` (logo) | The stroke under a headline word, icons, display accents. Large type only (3.1:1 on white). |
+| `--color-surface-brand` | `#FF5A1F` | Orange blocks (home hero, doorways). Navy type on it is 4.6:1; the pure logo orange would be 4.2:1. |
 | `--color-brand-strong` | `#CC4512` | Everything you click: buttons, links. 4.7:1 on white (AA). |
 | `--color-brand-hover` | `#A8380E` | Hover / active. |
 | `--color-ink` | `#102C45` | Text, and the navy surface for the one strong block per page (product details, video panel, doorways). |

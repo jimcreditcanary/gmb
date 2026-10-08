@@ -12,6 +12,7 @@
   --primitive-color-orange-600: #CC4512;
   --primitive-color-orange-700: #A8380E;
   --primitive-color-orange-800: #7E2A0A;
+  --primitive-color-orange-block: #FF5A1F;
   --primitive-color-navy-50: #EEF2F6;
   --primitive-color-navy-100: #D9E1EA;
   --primitive-color-navy-200: #B3C3D4;
@@ -104,7 +105,7 @@
   --color-surface-subtle: #EFF1F4;
   --color-surface-muted: #EFF1F4;
   --color-surface-inverse: #102C45;
-  --color-surface-brand: #CC4512;
+  --color-surface-brand: #FF5A1F;
   --color-surface-brand-soft: #FFF3EE;
   --color-ink: #102C45;
   --color-ink-muted: #3A4550;
@@ -123,8 +124,11 @@
   --color-success: #1E7B4B;
   --color-warning: #B26A00;
   --color-error: #B3261E;
-  --color-tint: #DECEF9;
-  --typography-display: clamp(3rem, 1.5rem + 6vw, 6rem);
+  --color-lilac: #DECEF9;
+  --color-blue: #CFF4FB;
+  --color-green: #8CD697;
+  --color-yellow: #F6C757;
+  --typography-display: clamp(3rem, 1.5rem + 5vw, 5rem);
   --typography-h1: clamp(2.5rem, 1.6rem + 3.2vw, 4rem);
   --typography-h2: clamp(2rem, 1.4rem + 2vw, 3rem);
   --typography-h3: 1.5rem;
@@ -143,11 +147,11 @@
   --spacing-stack: 1rem;
   --spacing-gutter: 1.5rem;
   --spacing-page-inline: clamp(1rem, 0.5rem + 2.5vw, 2.5rem);
-  --radius-control: 0.625rem;
+  --radius-control: 9999px;
   --radius-field: 0.75rem;
-  --radius-card: 0.75rem;
-  --radius-panel: 1.25rem;
-  --radius-media: 1rem;
+  --radius-card: 1.5rem;
+  --radius-panel: 2rem;
+  --radius-media: 1.5rem;
   --motion-duration: 200ms;
   --motion-duration-slow: 400ms;
   --motion-easing: cubic-bezier(0.2, 0.8, 0.2, 1);
@@ -161,7 +165,7 @@
   --button-secondary-bg: #FFFFFF;
   --button-secondary-fg: #102C45;
   --button-secondary-border: #102C45;
-  --button-radius: 0.625rem;
+  --button-radius: 9999px;
   --button-height-sm: 2.5rem;
   --button-height-md: 3rem;
   --button-height-lg: 3.5rem;
@@ -176,11 +180,11 @@
   --input-padding-x: 1rem;
   --card-bg: #FFFFFF;
   --card-border: #E1E5EA;
-  --card-radius: 0.75rem;
+  --card-radius: 1.5rem;
   --card-padding: 1.5rem;
   --card-shadow: 0 1px 2px 0 rgb(16 44 69 / 0.06);
   --card-hover-shadow: 0 4px 12px -2px rgb(16 44 69 / 0.08), 0 1px 3px rgb(16 44 69 / 0.05);
-  --panel-radius: 1.25rem;
+  --panel-radius: 2rem;
   --panel-padding: clamp(1.5rem, 1rem + 2vw, 3rem);
   --nav-height: 4.5rem;
   --nav-bg: #FFFFFF;
@@ -189,7 +193,7 @@
   --footer-bg: #102C45;
   --footer-fg: #FFFFFF;
   --footer-fg-muted: #B3C3D4;
-  --hero-radius: 1.25rem;
+  --hero-radius: 2rem;
   --hero-padding-y: clamp(2.5rem, 1.5rem + 4vw, 5rem);
   --hero-min-height: 28rem;
 }

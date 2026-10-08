@@ -11,7 +11,10 @@ const swatches: { name: string; token: string; note: string }[] = [
   { name: "brand", token: "--color-brand", note: "logo orange: large type, the hero slab, the stat band, the stroke under a word" },
   { name: "brand-strong", token: "--color-brand-strong", note: "buttons and links (4.7:1 on white)" },
   { name: "ink", token: "--color-ink", note: "navy: text, and the one strong block per page" },
-  { name: "tint", token: "--color-tint", note: "lilac: the single tint, member panels" },
+  { name: "lilac", token: "--color-lilac", note: "member panels, savings" },
+  { name: "blue", token: "--color-blue", note: "savings, details" },
+  { name: "green", token: "--color-green", note: "loans" },
+  { name: "yellow", token: "--color-yellow", note: "resources, stats" },
   { name: "surface-subtle", token: "--color-surface-subtle", note: "quiet grey sections" },
   { name: "ink-muted", token: "--color-ink-muted", note: "secondary copy" },
 ];
@@ -26,7 +29,7 @@ const type: { label: string; cls: string; sample: string }[] = [
   { label: "small", cls: "text-small", sample: "Loan repaid by direct debit monthly, four-weekly, or weekly" },
   { label: "caption", cls: "text-caption", sample: "Firm Reference Number 213550" },
 ];
-const tones: Tone[] = ["surface", "subtle", "tint", "inverse", "brand"];
+const tones: Tone[] = ["surface", "subtle", "lilac", "blue", "green", "yellow", "inverse", "brand"];
 
 /** /styleguide: the design system rendered from its own tokens and components. Noindex. */
 export default function Styleguide() {
@@ -38,7 +41,7 @@ export default function Styleguide() {
       </PageHeader>
 
       <Section tight>
-        <SectionHeader heading="Colour" intro="Five colours. The logo orange is spent on one bold device per page; the hue-matched AA orange is what you click; navy is the ink; lilac is the only tint." />
+        <SectionHeader heading="Colour" intro="The brand's own colours as big blocks: orange and navy carry the loudest moments, the four tints carry the cards. Navy type on orange (4.6:1), the hue-matched AA orange is what you click." />
         <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {swatches.map((s) => (
             <li key={s.name} className="overflow-hidden rounded-card border border-border">
@@ -58,19 +61,19 @@ export default function Styleguide() {
       </Section>
 
       <Section tight>
-        <SectionHeader heading="Buttons" intro="Primary, secondary, ghost. Three sizes. 10px corners: union, not app store." />
+        <SectionHeader heading="Buttons" intro="Primary, secondary, ghost, inverse, dark. Three sizes. Pills." />
         <div className="flex flex-wrap items-center gap-4">
           <Button href="#">Apply now</Button>
           <Button href="#" variant="secondary">Learn more</Button>
           <Button href="#" variant="ghost">Browse loans &gt;</Button>
-          <Button href="#" size="sm">Member Hub</Button>
+          <Button href="#" size="sm" variant="dark">Member Hub</Button>
           <Button href="#" size="lg">Open a Savings Account</Button>
           <Button disabled>Sending…</Button>
         </div>
       </Section>
 
       <Section tight>
-        <SectionHeader heading="Section tones" intro="Most sections are white, separated by rules and whitespace. A tone is used once per page for the block that matters." />
+        <SectionHeader heading="Section tones" intro="White page, colour in big rounded blocks. Blocks alternate; the same colour never sits next to itself." />
         <ul className="grid gap-4 sm:grid-cols-3">
           {tones.map((t) => <li key={t} className={`rounded-card p-6 ${toneClass[t]}`}><p className="font-display text-h4">{t}</p><p className="text-small">Body copy with a <a href="#">link</a> and a <u>mark</u>.</p></li>)}
         </ul>
@@ -95,7 +98,7 @@ export default function Styleguide() {
             <li><code>--spacing-section</code> clamp(48px, 96px): between page sections</li>
             <li><code>--spacing-block</code> 32px: between blocks inside a section</li>
             <li><code>--spacing-stack</code> 16px: heading → paragraph → button</li>
-            <li><code>--radius-control</code> 10px · <code>--radius-field</code> 12px · <code>--radius-card</code> 12px · <code>--radius-panel</code> 20px</li>
+            <li><code>--radius-control</code> pill · <code>--radius-field</code> 12px · <code>--radius-card</code> 24px · <code>--radius-panel</code> 32px</li>
           </ul>
         </Container>
       </Section>

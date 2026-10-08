@@ -20,7 +20,8 @@ const isCoverPhoto = (src: string) => { if (!/\.(jpe?g|webp|avif)$/i.test(src)) 
 function Art({ src, alt = "", onTint, sizes = "(max-width: 1024px) 90vw, 520px", ratio = "aspect-[4/3]" }: { src: string; alt?: string; onTint?: boolean; sizes?: string; ratio?: string }) {
   if (isCoverPhoto(src)) return <div className={cn("overflow-hidden rounded-media", ratio)}><Img src={src} alt={alt} sizes={sizes} className="size-full object-cover" /></div>;
   const d = imageDims(src); const portrait = !!d && d.height > d.width * 1.1;   // tall cut-outs (the app phone) get a square stage, not a letterboxed 4:3
-  return <div className={cn("stage p-6 sm:p-8", portrait ? "aspect-square" : ratio, onTint ? "stage-white" : "stage-soft")}><Img src={src} alt={alt} sizes={sizes} className="size-full object-contain object-bottom" /></div>;
+  const jpeg = /\.jpe?g$/i.test(src);   // JPEG cut-outs carry a baked white background: multiply blends it into the stage
+  return <div className={cn("stage p-6 sm:p-8", portrait ? "aspect-square" : ratio, onTint ? "stage-white" : "stage-soft")}><Img src={src} alt={alt} sizes={sizes} className={cn("size-full object-contain object-bottom", jpeg && "mix-blend-multiply")} /></div>;
 }
 const kidsOf = (children: ReactNode) => (Array.isArray(children) ? children : [children]).filter(Boolean);
 const typeOf = (k: unknown) => (typeof k === "object" && k !== null ? (k as { type?: unknown }).type : undefined);

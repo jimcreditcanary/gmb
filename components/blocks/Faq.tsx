@@ -19,7 +19,7 @@ export function FAQGroup({ heading, colour, children, index, hideHeading }: { he
         {items.map((item, i) => {
           const isOpen = open === i; const id = `${base}-${i}`;
           return (
-            <div key={i} className={cn("rounded-card", toneClass[tone])}>
+            <div key={i} className={cn("rounded-card", tone === "surface" ? "border border-border bg-surface text-ink" : toneClass[tone])}>
               <button type="button" className="flex w-full items-center justify-between gap-4 rounded-card px-5 py-4 text-left font-display text-h4 leading-snug" aria-expanded={isOpen} aria-controls={id} onClick={() => setOpen(isOpen ? null : i)}>
                 <span>{item.props.question}</span>
                 <FontAwesomeIcon icon={faChevronDown} className={cn("size-4 shrink-0 transition-transform duration-(--motion-duration) ease-standard", isOpen && "rotate-180")} aria-hidden="true" />

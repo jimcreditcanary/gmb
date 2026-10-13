@@ -121,7 +121,7 @@ export function StatBand({ source = "/about-us/" }: { source?: string }) {
 }
 
 /** The first N questions of one FAQ group, with a pill through to the full page. */
-export function FaqTeaser({ source = "/faqs/", group, count = 4, href, label }: { source?: string; group: string; count?: number; href: string; label: string }) {
+export function FaqTeaser({ source = "/faqs/", group, count = 4, href, label, colour }: { source?: string; group: string; count?: number; href: string; label: string; colour?: string }) {
   const page = getPage(source); if (!page) return null;
   const re = new RegExp(`<FAQGroup\\s+heading="${group.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}"([^>]*)>([\\s\\S]*?)<\\/FAQGroup>`);
   const m = page.body.match(re); if (!m) return null;
@@ -130,7 +130,7 @@ export function FaqTeaser({ source = "/faqs/", group, count = 4, href, label }: 
     <Section tight>
       <div className="grid gap-x-12 gap-y-8 lg:grid-cols-[minmax(0,4fr)_minmax(0,8fr)] lg:items-start">
         <div className="lg:sticky lg:top-28"><Mdx source={`## ${group}`} /><p className="mt-6"><Button href={href}>{label}</Button></p></div>
-        <div className="[&>div]:py-0"><Mdx source={`<FAQGroup heading="${group}" hideHeading={true}${m[1]}>\n${faqs.join("\n")}\n</FAQGroup>`} /></div>
+        <div className="[&>div]:py-0"><Mdx source={`<FAQGroup heading="${group}" hideHeading={true}${colour ? m[1].replace(/\scolour="[^"]*"/, "") + ` colour="${colour}"` : m[1]}>\n${faqs.join("\n")}\n</FAQGroup>`} /></div>
       </div>
     </Section>
   );

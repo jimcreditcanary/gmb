@@ -74,6 +74,10 @@ Rules:
 
 Open an existing page of the same template (`docs/templates.md`) and copy its structure.
 
+## Plain variants (2026-10-13)
+
+For pages that should read as a white page with one strong block (the car loan page; the bank-pattern write-up in `docs/design-direction.md`): `PageHeader variant="plain"` (no colour block, art on a soft stage, orange primary + outline secondary buttons); `PanelSection plain={true}` (columns on hairlines instead of colour cards); `PopoutBlock colour="white"` (editorial row under a rule); `FaqTeaser colour="white"` (outlined accordion items; `FAQGroup` renders a hairline when its tone is white).
+
 ## Rail (`components/ui/rail.tsx`)
 
 `Rail label` + `RailItem`: horizontal scroll-snap card row with previous / next controls (monzo.com's product rows). ~80% of the width per card on phones, half on tablets, a quarter on desktop. Wrapped in an `overflow-hidden` bleed so the row never widens the page. Used by `ProductCards` on the home page.

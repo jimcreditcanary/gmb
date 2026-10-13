@@ -10,7 +10,7 @@ import { Trustpilot } from "./Trustpilot";
 import { Lottie } from "./Lottie";
 
 type Tile = { label: string; href: string; icon?: string };
-type Props = { colour?: string; label?: string; trustpilot?: boolean; image?: string; imageAlt?: string; imageWrap?: string; lottie?: string; poster?: string; buttons?: Tile[]; variant?: "page" | "home" | "title"; date?: string; children?: ReactNode };
+type Props = { colour?: string; label?: string; trustpilot?: boolean; image?: string; imageAlt?: string; imageWrap?: string; lottie?: string; poster?: string; buttons?: Tile[]; variant?: "page" | "home" | "title" | "plain"; date?: string; children?: ReactNode };
 
 /**
  * Hero (docs/design-direction.md, Monzo model): a big rounded colour block inside the page margins.
@@ -24,11 +24,12 @@ export function PageHeader({ colour, label, trustpilot, image, imageAlt = "", lo
   const dark = isInverse(tone);
   const hasArt = Boolean(lottie || image);
   const compact = kind === "title";
+  const plain = kind === "plain";   // white hero: no colour block, art beside the copy (car loan page after the bank review)
   return (
     <>
       <section className={cn("hero overflow-x-clip", kind === "home" && "hero-home", compact ? "py-section-tight" : "pt-4 pb-4 sm:pt-6")}>
         <Container>
-          <div className={cn(!compact && cn("relative overflow-hidden rounded-panel px-6 pt-10 pb-10 sm:px-10 sm:pt-14 sm:pb-14 lg:px-16 lg:pt-20 lg:pb-20", toneClass[tone]))}>
+          <div className={cn(!compact && !plain && cn("relative overflow-hidden rounded-panel px-6 pt-10 pb-10 sm:px-10 sm:pt-14 sm:pb-14 lg:px-16 lg:pt-20 lg:pb-20", toneClass[tone]), plain && "relative pt-8 pb-4 sm:pt-12 lg:pt-16")}>
             <div className={cn("grid items-center gap-x-12 gap-y-10", hasArt && !compact && (kind === "home" ? "lg:grid-cols-[minmax(0,8fr)_minmax(0,4fr)]" : "lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)]"))}>
               <div className={cn("hero-copy relative", compact && "max-w-measure")}>
                 {label && <p className={cn("mb-3 font-ui text-h4 font-semibold", dark ? "text-ink-inverse-muted" : "text-ink")}>{label}</p>}
@@ -38,7 +39,7 @@ export function PageHeader({ colour, label, trustpilot, image, imageAlt = "", lo
                   <ul className="mt-8 flex flex-wrap gap-3">
                     {buttons.map((b, i) => (
                       <li key={b.href + b.label}>
-                        <Link href={b.href} className={cn("group inline-flex h-14 items-center gap-3 rounded-control px-7 font-ui text-lg font-semibold no-underline transition-colors duration-(--motion-duration)", i === 0 ? "bg-ink text-ink-inverse hover:bg-navy-800 hover:text-ink-inverse" : "bg-surface text-ink hover:bg-ink hover:text-ink-inverse")}>
+                        <Link href={b.href} className={cn("group inline-flex h-14 items-center gap-3 rounded-control px-7 font-ui text-lg font-semibold no-underline transition-colors duration-(--motion-duration)", i === 0 ? (plain ? "bg-brand-strong text-ink-inverse hover:bg-brand-hover hover:text-ink-inverse" : "bg-ink text-ink-inverse hover:bg-navy-800 hover:text-ink-inverse") : (plain ? "border border-ink bg-surface text-ink hover:bg-ink hover:text-ink-inverse" : "bg-surface text-ink hover:bg-ink hover:text-ink-inverse"))}>
                           {b.label}<FontAwesomeIcon icon={faArrowRight} className="size-4 transition-transform duration-(--motion-duration) group-hover:translate-x-1" aria-hidden="true" />
                         </Link>
                       </li>
@@ -52,8 +53,8 @@ export function PageHeader({ colour, label, trustpilot, image, imageAlt = "", lo
                     {image && <Img src={image} alt={imageAlt} priority sizes="(max-width: 1024px) 90vw, 640px" className="absolute -bottom-10 -right-8 h-auto w-[115%] max-w-none object-contain object-right-bottom sm:-bottom-14 lg:-bottom-20 lg:-right-16 lg:w-[125%]" />}
                   </div>
                 ) : (
-                  <div className="hero-art relative mx-auto -mb-10 w-full max-w-[460px] sm:-mb-14 lg:-mb-20 lg:max-w-none">
-                    <div className="stage aspect-[5/4] w-full rounded-none">
+                  <div className={cn("hero-art relative mx-auto w-full max-w-[460px] lg:max-w-none", plain ? "" : "-mb-10 sm:-mb-14 lg:-mb-20")}>
+                    <div className={cn("stage aspect-[5/4] w-full", plain ? "stage-soft" : "rounded-none")}>
                       {lottie ? <div className="h-full w-full"><Lottie src={lottie} poster={poster} /></div> : image && <Img src={image} alt={imageAlt} priority sizes="(max-width: 1024px) 80vw, 460px" className="size-full object-contain object-bottom" />}
                     </div>
                   </div>

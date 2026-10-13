@@ -17,8 +17,8 @@ const round50 = (n: number) => Math.round(n / 50) * 50;
 
 const field = "h-12 w-full rounded-field border border-border-strong bg-surface px-4 font-ui text-body text-ink focus:border-ink focus:outline-none";
 const label = "block font-ui text-small font-semibold text-ink";
-const stepCard = "rounded-panel border border-border bg-surface p-6 sm:p-8";
-const stepNo = "font-ui text-caption font-semibold uppercase tracking-wide text-ink-muted";
+const stepCard = "grid gap-x-8 border-t border-border pt-6 sm:grid-cols-[4rem_minmax(0,1fr)]";
+const stepNo = "font-display text-h2 leading-none text-brand";
 
 export function CarLoanJourneyClient({ facts, apply }: { facts: Facts; apply: string }) {
   const [found, setFound] = useState<boolean | null>(null);
@@ -36,7 +36,13 @@ export function CarLoanJourneyClient({ facts, apply }: { facts: Facts; apply: st
 
   const carPrice = price !== "" ? Number(price) : valuation?.typical ?? 0;
   const borrow = Math.max(0, carPrice - (deposit === "" ? 0 : Number(deposit)));
-  const toCalculator = () => { if (borrow > 0) setAmount(round50(clamp(borrow, facts.amountMin, facts.amountMax))); setStep(3); };
+  /** The estimate follows the car: any change to the valuation, price or deposit re-sets the amount (clamped to the product's range). */
+  const follow = (nextPrice: number | "", nextDeposit: number | "", nextValuation: Valuation | null) => {
+    const cp = nextPrice !== "" ? Number(nextPrice) : nextValuation?.typical ?? 0;
+    const b = Math.max(0, cp - (nextDeposit === "" ? 0 : Number(nextDeposit)));
+    if (b > 0) setAmount(round50(clamp(b, facts.amountMin, facts.amountMax)));
+  };
+  const toCalculator = () => { follow(price, deposit, valuation); setStep(3); };
 
   const pay = useMemo(() => monthly(amount, facts.rep.apr, term), [amount, facts.rep.apr, term]);
   const payLow = useMemo(() => monthly(amount, facts.aprMin, term), [amount, facts.aprMin, term]);
@@ -57,7 +63,7 @@ export function CarLoanJourneyClient({ facts, apply }: { facts: Facts; apply: st
       const v = await fetch("/api/valuation", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ vehicle: j.vehicle }) });
       const vj = await v.json();
       if (!v.ok) { setManual(true); setError(vj.error || "We couldn’t estimate a value for this vehicle. Enter the price instead."); return; }
-      setValuation(vj.valuation);
+      setValuation(vj.valuation); follow(price, deposit, vj.valuation);
     } catch { setError("Something went wrong. Please try again."); }
     finally { setBusy(null); }
   }
@@ -70,24 +76,24 @@ export function CarLoanJourneyClient({ facts, apply }: { facts: Facts; apply: st
       </header>
 
       <div className="grid gap-8 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:items-start">
-        <div className="grid gap-5">
+        <div className="grid gap-8">
           {/* Step 1 */}
           <fieldset className={stepCard}>
-            <legend className="sr-only-text">Step 1</legend>
-            <p className={stepNo}>Step 1 of {totalSteps}</p>
-            <h3 className="mt-2">Have you found a car you’d like to buy?</h3>
+            <legend className="sr-only-text">Step 1 of {totalSteps}</legend>
+            <p className={stepNo} aria-hidden="true">1</p>
+            <div><h3>Have you found a car you’d like to buy?</h3>
             <div className="mt-5 flex flex-wrap gap-3">
               <Button variant={found === true ? "dark" : "secondary"} aria-pressed={found === true} onClick={() => { setFound(true); setStep(2); }}>Yes, I’ve found one</Button>
               <Button variant={found === false ? "dark" : "secondary"} aria-pressed={found === false} onClick={() => { setFound(false); setStep(3); }}>No, not yet</Button>
-            </div>
+            </div></div>
           </fieldset>
 
           {/* Step 2: the car */}
           {found && (
             <fieldset className={stepCard}>
-              <legend className="sr-only-text">Step 2</legend>
-              <p className={stepNo}>Step 2 of 3</p>
-              <h3 className="mt-2">Tell us about the car</h3>
+              <legend className="sr-only-text">Step 2 of 3</legend>
+              <p className={stepNo} aria-hidden="true">2</p>
+              <div><h3>Tell us about the car</h3>
               <p className="mt-2 text-small text-ink-muted">Enter the registration and we’ll look the car up and estimate what it’s worth, so you know roughly how much to borrow.</p>
               {!manual && (
                 <form className="mt-5 flex flex-wrap items-end gap-3" onSubmit={(e) => { e.preventDefault(); if (reg.trim()) lookup(); }}>
@@ -121,11 +127,11 @@ export function CarLoanJourneyClient({ facts, apply }: { facts: Facts; apply: st
                 <div className="mt-6 grid gap-4 sm:grid-cols-2">
                   <div>
                     <label htmlFor="car-price" className={label}>{valuation ? "Price (if different)" : "Price of the car"}</label>
-                    <input id="car-price" type="number" inputMode="numeric" min={0} step={50} value={price} onChange={(e) => setPrice(e.target.value === "" ? "" : Number(e.target.value))} placeholder={valuation ? String(valuation.typical) : "e.g. 8500"} className={cn(field, "mt-1")} />
+                    <input id="car-price" type="number" inputMode="numeric" min={0} step={50} value={price} onChange={(e) => { const v = e.target.value === "" ? "" : Number(e.target.value); setPrice(v); follow(v, deposit, valuation); }} placeholder={valuation ? String(valuation.typical) : "e.g. 8500"} className={cn(field, "mt-1")} />
                   </div>
                   <div>
                     <label htmlFor="car-deposit" className={label}>Your deposit (optional)</label>
-                    <input id="car-deposit" type="number" inputMode="numeric" min={0} step={50} value={deposit} onChange={(e) => setDeposit(e.target.value === "" ? "" : Number(e.target.value))} placeholder="0" className={cn(field, "mt-1")} />
+                    <input id="car-deposit" type="number" inputMode="numeric" min={0} step={50} value={deposit} onChange={(e) => { const v = e.target.value === "" ? "" : Number(e.target.value); setDeposit(v); follow(price, v, valuation); }} placeholder="0" className={cn(field, "mt-1")} />
                   </div>
                 </div>
               )}
@@ -135,15 +141,16 @@ export function CarLoanJourneyClient({ facts, apply }: { facts: Facts; apply: st
                   {!manual && <button type="button" className="font-ui text-small font-semibold text-link underline" onClick={() => { setManual(true); setError(null); }}>I’d rather enter the price</button>}
                 </div>
               )}
+              </div>
             </fieldset>
           )}
 
           {/* Step 3: calculator */}
           {(step === 3 || found === false) && (
             <fieldset className={stepCard}>
-              <legend className="sr-only-text">Step {calcStep}</legend>
-              <p className={stepNo}>Step {calcStep} of {totalSteps}</p>
-              <h3 className="mt-2">Adjust the amount and term</h3>
+              <legend className="sr-only-text">Step {calcStep} of {totalSteps}</legend>
+              <p className={stepNo} aria-hidden="true">{calcStep}</p>
+              <div><h3>Adjust the amount and term</h3>
               <p className="mt-2 text-small text-ink-muted">Move the sliders and your estimate updates on the right.</p>
               <div className="mt-6 grid gap-6 sm:grid-cols-2">
                 <div>
@@ -164,31 +171,32 @@ export function CarLoanJourneyClient({ facts, apply }: { facts: Facts; apply: st
               </div>
               {outOfRange && <p role="status" className="mt-6 rounded-card bg-surface-subtle p-5 text-small">{facts.name}s are from {gbp.format(facts.amountMin)} to {gbp.format(facts.amountMax)}. For smaller amounts, see our <Link href="/loans/">other loans</Link>.</p>}
               {found && <p className="mt-6"><Button variant="secondary" size="sm" onClick={() => setStep(2)}>Back to the car</Button></p>}
+              </div>
             </fieldset>
           )}
         </div>
 
         {/* Your estimate */}
-        <aside className="tone-yellow on-tint rounded-panel p-(--panel-padding) text-ink lg:sticky lg:top-24" aria-live="polite">
+        <aside className="tone-navy on-inverse rounded-panel p-(--panel-padding) text-ink-inverse lg:sticky lg:top-24" aria-live="polite">
           <p className="font-ui text-small font-semibold">Your estimate</p>
           <p className="mt-1 font-display text-display leading-none">{outOfRange ? "—" : gbp2.format(pay)}</p>
-          <p className="mt-1 text-small">a month at {facts.rep.apr}% APR</p>
-          <dl className="mt-6 grid grid-cols-2 gap-x-6 gap-y-4 border-t border-ink/15 pt-5 text-small">
-            <div><dt className="text-ink-muted">Loan amount</dt><dd className="font-ui text-h4 font-bold">{gbp.format(amount)}</dd></div>
-            <div><dt className="text-ink-muted">Repay over</dt><dd className="font-ui text-h4 font-bold">{term} months</dd></div>
-            <div><dt className="text-ink-muted">Total repayable</dt><dd className="font-ui text-h4 font-bold">{outOfRange ? "—" : gbp2.format(total)}</dd></div>
-            <div><dt className="text-ink-muted">Interest to pay</dt><dd className="font-ui text-h4 font-bold">{outOfRange ? "—" : gbp2.format(total - amount)}</dd></div>
+          <p className="mt-1 text-small text-ink-inverse-muted">a month at {facts.rep.apr}% APR{found && borrow > 0 ? ` · ${gbp.format(carPrice)} car${deposit !== "" && Number(deposit) > 0 ? `, ${gbp.format(Number(deposit))} deposit` : ""}` : ""}</p>
+          <dl className="mt-6 grid grid-cols-2 gap-x-6 gap-y-4 border-t border-ink-inverse/20 pt-5 text-small">
+            <div><dt className="text-ink-inverse-muted">Loan amount</dt><dd className="font-ui text-h4 font-bold">{gbp.format(amount)}</dd></div>
+            <div><dt className="text-ink-inverse-muted">Repay over</dt><dd className="font-ui text-h4 font-bold">{term} months</dd></div>
+            <div><dt className="text-ink-inverse-muted">Total repayable</dt><dd className="font-ui text-h4 font-bold">{outOfRange ? "—" : gbp2.format(total)}</dd></div>
+            <div><dt className="text-ink-inverse-muted">Interest to pay</dt><dd className="font-ui text-h4 font-bold">{outOfRange ? "—" : gbp2.format(total - amount)}</dd></div>
           </dl>
-          <p className="mt-5 text-caption">Rates are {facts.aprMin}% to {facts.aprMax}% APR depending on your circumstances{outOfRange ? "." : `, which would make it ${gbp2.format(payLow)} to ${gbp2.format(payHigh)} a month.`} The figures above are for illustrative purposes only the actual repayment amounts will vary subject to loan amount and term.</p>
+          <p className="mt-5 text-caption text-ink-inverse-muted">Rates are {facts.aprMin}% to {facts.aprMax}% APR depending on your circumstances{outOfRange ? "." : `, which would make it ${gbp2.format(payLow)} to ${gbp2.format(payHigh)} a month.`} The figures above are for illustrative purposes only the actual repayment amounts will vary subject to loan amount and term.</p>
           <div className="mt-6 grid gap-3">
-            <Button href={apply} target="_blank" variant="dark" size="lg" block>Apply now</Button>
-            <p className="text-caption">Applying opens our secure application journey. You’ll need to be a member of GMB Credit Union, 18 or over, and able to provide proof of ID and regular income. Subject to a credit search and Open Banking.</p>
+            <Button href={apply} target="_blank" variant="inverse" size="lg" block>Apply now</Button>
+            <p className="text-caption text-ink-inverse-muted">Applying opens our secure application journey. You’ll need to be a member of GMB Credit Union, 18 or over, and able to provide proof of ID and regular income. Subject to a credit search and Open Banking.</p>
           </div>
         </aside>
       </div>
 
       {/* Representative example, verbatim from the product page */}
-      <div className="tone-lilac on-tint mt-8 grid gap-6 rounded-panel p-(--panel-padding) text-ink md:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] md:items-center">
+      <div className="mt-12 grid gap-6 border-t border-border pt-8 text-ink md:grid-cols-[minmax(0,1fr)_minmax(0,2fr)]">
         <h3>{facts.name} representative example</h3>
         <div>
           <ul className="grid gap-2 font-ui text-small font-bold sm:grid-cols-2">
@@ -198,7 +206,7 @@ export function CarLoanJourneyClient({ facts, apply }: { facts: Facts; apply: st
             <li>Interest: {facts.rep.apr}% APR</li>
             <li>Total amount: {gbp2.format(facts.rep.total)}</li>
           </ul>
-          <p className="mt-3 text-caption">The figures above are for illustrative purposes only the actual repayment amounts will vary subject to loan amount and term.</p>
+          <p className="mt-3 text-caption text-ink-muted">The figures above are for illustrative purposes only the actual repayment amounts will vary subject to loan amount and term.</p>
         </div>
       </div>
     </div>

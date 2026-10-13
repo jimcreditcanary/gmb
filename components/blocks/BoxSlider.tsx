@@ -1,32 +1,36 @@
-"use client";
-import { useRef, type ReactNode } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import { SectionHeader } from "./SectionHeader";
+import type { ReactNode } from "react";
+import { Section, SectionHeader } from "@/components/ui/section";
+import { Img } from "./Img";
+import { LinkButton } from "@/lib/with-context";
+import { Button } from "@/components/ui/button";
 
-/** Product teaser slider. The theme used slick (4/3/2/1 per row at 1200/992/640). Reproduced with CSS scroll-snap + arrows: no carousel JS. */
-export function BoxSlider({ heading, intro, align, children }: { heading?: string; intro?: string; align?: "center" | "right"; children: ReactNode }) {
-  const track = useRef<HTMLDivElement>(null);
-  const scroll = (dir: 1 | -1) => { const el = track.current; if (!el) return; const w = el.firstElementChild?.getBoundingClientRect().width || 300; el.scrollBy({ left: dir * w, behavior: "smooth" }); };
+type El = { type?: unknown; props?: { children?: unknown } };
+const flat = (c: unknown): unknown[] => (Array.isArray(c) ? c.flatMap(flat) : [c]);
+const isAction = (k: unknown) => { const e = k as El; return !!e && typeof e === "object" && e.type === "p" && flat(e.props?.children).some((c) => { const t = (c as El)?.type; return t === LinkButton || t === Button; }); };
+
+/**
+ * Product cards (docs/design-direction.md, Monzo model): every product as a colour card cycling through the brand tints,
+ * artwork on top, facts as a list, the two actions at the bottom. `layout` is accepted for content compatibility and ignored.
+ */
+export function BoxSlider({ heading, intro, align, children }: { heading?: string; intro?: string; align?: "center" | "right"; layout?: "slider" | "grid"; children: ReactNode }) {
   return (
-    <section className="box-slider bg-white"><div className="outline">
-      {(heading || intro) && <SectionHeader heading={heading} align={align}>{intro && <p style={align ? { textAlign: align } : undefined} dangerouslySetInnerHTML={{ __html: intro }} />}</SectionHeader>}
-      <div className="wrap-boxslider">
-        <div className="init-boxslider slick-initialized slick-slider">
-          <button type="button" className="slick-next" aria-label="Previous" onClick={() => scroll(-1)}><FontAwesomeIcon icon={faArrowLeft} /></button>
-          <div className="slick-list"><div className="slick-track snap-track" ref={track}>{children}</div></div>
-          <button type="button" className="slick-prev" aria-label="Next" onClick={() => scroll(1)}><FontAwesomeIcon icon={faArrowRight} /></button>
-        </div>
-      </div>
-    </div></section>
+    <Section>
+      <SectionHeader heading={heading} intro={intro} align={align} className="[&>h2]:max-w-[16ch]" />
+      <ul className="card-cycle grid gap-5 sm:grid-cols-2 lg:grid-cols-3">{children}</ul>
+    </Section>
   );
 }
 export function Box({ image, imageAlt = "", children }: { image?: string; imageAlt?: string; children: ReactNode }) {
+  const kids = (Array.isArray(children) ? children : [children]).filter(Boolean);
+  const actions = kids.filter(isAction).flatMap((k) => flat((k as El).props?.children).filter((c) => typeof c === "object" && c !== null));
+  const body = kids.filter((k) => !isAction(k));
   return (
-    <div className="slick-slide snap-slide"><div className="wrap">
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      {image && <div className="data-image"><img src={image} alt={imageAlt} loading="lazy" decoding="async" /></div>}
-      <div className="data-content">{children}</div>
-    </div></div>
+    <li className="flex">
+      <div className="card-tone on-tint flex w-full flex-col rounded-card p-(--card-padding) text-ink sm:p-8">
+        {image && <div className="stage stage-white mb-6 h-40 w-full p-4"><Img src={image} alt={imageAlt} className="size-full object-contain object-bottom" /></div>}
+        <div className="prose grow [&>h3]:text-h3 [&>p]:text-small [&>ul]:mt-4 [&>ul]:list-none [&>ul]:p-0 [&>ul]:text-small [&>ul]:font-display [&>ul>li]:border-t [&>ul>li]:border-ink/15 [&>ul>li]:py-2 [&>ul>li]:m-0">{body}</div>
+        {actions.length > 0 && <div className="mt-6 flex flex-wrap gap-3 [&>.button.button-alt]:bg-transparent">{actions as ReactNode[]}</div>}
+      </div>
+    </li>
   );
 }

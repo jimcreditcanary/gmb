@@ -1,8 +1,8 @@
 "use client";
-import { Button } from "@/components/ui/button";
 import { useState, type FormEvent } from "react";
+import { Button } from "@/components/ui/button";
 
-/** Mailchimp embedded form, same fields (EMAIL + honeypot) and markup ids; posts to /api/newsletter which forwards to Mailchimp. */
+/** Mailchimp signup, same fields (EMAIL + honeypot) and ids; posts to /api/newsletter which forwards to Mailchimp. */
 export function NewsletterForm() {
   const [status, setStatus] = useState<"idle" | "sending" | "ok" | "error">("idle");
   const [msg, setMsg] = useState("");
@@ -16,22 +16,17 @@ export function NewsletterForm() {
     } catch (err) { setStatus("error"); setMsg(err instanceof Error ? err.message : "Please try again."); }
   };
   return (
-    <div id="mc_embed_shell"><div id="mc_embed_signup">
-      <form onSubmit={onSubmit} method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" noValidate>
-        <div id="mc_embed_signup_scroll">
-          <div className="indicates-required"><span className="asterisk">*</span> indicates required</div>
-          <div className="mc-field-group">
-            <label htmlFor="mce-EMAIL">Email Address <span className="asterisk">*</span></label>
-            <input type="email" name="EMAIL" className="required email" id="mce-EMAIL" required autoComplete="email" />
-          </div>
-          <div id="mce-responses" className="clear" aria-live="polite">
-            {status === "error" && <div className="response" id="mce-error-response">{msg}</div>}
-            {status === "ok" && <div className="response" id="mce-success-response">{msg}</div>}
-          </div>
-          <div aria-hidden="true" style={{ position: "absolute", left: "-5000px" }}><input type="text" name="b_d9343033dc8a6cee1d438cafd_a34de2255e" tabIndex={-1} defaultValue="" /></div>
-          <div className="clear"><Button type="submit" name="subscribe" id="mc-embedded-subscribe" disabled={status === "sending"}>{status === "sending" ? "Subscribing…" : "Subscribe"}</Button></div>
-        </div>
-      </form>
-    </div></div>
+    <form onSubmit={onSubmit} method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" noValidate className="grid gap-2">
+      <label htmlFor="mce-EMAIL" className="text-small text-ink-inverse-muted">Email Address <span aria-hidden="true">*</span><span className="sr-only-text">required</span></label>
+      <div className="flex flex-col gap-2 sm:flex-row">
+        <input type="email" name="EMAIL" id="mce-EMAIL" required autoComplete="email" className="h-12 min-w-0 grow rounded-field border border-ink-inverse/30 bg-surface px-4 text-body text-ink placeholder:text-ink-subtle focus:border-ink focus:outline-none focus-visible:outline-3 focus-visible:outline-ink-inverse focus-visible:outline-offset-2" />
+        <Button type="submit" name="subscribe" id="mc-embedded-subscribe" disabled={status === "sending"} className="focus-visible:outline-ink-inverse">{status === "sending" ? "Subscribing…" : "Subscribe"}</Button>
+      </div>
+      <div aria-live="polite" className="text-small">
+        {status === "error" && <p className="text-tone-resources" id="mce-error-response">{msg}</p>}
+        {status === "ok" && <p id="mce-success-response">{msg}</p>}
+      </div>
+      <div aria-hidden="true" className="absolute -left-[5000px]"><input type="text" name="b_d9343033dc8a6cee1d438cafd_a34de2255e" tabIndex={-1} defaultValue="" /></div>
+    </form>
   );
 }

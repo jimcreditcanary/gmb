@@ -73,3 +73,16 @@ Rules:
 | `A href className target` | inline | for classed or `target` links that are not buttons |
 
 Open an existing page of the same template (`docs/templates.md`) and copy its structure.
+
+## Rail (`components/ui/rail.tsx`)
+
+`Rail label` + `RailItem`: horizontal scroll-snap card row with previous / next controls (monzo.com's product rows). ~80% of the width per card on phones, half on tablets, a quarter on desktop. Wrapped in an `overflow-hidden` bleed so the row never widens the page. Used by `ProductCards` on the home page.
+
+## ProductCards (home)
+
+`<ProductCards source="/loans/" include={["/loans/car-loan/"]} count={n} />`: simple cards (image, title, first line, "Learn more >") read from the hub page's `<Box>` blocks, so copy lives once; `include` adds pages that are not on the hub, built from their frontmatter (`h1`/`title`, `excerpt`, `cardImage`). Rendered in a `Rail`.
+
+## CarLoanJourney
+
+`<CarLoanJourney product="/loans/member-loan/" apply="https://gmb.cuapply.com/journey/1" />` (page: `/loans/car-loan/`). Server wrapper reads the loan facts (amounts, APR range, the full representative example, max term) from the product page's frontmatter and renders the client journey (steps on the left, a sticky live "Your estimate" panel with the Apply button on the right, the representative example beneath; anchor `#cost`): found a car? → registration → `POST /api/vehicle` (DVLA Vehicle Enquiry Service, `DVLA_API_KEY`) → `POST /api/valuation` (Claude, `ANTHROPIC_API_KEY`, structured output: low / high / typical / basis) → price and deposit → calculator (amount, term; UK APR converted to a monthly rate, matches the published representative example) → "Apply now" link to the journey. Without either key the page falls back to a price field. Both routes are rate limited per IP and never expose the keys. Nothing is submitted on the member's behalf.
+

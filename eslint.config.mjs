@@ -11,6 +11,7 @@ const eslintConfig = defineConfig([
     "audit/**",
     "source/**",
     "scripts/**/*.mjs",
+    "scripts/**/*.cjs",
     "public/**",
     // Default ignores of eslint-config-next:
     ".next/**",

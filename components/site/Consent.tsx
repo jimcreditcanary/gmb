@@ -39,20 +39,20 @@ export function CookieBanner() {
   const save = (c: Omit<Consent, "ts">) => { const v = { ...c, ts: Date.now() }; try { localStorage.setItem(KEY, JSON.stringify(v)); } catch { } setDismissedAt(reopenCount || "0"); document.dispatchEvent(new Event(EVT)); };
   if (!visible) return null;
   return (
-    <div className="cookie-banner" role="dialog" aria-modal="false" aria-labelledby="ck-title" aria-describedby="ck-desc">
-      <h2 id="ck-title">We value your privacy</h2>
-      <p id="ck-desc">We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking &quot;Accept All&quot;, you consent to our use of cookies. <Link href="/privacy-policy/">Privacy policy</Link></p>
+    <div className="cookie-banner fixed bottom-4 left-4 z-[60] w-[calc(100%-2rem)] max-w-[26rem] rounded-card border border-border bg-surface p-6 text-ink shadow-float" role="dialog" aria-modal="false" aria-labelledby="ck-title" aria-describedby="ck-desc">
+      <h2 id="ck-title" className="text-h4">We value your privacy</h2>
+      <p id="ck-desc" className="mt-2 text-small text-ink-muted">We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking &quot;Accept All&quot;, you consent to our use of cookies. <Link href="/privacy-policy/">Privacy policy</Link></p>
       {custom && (
-        <div className="cookie-options">
+        <div className="cookie-options mt-4 grid gap-2 text-small">
           <label><input type="checkbox" checked disabled /> Necessary (always on)</label>
           <label><input type="checkbox" checked={analytics} onChange={(e) => setAnalytics(e.target.checked)} /> Analytics</label>
           <label><input type="checkbox" checked={marketing} onChange={(e) => setMarketing(e.target.checked)} /> Advertising</label>
         </div>
       )}
-      <div className="cookie-actions">
-        {custom ? <Button variant="secondary" onClick={() => save({ analytics, marketing })}>Save preferences</Button> : <Button variant="secondary" onClick={() => setCustom(true)}>Customize</Button>}
-        <Button variant="secondary" onClick={() => save({ analytics: false, marketing: false })}>Reject All</Button>
-        <Button onClick={() => save({ analytics: true, marketing: true })}>Accept All</Button>
+      <div className="cookie-actions mt-5 flex flex-wrap gap-2">
+        {custom ? <Button variant="secondary" size="sm" onClick={() => save({ analytics, marketing })}>Save preferences</Button> : <Button variant="secondary" size="sm" onClick={() => setCustom(true)}>Customize</Button>}
+        <Button variant="secondary" size="sm" onClick={() => save({ analytics: false, marketing: false })}>Reject All</Button>
+        <Button size="sm" onClick={() => save({ analytics: true, marketing: true })}>Accept All</Button>
       </div>
     </div>
   );

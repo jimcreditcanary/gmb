@@ -18,6 +18,10 @@
       "href": "/loans/",
       "children": [
         {
+          "label": "Car Loan",
+          "href": "/loans/car-loan/"
+        },
+        {
           "label": "Consolidation Loan",
           "href": "/loans/consolidation-loan/"
         },

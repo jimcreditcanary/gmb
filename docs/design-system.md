@@ -10,7 +10,7 @@ Live reference: `/styleguide/` (noindex) renders every token and component below
 
 | Layer | File | Notes |
 |---|---|---|
-| Tokens (source of truth) | `design/tokens.json` | W3C format, three layers. `pnpm tokens` regenerates the CSS. |
+| Tokens (source of truth) | `design/tokens.json` | W3C format, three layers. `pnpm tokens` (`scripts/generate-tokens.cjs`) regenerates the CSS. |
 | Tokens (CSS) | `app/styles/tokens.css` | Generated. `--primitive-*`, semantic `--color-* --typography-* --spacing-* --radius-* --motion-*`, component `--button-* --input-* --card-* --panel-* --nav-* --footer-* --hero-*`. Do not edit. |
 | Utility mapping + base | `app/globals.css` | `@theme inline reference` maps semantic tokens to Tailwind utilities; base typography; `.prose`, `.on-tint`, `.on-inverse`. |
 | Primitives | `components/ui/button.tsx`, `components/ui/section.tsx` | `Button`, `Section`, `Container`, `SectionHeader`. |

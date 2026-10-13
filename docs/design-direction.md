@@ -93,3 +93,17 @@ GMB version, same skeleton, all copy verbatim from the site:
 | "A regulated bank with 24/7 support" | `FaqTeaser group="General FAQs"`: the first four questions as an accordion + "Visit our FAQ" | FAQ page, rendered from its source |
 
 Not copied: the giant footer wordmark (GMBCU's logo is a stacked lockup, it would not survive the treatment), the survey tables (regulatory to Monzo as a bank), the steps (we have no step copy).
+
+## Car loan page, after the bank review (2026-10-13)
+
+Jim: keep the registration → valuation idea, but lift the best practice from barclays.co.uk/loans/car-loans, tsb.co.uk/personal-loans/car-loan, hsbc.co.uk/loans/products/car-loan, nationwide.co.uk/loans/car-loans and lloydsbank.com/car-finance/calculator. What they share (checked 2026-10-13):
+
+1. **The rate is in the hero.** Every page states the representative APR and the amount band it applies to within the first screen (TSB: "6.4% APR representative for loans between £7,500 and £25,000"; HSBC a dedicated "Representative APR" column). One primary CTA ("Get a personalised quote"); Barclays repeats it in a "How to apply" block further down.
+2. **Lifestyle photography or a product illustration beside the headline.** Barclays (woman with a red car), HSBC (couple driving), Lloyds (showroom) use full-bleed photos with the copy in a card; TSB uses a flat illustration. We have no car photography, so the hero carries a flat illustration in the brand palette on the green loans block; a real photo of a member with their car would be better and is Jim's to supply.
+3. **A benefit strip straight after the hero**: three or four icon cards (amount, term, decision speed / no credit footprint, no fees). Ours uses the Member Loan's own benefit copy.
+4. **The calculator is a hero-sized section, not a widget.** Sliders plus number inputs on the left, a live result panel on the right (Nationwide's "Your estimate": amount, term, monthly, representative APR, interest to pay, total), the representative example immediately under it, and the disclaimer. Lloyds asks price → deposit → term, which is exactly our "found a car" branch. Our result panel is sticky and carries the Apply button.
+5. **Eligibility as a short list, then two apply routes** (app / online) and "won't affect your credit score". We have one route (the apply journey) and the credit-search line from the product T&Cs.
+6. **Budgeting guidance** (Nationwide: tax, insurance, MOT, tyres, servicing) and **car-specific FAQs**. We link the Budget Planner and surface the Member Loan FAQs.
+
+Order on `/loans/car-loan/`: hero → benefit strip → journey + estimate → representative example → eligibility / T&Cs / how to apply → budgeting → FAQs → Apply block.
+

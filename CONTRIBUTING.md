@@ -6,7 +6,7 @@ The look is a token-based design system: **read `docs/design-system.md` before t
 
 ## Golden rules
 1. **Verbatim copy.** Do not reword, "improve" or reformat existing copy unless the change request says so.
-2. **Locked pages** (`locked: true` in frontmatter: every product, legal, FAQ, about, contact, home, prize draw, the footer statement and some posts) are regulatory. The build diffs their text against `content/_locked/*.txt` and fails on any change. To make an approved change: edit the MDX, then update the snapshot (`pnpm tsx scripts/locked-diff.ts` prints the diff; copy the new text into the snapshot file) and say so in the PR.
+2. **Locked pages** (`locked: true` in frontmatter: every product, legal, FAQ, about, contact, home, prize draw, the footer statement and some posts) are regulatory. The build diffs their text against `content/_locked/*.txt` and fails on any change. To make an approved change: edit the MDX, then update the snapshot (`pnpm tsx scripts/locked-diff.ts` prints the diff; `pnpm tsx scripts/locked-diff.ts --accept` rewrites the snapshot from the current MDX) and say so in the PR.
 3. **URLs never change.** `slug` + `canonical` are the contract. Moving a page = add a row to `audit/redirects.csv`, run `node scripts/gen-redirects.mjs`, and keep the old slug redirecting.
 4. Run `pnpm validate` before committing. The build runs it too.
 

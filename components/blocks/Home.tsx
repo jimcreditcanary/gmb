@@ -9,6 +9,8 @@ import { Container, Section } from "@/components/ui/section";
 import { Button } from "@/components/ui/button";
 import { Img } from "./Img";
 import { Trustpilot } from "./Trustpilot";
+import { Rail, RailItem } from "@/components/ui/rail";
+import { withContext } from "@/lib/with-context";
 
 /*
   Home page blocks (docs/design-direction.md §Home, modelled on monzo.com's structure, 2026-10-08).
@@ -64,12 +66,51 @@ export function FeatureSection({ children }: { children: ReactNode }) {
   );
 }
 
-/** The first N product cards from a hub page (`/loans/` or `/savings/`), rendered through the same `Box` block the hub uses. Copy lives once, on the hub. */
-export function ProductCards({ source, count = 4 }: { source: string; count?: number }) {
-  const page = getPage(source); if (!page) return null;
-  const boxes = [...page.body.matchAll(/<Box\b[^>]*>[\s\S]*?<\/Box>/g)].map((m) => m[0]).slice(0, count);
-  if (!boxes.length) return null;
-  return <ul className="card-cycle grid gap-5 sm:grid-cols-2 lg:grid-cols-4"><Mdx source={boxes.join("\n\n")} /></ul>;
+type Card = { title: string; text: string; href: string; image?: string; label: string };
+const plain = (s: string) => s.replace(/<[^>]+>/g, "").replace(/[*_`]/g, "").replace(/\s+/g, " ").trim();
+
+/** Reads a hub page's `<Box>` blocks down to what a rail card needs: image, title, first line, the "Learn more" link. */
+function cardsFromHub(slug: string): Card[] {
+  const page = getPage(slug); if (!page) return [];
+  return [...page.body.matchAll(/<Box\b([^>]*)>([\s\S]*?)<\/Box>/g)].map((m) => {
+    const image = m[1].match(/image="([^"]+)"/)?.[1];
+    const body = m[2];
+    const title = plain(body.match(/^###\s+(.+)$/m)?.[1] || "");
+    const text = plain((body.split(/\n\s*\n/).map((x) => x.trim()).find((x) => x && !x.startsWith("#") && !x.startsWith("-") && !x.startsWith("<")) || ""));
+    const learn = body.match(/<Button\s+href="([^"]+)"[^>]*variant="secondary"[^>]*>([^<]+)<\/Button>/);
+    return { title, text, href: learn?.[1] || slug, label: plain(learn?.[2] || "Learn more >"), image };
+  }).filter((c) => c.title);
+}
+
+/** A card for a page that is not on the hub (frontmatter: title / h1, excerpt, cardImage). */
+function cardFromPage(slug: string, label: string): Card | null {
+  const page = getPage(slug); if (!page) return null;
+  const fm = page.frontmatter;
+  return { title: fm.h1 || fm.title.replace(/ \| .*$/, ""), text: fm.excerpt || fm.description, href: slug, image: fm.cardImage || fm.ogImage, label };
+}
+
+/**
+ * Product rail (monzo.com's "Get the most out of Monzo" row): simple cards, image, title, one line, "Learn more".
+ * Cards come from the hub page's own `<Box>` blocks so the copy lives once; `include` adds pages that are not on the hub
+ * (built from their frontmatter) at the front; `count` caps the list (default: all).
+ */
+export function ProductCards({ source, count, include = [], label = "Learn more >" }: { source: string; count?: number; include?: string[]; label?: string }) {
+  const cards = [...include.map((s) => cardFromPage(s, label)).filter((c): c is Card => !!c), ...cardsFromHub(source)].slice(0, count ?? 99);
+  if (!cards.length) return null;
+  return (
+    <Rail label={`${source === "/savings/" ? "Savings" : "Loan"} products`} className="card-cycle">
+      {cards.map((c) => (
+        <RailItem key={c.href}>
+          <article className="card-tone on-tint flex w-full flex-col rounded-card p-6 text-ink">
+            {c.image && <div className="stage stage-white mb-5 h-36 w-full p-4"><Img src={c.image} alt="" className="size-full object-contain object-bottom" /></div>}
+            <h3 className="text-h4 font-bold">{c.title}</h3>
+            <p className="mt-2 grow text-small">{c.text}</p>
+            <p className="mt-5"><Link href={c.href} className="font-ui text-small font-semibold text-ink underline decoration-brand-strong decoration-2 underline-offset-4 hover:text-brand-hover">{withContext(c.href, c.label)}</Link></p>
+          </article>
+        </RailItem>
+      ))}
+    </Rail>
+  );
 }
 
 /** The About page's stat band, re-rendered here from its source. */

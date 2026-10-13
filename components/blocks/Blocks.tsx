@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import { isValidElement, cloneElement, type ReactElement, type ReactNode } from "react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { toTone, toneClass } from "@/lib/tones";
@@ -48,18 +48,27 @@ export function IconRow({ icon, children }: { icon?: string; children: ReactNode
 export { IconRow as ListItem, IconRow as IconItem };
 
 // ---------- PanelSection: the page's one strong block. Navy, three columns, white type ----------
-export function PanelSection({ children }: { children: ReactNode }) {
+export function PanelSection({ plain, children }: { plain?: boolean; children: ReactNode }) {
   const kids = kidsOf(children);
   const footer = kids.find((k) => typeOf(k) === PanelFooter);
-  const panels = kids.filter((k) => k !== footer);
+  const panels = kids.filter((k) => k !== footer).map((k) => (plain && isValidElement(k) ? cloneElement(k as ReactElement<{ plain?: boolean }>, { plain: true }) : k));
   return (
     <Section tight>
-      <ul className={cn("card-cycle grid gap-5", panels.length >= 3 ? "md:grid-cols-3" : "md:grid-cols-2")}>{panels}</ul>
+      <ul className={cn("grid", plain ? "rule-grid gap-x-10 gap-y-10" : "card-cycle gap-5", panels.length >= 3 ? "md:grid-cols-3" : "md:grid-cols-2")}>{panels}</ul>
       {footer}
     </Section>
   );
 }
-export function Panel({ title, children }: { colour?: string; title?: string; children: ReactNode }) {
+/** `plain` (set by `PanelSection plain`): no colour card, a hairline above each column instead. */
+export function Panel({ title, plain, children }: { colour?: string; title?: string; plain?: boolean; children: ReactNode }) {
+  if (plain) return (
+    <li className="flex">
+      <div className="flex w-full flex-col text-ink">
+        {title && <h3 className="mb-4" dangerouslySetInnerHTML={{ __html: title }} />}
+        <div className="prose grow [&>ul]:space-y-2 [&_li]:text-small">{children}</div>
+      </div>
+    </li>
+  );
   return (
     <li className="flex">
       <div className="card-tone on-tint flex w-full flex-col rounded-card p-(--card-padding) text-ink sm:p-8">
